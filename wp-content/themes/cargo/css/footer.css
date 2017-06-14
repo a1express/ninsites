@@ -1,0 +1,163 @@
+/*
+
+   	6. Footer 
+
+	Source: css/footer.css 
+	Description: styles footer
+
+*/
+
+/* Footer copyright
+---------------------------------------------------------------*/
+.btSiteFooter  {
+	font-size: 12px;
+	padding: 10px 0;
+	.port {
+		max-width: math(1200 - 2*$(pagePadding), px);
+		margin: auto;
+	}
+	.copyLine {
+		margin-bottom: 0;
+	}
+	.menu {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		text-align: right;
+		li {
+			display: inline-block;
+			margin: 0 20px 0 0;
+			padding: 0;
+			text-transform: uppercase;
+			a {
+				color: $(accentColorLight30);
+				transition: color 300ms ease;
+			}
+			a:hover {
+				color: $(accentColor);
+				transition: color 300ms ease;
+			}
+		}
+		li:last-child {
+			margin: 0;
+		}
+	}
+}
+
+/* Footer widgets
+---------------------------------------------------------------*/
+.btSiteFooterWidgets {
+	.btBox  {
+		font-weight: 300;
+		h4 {
+			color: $(accentColorLight20);
+			font-weight: 900;
+			text-transform: uppercase;
+			font-size: 18px;
+			:after {
+				display: block;
+				content: " ";
+				border-top: $(lightBgColor) 3px solid;
+				width: 50px;
+				margin-top: 10px;
+			}
+		}
+		a {
+			color: #FFF;
+			transition: color 300ms ease;
+		}
+		a:hover {
+			color: $(accentColorLight30);
+			transition: color 300ms ease;
+		}
+	}
+	.btBox .btSearchInnerContent input[type="text"] {
+		box-shadow: none;
+	}
+	.btBox.widget_bt_text_image img {
+		width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+	.recentTweets small:before {
+		color: $(accentColorLight20);
+	}
+}
+
+.btSiteFooterCurve {
+	display: none;
+	height: 14px;
+	width: 100%;
+	line-height: 14px;
+	margin-top: -14px;
+	position: absolute;
+	clear: both;
+}
+.btSiteFooterCurve .port {
+	padding: 0 50px;
+}
+.btSiteFooterCurve .btSiteFooterCurveSleeve {
+	background: $(footerBackgroundColor);
+	height: 14px;
+	width: 100%;
+}
+.btSiteFooterCurve .btCurveLeftHolder {
+	float: left;
+	margin-left: -50px;
+}
+.btSiteFooterCurve .btCurveRightHolder {
+	float: right;
+	margin-right: -50px;
+}
+.btSiteFooterCurve .btCurveLeft, .btSiteFooterCurve .btCurveRight {
+	fill: $(footerBackgroundColor);
+}
+
+.btSiteFooterWidgets .btBox.widget_nav_menu.col-md-3 {
+	ul li {
+		width: 50%;
+		padding-right: 10px;
+		float: left;
+	}
+	ul li:nth-child(2n+1) {
+		width: 50%;
+		clear: left;
+	}
+	ul:after {
+		clear: both;
+		content: "";
+		display: block;
+	}
+}
+
+:lightSkinSelector {
+	.btSiteFooterWidgets  {
+		background:  $(footerBackgroundColor);		
+		color: $(darkFontColor);
+	}
+	.btSiteFooter  {
+		border-top: 1px solid $(darkBorderColorLight-50);
+		background:  $(footerBackgroundColor);		
+		color: $(darkFontColor);
+	}
+}
+
+:darkSkinSelector {
+	.btSiteFooterWidgets  {
+		background:  $(footerBackgroundColor);		
+		color: $(darkFontColor);
+	}
+	.btSiteFooter  {
+		border-top: 1px solid $(darkBorderColorLight-50);
+		background: $(footerBackgroundColor);		
+		color: $(darkFontColor);
+	}
+}
+
+.btSiteFooterWidgets.btDarkFooterSkin, .btSiteFooterCurve.btDarkFooterSkin .btSiteFooterCurveSleeve, .btSiteFooter.btDarkFooterSkin { 
+	background: $(darkBgColor) !important; 
+} 
+
+.btSiteFooterCurve.btDarkFooterSkin .btCurveLeft, .btSiteFooterCurve.btDarkFooterSkin .btCurveRight { 
+	fill: $(darkBgColor); 
+}	

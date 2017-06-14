@@ -1,0 +1,303 @@
+/*
+
+   	10. Cost calculator
+
+	Source: css/costcalc.css 
+	Description: styles cost calculator dependancies
+
+*/
+
+.btQuoteBooking .ui-slider-horizontal .ui-slider-handle {
+	margin-left: -1px;
+}
+.btQuoteBooking .ddTitleText span, .btQuoteBooking .ddChild ul li span {
+	font-weight: 700;
+}
+.btQuoteBooking .ddChild ul li span.description {
+	font-weight: 500;
+}
+.btQuoteBooking .ddTitleText .ddlabel {
+	font-weight: 700;
+}
+.btQuoteBooking .ddTitleText .ddlabel .description {
+	font-weight: 500;
+}
+.btQuoteBooking .ddTitleText.btNotSelected .ddlabel, .btQuoteBooking .ddChild ul li:first-child span {
+	color: #A9A9A9;
+	font-weight: 500;
+}
+.btQuoteBooking .ddTitle .arrow {
+	line-height: 38px;
+	height: 38px;
+	width: 38px;
+	text-align: center;
+	top: 0;
+	right: 0;
+	margin: 0;
+	transform: rotate(0);
+	transition: all 300ms ease;
+}
+.btQuoteBooking .borderRadiusTp .ddTitle .arrow, .btQuoteBooking .borderRadiusBtm .ddTitle .arrow {
+	line-height: 38px;
+	height: 38px;
+	width: 38px;
+	text-align: center;
+	transform: rotate(180deg);
+	transition: all 300ms ease;
+}
+
+.btQuoteBooking .ddTitle .arrow:before {
+	border: 0;
+    content: '\f078';
+    font: normal 14px/38px FontAwesome;
+    display: block;
+    position: relative;
+	width: 38px;
+	height: 38px;
+	right: 0;
+	top: 0;
+}
+:any(:darkSkinSelector, :LightSkinSelector) {
+	.btQuoteBooking .borderRadiusTp .ddTitle .arrow:before, .btQuoteBooking .borderRadiusBtm .ddTitle .arrow:before {
+		color: #CCC !important;
+	}
+}
+:LightSkinSelector {
+	.btQuoteBooking .ddTitle .arrow:before {
+		color: #CCC;
+	}
+}
+:darkSkinSelector {
+	.btQuoteBooking .ddTitle .arrow:before {
+		color: #FFF;
+	}
+}
+
+/* Background color
+---------------------------------------------------------------*/
+.btQuoteBooking .btQuoteSwitch.on .btQuoteSwitchInner,
+.btQuoteBooking  .ui-slider .ui-slider-handle,
+.btQuoteBooking .btQuoteBookingForm .btQuoteTotal,
+.btDatePicker .ui-datepicker-header,
+.btQuoteBooking .btContactSubmit {
+	background: $(accentColor);
+}
+
+/* Color
+---------------------------------------------------------------*/
+.btQuoteBooking .btContactNext,
+.btQuoteBooking .btSubmitMessage {
+	color: $(accentColor);
+}
+.btQuoteBooking .btSubmitMessage {
+	line-height: 50px;
+}
+:any(:darkSkinSelector, :LightSkinSelector) {
+	.btQuoteBooking .btContactSubmit {
+		font-size: 13px;
+		line-height: $(extrasmallIconSize)px;
+		padding: 4px 20px;
+		border-radius: 2px;
+		font-weight: 600;
+	}
+}
+
+/* Borders
+---------------------------------------------------------------*/
+.btQuoteBooking .btContactNext {
+	border-color: $(accentColor);
+}
+:any(:darkSkinSelector, :LightSkinSelector) {
+	.btQuoteBooking .btContactNext {
+		font-size: 13px;
+		line-height: $(extrasmallIconSize)px;
+		padding: 4px 20px;
+		border-radius: 2px;
+		font-weight: 600;
+	}
+}
+
+/* Fields box shadows
+---------------------------------------------------------------*/
+.btQuoteBooking .btQuoteSwitch:hover {
+	box-shadow: 0 0 0 $(accentColor) inset, 0 1px 5px rgba(0,0,0,0.2);
+}
+.btQuoteBooking  input[type="text"]:hover, .btQuoteBooking  input[type="email"]:hover, .btQuoteBooking  input[type="password"]:hover, .btQuoteBooking  textarea:hover, .btQuoteBooking  .fancy-select .trigger:hover {
+	box-shadow: 0 0 0 $(accentColor) inset, 0 1px 5px rgba(0,0,0,0.2);
+}
+.btQuoteBooking .dd.ddcommon.borderRadius:hover .ddTitleText {
+	box-shadow: 0 0 0 $(accentColor) inset, 0 1px 5px rgba(0,0,0,0.2);
+}
+.btQuoteBooking  input[type="text"]:focus, .btQuoteBooking  input[type="email"]:focus, .btQuoteBooking  textarea:focus, .btQuoteBooking  .fancy-select .trigger.open {
+	box-shadow: 5px 0 0 $(accentColor) inset, 0 2px 10px rgba(0,0,0,0.2);
+}
+.btQuoteBooking .dd.ddcommon.borderRadiusTp .ddTitleText, .btQuoteBooking .dd.ddcommon.borderRadiusBtm .ddTitleText {
+	box-shadow: 5px 0 0 $(accentColor) inset, 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Hover states
+---------------------------------------------------------------*/
+.btQuoteBooking  .btContactFieldMandatory input:hover, .btQuoteBooking  .btContactFieldMandatory textarea:hover {
+	box-shadow: 0 0 0 1px #AAA inset, 0 0 0 $(accentColor) inset, 0 1px 5px rgba(0,0,0,0.2);
+}
+.btQuoteBooking .btContactFieldMandatory .dd.ddcommon.borderRadius:hover .ddTitleText {
+	box-shadow: 0 0 0 1px #AAA inset, 0 0 0 $(accentColor) inset, 0 1px 5px rgba(0,0,0,0.2);
+}
+.btQuoteBooking  .btContactFieldMandatory input:focus, .btQuoteBooking  .btContactFieldMandatory textarea:focus {
+	box-shadow: 0 0 0 1px #AAA inset, 5px 0 0 $(accentColor) inset, 0 1px 5px rgba(0,0,0,0.2);
+}
+.btQuoteBooking .btContactFieldMandatory .dd.ddcommon.borderRadiusTp .ddTitleText {
+	box-shadow: 0 0 0 1px #AAA inset, 5px 0 0 $(accentColor) inset, 0 1px 5px rgba(0,0,0,0.2);
+}
+/* Error fields validation
+---------------------------------------------------------------*/
+.btQuoteBooking  .btContactFieldMandatory.btContactFieldError input, .btQuoteBooking  .btContactFieldMandatory.btContactFieldError textarea {
+    border: 1px solid $(accentColor);
+	box-shadow: 0 0 0 1px $(accentColor) inset;
+}
+.btQuoteBooking .btContactFieldMandatory.btContactFieldError .dd.ddcommon.borderRadius .ddTitleText {
+    border: 1px solid $(accentColor);
+	box-shadow: 0 0 0 1px $(accentColor) inset;
+}
+.btQuoteBooking  .btContactFieldMandatory.btContactFieldError input:hover, .btQuoteBooking  .btContactFieldMandatory.btContactFieldError textarea:hover {
+	box-shadow: 0 0 0 1px $(accentColor) inset, 0 0 0 $(accentColor) inset, 0 1px 5px rgba(0,0,0,0.2);
+}
+.btQuoteBooking .btContactFieldMandatory.btContactFieldError .dd.ddcommon.borderRadius:hover .ddTitleText {
+	box-shadow: 0 0 0 1px $(accentColor) inset, 0 0 0 $(accentColor) inset, 0 1px 5px rgba(0,0,0,0.2);
+}
+.btQuoteBooking  .btContactFieldMandatory.btContactFieldError input:focus, .btQuoteBooking  .btContactFieldMandatory.btContactFieldError textarea:focus {
+	box-shadow: 0 0 0 1px $(accentColor) inset, 5px 0 0 $(accentColor) inset, 0 1px 5px rgba(0,0,0,0.2);
+}
+.btQuoteBooking .btContactFieldMandatory.btContactFieldError .dd.ddcommon.borderRadiusTp .ddTitleText {
+	box-shadow: 0 0 0 1px $(accentColor) inset, 5px 0 0 $(accentColor) inset, 0 1px 5px rgba(0,0,0,0.2);
+}
+.btPayPalButton:hover {
+	box-shadow: 0 0 0 $(accentColor) inset, 0 1px 5px rgba(0,0,0,0.2);
+}
+
+:darkSkinSelector {
+	 .btQuoteBooking .dd.ddcommon.borderRadius .ddTitleText.btNotSelected {
+		background-color: $(darkBorderColor);
+		border-color: $(darkCostCalculatorBorder);
+	 }
+	.btQuoteBooking select, .btQuoteBooking textarea, .btQuoteBooking input {
+		color: $(lightFontColor);
+	}
+	.btQuoteBooking .btQuoteWrapper {
+		background: $(darkBorderColor);
+	}
+	.btQuoteBooking .btQuoteWrapper {
+		border-color: $(darkCostCalculatorBorder);
+	}
+	.btQuoteBooking .btContactFieldMandatory input, .btQuoteBooking .btContactFieldMandatory textarea {
+		border-color: #AAA;
+	}
+	.btQuoteBooking .btContactFieldMandatory.btContactFieldError input, .btQuoteBooking .btContactFieldMandatory.btContactFieldError textarea {
+		border-color: $(accentColor);
+	}
+	.btQuoteBooking .btQuoteSwitch  {
+		background: $(darkBorderColor);
+		border-color: $(darkCostCalculatorBorder) !important;
+		transition: all 190ms cubic-bezier(0.8, 0.1, 0.8, 0.1);
+	}
+	.btQuoteBooking .btQuoteSwitch.on  {
+		transition: all 190ms cubic-bezier(0.8, 0.1, 0.8, 0.1);
+	}
+	.btQuoteBooking .btQuoteSwitch .btQuoteSwitchInner {
+		background: $(darkCostCalculatorBorder);
+	}
+	.btQuoteBooking .btQuoteSwitch.on .btQuoteSwitchInner {
+		background: $(lightBgColor) !important;
+	}
+	.btQuoteBooking .btSubmitMessage {
+		color: $(darkFontColor);
+	}
+}
+
+/* Cargo specific theme fixes */
+.btQuoteBooking .btQuoteBookingForm .btQuoteTotal, .btQuoteBooking .btQuoteBookingForm.btActive .btQuoteTotal, .btQuoteBooking .btContactNext {
+	border-radius: 2px;
+}
+.btQuoteBooking .btQuoteBookingForm.btActive .btTotalNextWrapper {
+	padding-right: 110px;
+}
+.btQuoteBooking .btQuoteBookingForm .boldBtn {
+	width: 100px;
+}
+.btQuoteBooking .btQuoteTotalText {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.btQuoteBooking .btQuoteTotalCalc {
+	border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+	font-size: 13px;
+	line-height: $(extrasmallIconSize)px;
+}
+.btQuoteBooking .btQuoteTotalCurrency {
+	border-radius: 0;
+	font-size: 13px;
+	line-height: $(extrasmallIconSize)px;
+}
+.btQuoteBooking .btContactNext {
+	background: $(accentColor);
+	color: $(darkFontColor);
+	border: 1px solid $(accentColor);
+	box-shadow: 0 0 0 1px $(accentColor) inset, 0 1px 0 transparent inset;
+	text-shadow: none;
+	margin-left: 10px;
+}
+.btQuoteBooking .btContactNext:hover {
+	background: $(accentColorLight-9);
+	color: $(darkFontColor);
+	border: 1px solid $(accentColorLight-9);
+	box-shadow: 0 0 0 1px transparent inset, 0 1px 0 $(accentColorLight-9) inset;
+	text-shadow: none;
+	opacity: 1;
+}
+.btQuoteBooking .btContactSubmit {
+	background: $(accentColor);
+	color: $(darkFontColor);
+	border: 1px solid $(accentColor);
+	box-shadow: 0 0 0 1px $(accentColor) inset, 0 1px 0 transparent inset;
+	text-shadow: none;
+}
+.btQuoteBooking .btContactSubmit:hover {
+	background: $(accentColorLight-9);
+	color: $(darkFontColor);
+	border: 1px solid $(accentColorLight-9);
+	box-shadow: 0 0 0 1px transparent inset, 0 1px 0 $(accentColorLight-9) inset;
+	text-shadow: none;
+	opacity: 1;
+}
+
+.btQuoteBooking .ui-slider { 
+	width: calc(100% - 38px);
+}
+.btQuoteBooking .ui-slider-horizontal, .btQuoteBooking .ui-slider-horizontal:hover {
+	background: transparent;
+	border: 0;
+	box-shadow: none;
+	margin: 0;
+}
+.btQuoteWrapper {
+    height: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    background: #ededed;
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.05), rgba(0,0,0,0));
+    background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.05), rgba(0,0,0,0));
+    position: relative;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    box-shadow: 0 0 0 rgba(0,0,0,0.2);
+    -webkit-transition: all 190ms ease;
+    transition: all 190ms ease;
+	transform: translateY(10px);
+}
+.btQuoteWrapper:hover {
+	box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+    -webkit-transition: all 380ms ease;
+    transition: all 380ms ease;
+}

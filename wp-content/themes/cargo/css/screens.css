@@ -1,0 +1,175 @@
+/*
+
+   	9. Screens
+
+	Source: css/screens.css 
+	Description: handles media query visibility
+
+*/
+
+/* Bootstrap large
+---------------------------------------------------------------*/
+@media (max-width: 1200px) {
+	:any( .search, .blog, .archive ).btNoSidebar .btContentHolder,
+	.btWithSidebar .btContentHolder,
+	.btMenuGutter .mainHeader .port, 
+	.btMenuGutter .topBar .topBarPort,
+	.btNoSidebar .gutter .port  {
+		width: 100%;
+		padding-left: $(pagePadding)px;
+		padding-right: $(pagePadding)px;
+	}
+	.btSiteFooterWidgets .btBox.widget_bt_text_image img {
+		max-width: 100%;
+	}
+}
+
+@media (min-width: 1260px) {
+	.slidedItem .btSlidePane {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+}
+
+@media (min-width: 1160px) {
+	.btSiteFooterCurve {
+		display: block;
+	}
+
+}
+
+
+@media (max-width: 990px) {
+	.header.small {
+		margin-bottom: 10px;
+		h4 {
+			font-size: 22px;
+			line-height: math( this( font-size ) + query( parent, margin-bottom ), px );
+		}	
+	}
+	.menuHolder {
+		margin-top: 0px;
+	}
+	.btGoogleMapsWrapper .btGoogleMapsContent {
+		position: relative;
+		clear: both;
+		width: auto;
+		margin: 20px;
+		right: 0;
+		left: 0;
+		top: 0;
+	}
+
+	.btSiteFooterWidgets .btBox.widget_bt_text_image img {
+		max-width: 40%;
+	}
+
+}
+	
+
+/* Bootstrap medium
+---------------------------------------------------------------*/
+@media (max-width: 768px) {
+	.btContent, .btSidebar {
+		width: 100%;
+		float: none;
+	}
+	:any( .btSidebarLeft, .btSidebarRight) .btSidebar {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	h1, .header.huge h1 {
+		font-size: 50px;
+		line-height: 70px;
+	}
+	.header.extralarge h1 {
+		font-size: 40px;
+		line-height: 60px;
+	}
+	h2, .header.large h2 {
+		font-size: 35px;
+		line-height: 45px;
+	}	
+	.header.extralarge {
+		.btSuperTitle, .btSubTitle {
+			font-size: 18px;
+		}
+	}
+	.nbs {
+		display: none !important;
+	}
+	.btBtn {
+		padding: 5px 10px;
+	}
+	.btTextLeft .btBtn {
+		margin-right: 10px;
+	}
+	.btTextRight .btBtn {
+		margin-left: 10px;
+	}
+	.btBtn.btBtnNoBorder {
+		padding: 0;
+	}
+	.btArticleMeta {
+/*		text-align: left;*/
+		dd, dt {
+			display: inline-block;
+			padding-right: 5px;
+		}
+		dd:after {
+			content: "; ";
+		}
+		dt:after {
+			content: ": ";
+		}
+	}
+	.btArticleMeta.onTop dd {
+		margin-bottom: 0;
+	}
+	.slidedItem .btSlidePane {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.btSiteFooterWidgets .btBox.widget_bt_text_image img {
+		max-width: 55%;
+	}
+}
+
+/* Bootstrap small-caps---------------------------------------------------------------*/
+@media (max-width: 480px) {
+	.comment-respond form {
+		width: 100%;
+	}
+	.slided .slick-dots li {
+		width: 50px;
+	}
+	.btCatFilter {
+		line-height: 2.5;
+		.btCatFilterItem, .btCatFilterTitle {
+			display: block;
+		}
+		.btCatFilterItem:after {
+			display: none;
+		}
+	}
+	.btSiteFooterWidgets .btBox.widget_bt_text_image img {
+		max-width: 80%;
+	}
+}
+
+/* Bootstrap small-caps---------------------------------------------------------------*/
+@media (max-width: 440px) {
+	.btQuoteBooking .btQuoteBookingForm.btActive .btTotalNextWrapper {
+		padding-right: 0 !important;
+	}
+	.btQuoteBooking .btQuoteBookingForm.btActive .btQuoteTotal, .btQuoteBooking .btQuoteBookingForm .btQuoteTotal {
+		height: auto;
+	}
+	.btQuoteBooking .btQuoteBookingForm .boldBtn {
+		width: 100% !important;
+	}
+	.btQuoteBooking .btQuoteBookingForm.btActive .btContactNext, .btQuoteBooking .btQuoteBookingForm .btContactNext {
+		width: auto !important;
+	}
+}
