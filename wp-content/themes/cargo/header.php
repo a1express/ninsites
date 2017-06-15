@@ -12,14 +12,7 @@
 	
 	?>
 
-	<script type="text/javascript">
-		alert("deployment was done");
-	</script>
-
 	<style type="text/css">
-
-
-	
 		body.page-id-1739 .btContent { text-align: center; }
 		body.page-id-1739 .btContent table {
 			display: block;
