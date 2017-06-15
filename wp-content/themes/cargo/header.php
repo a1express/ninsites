@@ -12,6 +12,10 @@
 	
 	?>
 
+	<script type="text/javascript">
+		alert("deployment was done");
+	</script>
+
 	<style type="text/css">
 
 
