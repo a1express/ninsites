@@ -69,3 +69,35 @@
     }
 }
 
+.how-it-works {
+    background: url(img/a1x/how-it-works/bkg.jpg) center top no-repeat;
+    margin: 0px auto;
+    max-width: 1170px;
+}
+.how-it-works header {
+    text-align: center;
+}
+.how-it-works .step {
+    overflow: hidden;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+.how-it-works .step .content {
+    float: left;
+}
+.how-it-works .step:first-child figure {
+    float: right;
+}
+.how-it-works .step h3 {
+    color: #f4091f;
+    font-size: 18px;
+}
+.how-it-works .step .point {
+    background: url(img/a1x/how-it-works/icon2.jpg) center center no-repeat;
+    width: 100px;
+    height: 100px;
+    font-size: 30px;
+    padding: 34px 0px 0px 12px;
+    text-align: center;
+    box-sizing: border-box;
+}
