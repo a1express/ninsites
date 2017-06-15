@@ -12,6 +12,21 @@
 
 	?>
 
+	<style type="text/css">
+		<?php $iframePage = DomainManager::GetVariable(1739, 2332, 1739); ?>
+
+		body.page-id-<?php echo $iframePage; ?> .btContent { text-align: center; }
+		body.page-id-<?php echo $iframePage; ?> .btContent table {
+			display: block;
+			margin: 0px auto;
+			width: 660px;
+		}
+		body.page-id-<?php echo $iframePage; ?> .btContent table tbody,
+		body.page-id-<?php echo $iframePage; ?> .btContent table tr,
+		body.page-id-<?php echo $iframePage; ?> .btContent table td { display: block; }
+		body.page-id-<?php echo $iframePage; ?> .btContent table iframe { height: 1360px !important; }
+	</style>
+
 	<script type="text/javascript">
 		(function($) {
 			$(document).ready(function(){
