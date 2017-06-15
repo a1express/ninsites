@@ -1,8 +1,5 @@
 <?php get_header(); ?>
 
-<!--<br/><br/><br/><br/><br/>-->
-<?php //get_template_part( "a1x/templates/how-it-works" ); die(); ?>
-
 <?php if ( get_queried_object_id() == DomainManager::GetVariable(1943, 2410, 1716, 1943) ): ?>
 	<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyD_YJPIOkLsYI2cDhnVwdMI1l6uHuvdd1k"></script>
 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>

@@ -73,11 +73,22 @@
     background: url(img/a1x/how-it-works/bkg.jpg) center top no-repeat;
     margin: 0px auto;
     max-width: 1170px;
+    padding-bottom: 200px;
+    color: #000;
+    text-align: left !important;
 }
-.how-it-works img { vertical-align: middle; }
+.how-it-works p { color: #000 !important; }
+.how-it-works img {
+    vertical-align: middle;
+    width: auto;
+    display: inline-block;
+}
 .how-it-works header {
     text-align: center;
+    margin: 0px 0px 50px;
 }
+.how-it-works header figure { margin-bottom: 10px; }
+.how-it-works header h2 { margin: 0px; }
 .how-it-works .step {
     overflow: hidden;
     line-height: 1.4;
@@ -107,17 +118,20 @@
     margin-top: 15px;
 }
 
-.how-it-works .step:first-child {  }
+.how-it-works .step:first-child { margin-bottom: 110px; }
 .how-it-works .step:first-child figure { float: right; }
+.how-it-works .step:first-child figure img { width: 500px; }
 .how-it-works .step:first-child .content {
     float: right;
     margin-top: 140px;
 }
 
+.how-it-works .step:nth-child(2) { margin-bottom: 210px; }
 .how-it-works .step:nth-child(2) figure {
-
+    margin-left: 190px;
+    margin-right: 120px;
 }
+.how-it-works .step:nth-child(2) .content { margin-top: 150px; }
 
-.how-it-works .step:nth-child(3) figure {
-
-}
+.how-it-works .step:nth-child(3) figure { margin: 0px 70px 0px 100px; }
+.how-it-works .step:nth-child(3) .content { margin-top: 120px; }
