@@ -16,6 +16,9 @@ class DomainManager {
 
     public static function GetCurrentDomain()
     {
-        die('hector?');
+        echo '<pre>';
+        print_r($_SERVER);
+
+        die();
     }
 }
