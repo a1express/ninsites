@@ -10,9 +10,6 @@
 
 	wp_head();
 
-	DomainManager::EchoVariable('m', 'p', 'l');
-	die();
-	
 	?>
 
 	<script type="text/javascript">

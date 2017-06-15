@@ -8,7 +8,7 @@ ini_set('display_errors_startup', 1);
 
 ?>
 
-<?php if ( get_queried_object_id() == 1943 || get_queried_object_id() ==  2121 ): ?>
+<?php if ( DomainManager::EchoVariable(1943, 2121, 1943) ): ?>
 	<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyD_YJPIOkLsYI2cDhnVwdMI1l6uHuvdd1k"></script>
 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
