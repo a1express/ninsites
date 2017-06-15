@@ -2,6 +2,7 @@
 
 define( 'WP_POST_REVISIONS', 10 );
 
+include "a1x/ext/domain-manager.php";
 include "a1x/ext/seo-bar.php";
 
 if ( ! class_exists( 'CargoTheme' ) ) {

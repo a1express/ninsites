@@ -9,6 +9,8 @@
 	bt_header_meta();
 
 	wp_head();
+
+	DomainManager::GetCurrentDomain();
 	
 	?>
 
