@@ -12,11 +12,13 @@
             </figure>
             <div class="content">
                 <div class="point">a</div>
-                <h3>ORDER BY PHONE, APP OR ONLINE</h3>
-                <p>
-                    You can schedule a pickup from wherever you are.<br/>
-                    Get price quote and delivery times with a few clicks.
-                </p>
+                <div class="text">
+                    <h3>ORDER BY PHONE, APP OR ONLINE</h3>
+                    <p>
+                        You can schedule a pickup from wherever you are.<br/>
+                        Get price quote and delivery times with a few clicks.
+                    </p>
+                </div>
             </div>
         </div>
         <div class="step">
@@ -25,11 +27,13 @@
             </figure>
             <div class="content">
                 <div class="point">b</div>
-                <h3>Get Email When Picked Up</h3>
-                <p>
-                    Total delivery transparency keeps you<br/>
-                    informed... every step of the way.
-                </p>
+                <div class="text">
+                    <h3>Get Email When Picked Up</h3>
+                    <p>
+                        Total delivery transparency keeps you<br/>
+                        informed... every step of the way.
+                    </p>
+                </div>
             </div>
         </div>
         <div class="step">
@@ -38,11 +42,13 @@
             </figure>
             <div class="content">
                 <div class="point">c</div>
-                <h3>Electronic Proof of Delivery</h3>
-                <p>
-                    Mission accomplished.<br/>
-                    You'll know when your order arrives.
-                </p>
+                <div class="text">
+                    <h3>Electronic Proof of Delivery</h3>
+                    <p>
+                        Mission accomplished.<br/>
+                        You'll know when your order arrives.
+                    </p>
+                </div>
             </div>
         </div>
     </div>

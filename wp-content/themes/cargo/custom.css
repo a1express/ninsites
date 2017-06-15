@@ -74,6 +74,7 @@
     margin: 0px auto;
     max-width: 1170px;
 }
+.how-it-works img { vertical-align: middle; }
 .how-it-works header {
     text-align: center;
 }
@@ -82,14 +83,12 @@
     line-height: 1.4;
     text-transform: uppercase;
 }
-.how-it-works .step .content {
-    float: left;
-}
-.how-it-works .step:first-child figure {
-    float: right;
-}
+.how-it-works .step figure,
+.how-it-works .step .content { float: left; }
+
 .how-it-works .step h3 {
     color: #f4091f;
+    margin: 0px 0px 10px;
     font-size: 18px;
 }
 .how-it-works .step .point {
@@ -100,4 +99,25 @@
     padding: 34px 0px 0px 12px;
     text-align: center;
     box-sizing: border-box;
+    float: left;
+    margin: 0px 20px 0px 0px;
+}
+.how-it-works .step .text {
+    float: left;
+    margin-top: 15px;
+}
+
+.how-it-works .step:first-child {  }
+.how-it-works .step:first-child figure { float: right; }
+.how-it-works .step:first-child .content {
+    float: right;
+    margin-top: 140px;
+}
+
+.how-it-works .step:nth-child(2) figure {
+
+}
+
+.how-it-works .step:nth-child(3) figure {
+
 }
