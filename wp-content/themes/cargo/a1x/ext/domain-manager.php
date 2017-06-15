@@ -31,7 +31,7 @@ class DomainManager {
         return isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '';
     }
 
-    public static function EchoVariable($manhattanVariable, $proficientVariable, $localhostVariable, $defaultVariable = '')
+    public static function GetVariable($manhattanVariable, $proficientVariable, $localhostVariable, $defaultVariable = '')
     {
         $variable = $defaultVariable;
 
@@ -42,6 +42,11 @@ class DomainManager {
         else if ( self::IsLocalhostDomain() )
             $variable = $localhostVariable;
 
-        echo $variable;
+        return $variable;
+    }
+
+    public static function EchoVariable($manhattanVariable, $proficientVariable, $localhostVariable, $defaultVariable = '')
+    {
+        echo self::GetVariable($manhattanVariable, $proficientVariable, $localhostVariable, $defaultVariable);
     }
 }
