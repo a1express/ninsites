@@ -118,7 +118,7 @@
     margin-top: 15px;
 }
 
-.how-it-works .step:first-child { margin-bottom: 110px; }
+.how-it-works .step:first-child { margin-bottom: 130px; }
 .how-it-works .step:first-child figure { float: right; }
 .how-it-works .step:first-child figure img { width: 500px; }
 .how-it-works .step:first-child .content {
@@ -126,7 +126,7 @@
     margin-top: 140px;
 }
 
-.how-it-works .step:nth-child(2) { margin-bottom: 210px; }
+.how-it-works .step:nth-child(2) { margin-bottom: 230px; }
 .how-it-works .step:nth-child(2) figure {
     margin-left: 190px;
     margin-right: 120px;
