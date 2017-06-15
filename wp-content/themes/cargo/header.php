@@ -13,7 +13,7 @@
 	?>
 
 	<style type="text/css">
-		<?php $iframePage = DomainManager::GetVariable(1739, 2332, 1739); ?>
+		<?php $iframePage = DomainManager::GetVariable(1739, 2332, 1719, 1739); ?>
 
 		body.page-id-<?php echo $iframePage; ?> .btContent { text-align: center; }
 		body.page-id-<?php echo $iframePage; ?> .btContent table {

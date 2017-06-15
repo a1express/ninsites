@@ -1,14 +1,9 @@
-<?php
+<?php get_header(); ?>
 
-get_header();
+<!--<br/><br/><br/><br/><br/>-->
+<?php //get_template_part( "a1x/templates/how-it-works" ); die(); ?>
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-ini_set('display_errors_startup', 1);
-
-?>
-
-<?php if ( get_queried_object_id() == DomainManager::GetVariable(1943, 2410, 1943) ): ?>
+<?php if ( get_queried_object_id() == DomainManager::GetVariable(1943, 2410, 1716, 1943) ): ?>
 	<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyD_YJPIOkLsYI2cDhnVwdMI1l6uHuvdd1k"></script>
 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
@@ -419,31 +414,90 @@ ini_set('display_errors_startup', 1);
 
 				if ( $email != '' )
 				{
-					$params = "?origin=" . $origin . "&destination=" . $destination . "&pieces=" . $pieces . "&weight=" . $weight . "&date=" . $date . "&track2=" . $time . "&jumpMenu=" . $ampm . "&email=" . $email . "&jumpMenu2=" . $vehicle . "&optin=" . $foptin;
-								$solve360Url = "http://www.webicise.com/Solve360/Manhattan/QuickQuote/Solve360ContactSave.php" . $params;
+					if ( DomainManager::IsManhattanCourierServiceDomain() )
+					{
+						$params = "?origin=" . $origin . "&destination=" . $destination . "&pieces=" . $pieces . "&weight=" . $weight . "&date=" . $date . "&track2=" . $time . "&jumpMenu=" . $ampm . "&email=" . $email . "&jumpMenu2=" . $vehicle . "&optin=" . $foptin;
+						$solve360Url = "http://www.webicise.com/Solve360/Manhattan/QuickQuote/Solve360ContactSave.php" . $params;
 
-					$ch = curl_init();
-			        curl_setopt($ch, CURLOPT_URL, $solve360Url);
-			        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			        curl_exec($ch); 
-			        curl_close($ch);
-		   
-		        	$mailBody = "<HTML><head></head><body><table width=800>";
-					$mailBody .= "<tr><td valign=top><img src='https://www.manhattancourierservice.com/wp-content/themes/cargo/img/Manhattan_Courier_Logo.png' alt='manhattancourierservice.com'></td></tr>";
-					$mailBody .= "<tr><td><table width='100%'><tr align=center><td valign=top><a href='https://www.manhattancourierservice.com/quick-quote/' title='Quick Quote'>QUICK QUOTE</a> | <a href='https://www.manhattancourierservice.com/quick-quote/' title='Special Quote'>SPECIAL QUOTE</a> | <a href='https://www.a1express.com/register.asp' title='Open an Account'>OPEN ACCOUNT</a> | <a href='https://www.manhattancourierservice.com/new-account/' title='Order Now'>ORDER NOW</a> | <a href='hhttps://www.manhattancourierservice.com' title='About us'>ABOUT US</a> | <a href='https://www.manhattancourierservice.com/new-account/' title='Tracking'>TRACKING</a> | <a href='https://www.manhattancourierservice.com/services/' title='Services'>SERVICES</a></td></tr></table></td></tr>";
-					$mailBody .= "<tr align=center><td valign=top><font color=#50A21E size=8>Save Time & Gas</font></td></tr>";
-					$mailBody .= "<tr align=center><td valign=top><a href='https://www.manhattancourierservice.com/new-account/' title='Order Now'><img src='https://www.manhattancourierservice.com/wp-content/themes/cargo/img/Manhattan_Special.png' border=0 alt='Order Now and get $5.00 off'></a></td></tr>";
-					$mailBody .= "<tr align=center><td><font color=#50A21E>You recently requested a same day courier service quote at manhattancourierservice.com.  Place an order for your<br>1st courier delivery within the next 7 days and get $5 off with the coupon code MCS100X.<br><br>If you place an order online; place the code in the reference field on the order form and $5.00 will be<br>deducted from the order before final charges.</font></td></tr>";
-					$mailBody .= "<tr><td><table width='100%' bgcolor=#0A8C3B><tr align=center><td><font color=#FFFFFF>Manhattan Courier Service | (800) 469-0929 | 153 West 27th St | New York, NY | 10001</font></td valign=right><td></td></tr></table></td></tr>";
-					$mailBody .= "<tr><td>If you would like to unsubscribe and stop receiving these emails <a href=mailto:lisa@a1express.com?subject=Unsubscribe%20to%20Manhattan%20QuickQuotes>click here</a></td></tr>";
-					$mailBody .= "</td></tr></table></body></html>";
+						$ch = curl_init();
+						curl_setopt($ch, CURLOPT_URL, $solve360Url);
+						curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+						curl_exec($ch);
+						curl_close($ch);
 
-					$headers  = 'MIME-Version: 1.0' . "\r\n";
-					$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-					$headers .= 'To: ' . $email . "\r\n";
-					$headers .= 'From: Manhattan Courier Service <lisa@a1express.com>' . "\r\n";
+						$mailBody = "<HTML><head></head><body><table width=800>";
+						$mailBody .= "<tr><td valign=top><img src='https://www.manhattancourierservice.com/wp-content/themes/cargo/img/Manhattan_Courier_Logo.png' alt='manhattancourierservice.com'></td></tr>";
+						$mailBody .= "<tr><td><table width='100%'><tr align=center><td valign=top><a href='https://www.manhattancourierservice.com/quick-quote/' title='Quick Quote'>QUICK QUOTE</a> | <a href='https://www.manhattancourierservice.com/new-account/' title='Order Now'>ORDER NOW</a> | <a href='hhttps://www.manhattancourierservice.com' title='About us'>ABOUT US</a> | <a href='https://www.manhattancourierservice.com/services/' title='Services'>SERVICES</a></td></tr></table></td></tr>";
+						$mailBody .= "<tr align=center><td valign=top><font color=#50A21E size=8>Save Time & Gas</font></td></tr>";
+						$mailBody .= "<tr align=center><td valign=top><a href='https://www.manhattancourierservice.com/new-account/' title='Order Now'><img src='https://www.manhattancourierservice.com/wp-content/themes/cargo/img/Manhattan_Special.png' border=0 alt='Order Now and get $5.00 off'></a></td></tr>";
+						$mailBody .= "<tr align=center><td><font color=#50A21E>You recently requested a same day courier service quote at manhattancourierservice.com.  Place an order for your<br>1st courier delivery within the next 7 days and get $5 off with the coupon code MCS100X.<br><br>If you place an order online; place the code in the reference field on the order form and $5.00 will be<br>deducted from the order before final charges.</font></td></tr>";
+						$mailBody .= "<tr><td><table width='100%' bgcolor=#0A8C3B><tr align=center><td><font color=#FFFFFF>Manhattan Courier Service | (800) 469-0929 | 153 West 27th St | New York, NY | 10001</font></td valign=right><td></td></tr></table></td></tr>";
+						$mailBody .= "<tr><td>If you would like to unsubscribe and stop receiving these emails <a href=mailto:lisa@a1express.com?subject=Unsubscribe%20to%20Manhattan%20QuickQuotes>click here</a></td></tr>";
+						$mailBody .= "</td></tr></table></body></html>";
 
-					$r = mail($email, "ManhattanCourierService QuickQuote", $mailBody, $headers);
+						$headers  = 'MIME-Version: 1.0' . "\r\n";
+						$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+						$headers .= 'To: ' . $email . "\r\n";
+						$headers .= 'From: Manhattan Courier Service <lisa@a1express.com>' . "\r\n";
+
+						$r = mail($email, "ManhattanCourierService QuickQuote", $mailBody, $headers);
+					}
+					else if ( DomainManager::IsProficientLogisticDomain() )
+					{
+						$params = "?origin=" . $origin . "&destination=" . $destination . "&pieces=" . $pieces . "&weight=" . $weight . "&date=" . $date . "&track2=" . $time . "&jumpMenu=" . $ampm . "&email=" . $email . "&jumpMenu2=" . $vehicle . "&optin=" . $foptin;
+						$solve360Url = "http://www.webicise.com/Solve360/Proficient/QuickQuote/Solve360ContactSave.php" . $params;
+
+						$ch = curl_init();
+						curl_setopt($ch, CURLOPT_URL, $solve360Url);
+						curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+						curl_exec($ch);
+						curl_close($ch);
+
+						$mailBody = "<HTML><head></head><body><table width=800>";
+						$mailBody .= "<tr><td valign=top><img src='https://www.proficientlogistic.com/wp-content/themes/cargo/img/Proficient_Logistic_Logo.png' alt='proficientlogistic.com'></td></tr>";
+						$mailBody .= "<tr><td><table width='100%'><tr align=center><td valign=top><a href='https://www.proficientlogistic.com/quick-quote/' title='Quick Quote'>QUICK QUOTE</a> | <a href='https://www.proficientlogistic.com/order-form/' title='Order Now'>ORDER NOW</a> | <a href='https://www.proficientlogistic.com/services/' title='Services'>SERVICES</a></td></tr></table></td></tr>";
+						$mailBody .= "<tr align=center><td valign=top><font color=#50A21E size=8>Save Time & Gas</font></td></tr>";
+						$mailBody .= "<tr align=center><td valign=top><a href='https://www.proficientlogistic.com/order-form/' title='Order Now'><img src='https://www.proficientlogistic.com/wp-content/themes/cargo/img/Proficient_Special.png' border=0 alt='Order Now and get $5.00 off'></a></td></tr>";
+						$mailBody .= "<tr align=center><td><font color=#50A21E>You recently requested a same day courier service quote at proficientlogistic.com.  Place an order for your<br>1st courier delivery within the next 7 days and get $5 off with the coupon code PL100X.<br><br>If you place an order online; place the code in the reference field on the order form and $5.00 will be<br>deducted from the order before final charges.</font></td></tr>";
+						$mailBody .= "<tr><td><table width='100%' bgcolor=#0A8C3B><tr align=center><td><font color=#FFFFFF>Proficient Logistic| (859) 300-3880 | 351 United Court | Lexington KY | 40509 </font></td valign=right><td></td></tr></table></td></tr>";
+						$mailBody .= "<tr><td>If you would like to unsubscribe and stop receiving these emails <a href=mailto:lisa@a1express.com?subject=Unsubscribe%20to%20Proficient%20QuickQuotes>click here</a></td></tr>";
+						$mailBody .= "</td></tr></table></body></html>";
+
+						$headers  = 'MIME-Version: 1.0' . "\r\n";
+						$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+						$headers .= 'To: ' . $email . "\r\n";
+						$headers .= 'From: Proficient Logistic <lisa@a1express.com>' . "\r\n";
+
+						$r = mail($email, "ProficientLogistic QuickQuote", $mailBody, $headers);
+					}
+					else if ( DomainManager::IsExpressWayCourierDomain() )
+					{
+						$params = "?origin=" . $origin . "&destination=" . $destination . "&pieces=" . $pieces . "&weight=" . $weight . "&date=" . $date . "&track2=" . $time . "&jumpMenu=" . $ampm . "&email=" . $email . "&jumpMenu2=" . $vehicle . "&optin=" . $foptin;
+						$solve360Url = "http://www.webicise.com/Solve360/Proficient/QuickQuote/Solve360ContactSave.php" . $params;
+
+						$ch = curl_init();
+						curl_setopt($ch, CURLOPT_URL, $solve360Url);
+						curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+						curl_exec($ch);
+						curl_close($ch);
+
+						$mailBody = "<HTML><head></head><body><table width=800>";
+						$mailBody .= "<tr><td valign=top><img src='https://www.proficientlogistic.com/wp-content/themes/cargo/img/Proficient_Logistic_Logo.png' alt='proficientlogistic.com'></td></tr>";
+						$mailBody .= "<tr><td><table width='100%'><tr align=center><td valign=top><a href='https://www.proficientlogistic.com/quick-quote/' title='Quick Quote'>QUICK QUOTE</a> | <a href='https://www.proficientlogistic.com/order-form/' title='Order Now'>ORDER NOW</a> | <a href='https://www.proficientlogistic.com/services/' title='Services'>SERVICES</a></td></tr></table></td></tr>";
+						$mailBody .= "<tr align=center><td valign=top><font color=#50A21E size=8>Save Time & Gas</font></td></tr>";
+						$mailBody .= "<tr align=center><td valign=top><a href='https://www.proficientlogistic.com/order-form/' title='Order Now'><img src='https://www.proficientlogistic.com/wp-content/themes/cargo/img/Proficient_Special.png' border=0 alt='Order Now and get $5.00 off'></a></td></tr>";
+						$mailBody .= "<tr align=center><td><font color=#50A21E>You recently requested a same day courier service quote at proficientlogistic.com.  Place an order for your<br>1st courier delivery within the next 7 days and get $5 off with the coupon code PL100X.<br><br>If you place an order online; place the code in the reference field on the order form and $5.00 will be<br>deducted from the order before final charges.</font></td></tr>";
+						$mailBody .= "<tr><td><table width='100%' bgcolor=#0A8C3B><tr align=center><td><font color=#FFFFFF>Proficient Logistic| (859) 300-3880 | 351 United Court | Lexington KY | 40509 </font></td valign=right><td></td></tr></table></td></tr>";
+						$mailBody .= "<tr><td>If you would like to unsubscribe and stop receiving these emails <a href=mailto:lisa@a1express.com?subject=Unsubscribe%20to%20Proficient%20QuickQuotes>click here</a></td></tr>";
+						$mailBody .= "</td></tr></table></body></html>";
+
+						$headers  = 'MIME-Version: 1.0' . "\r\n";
+						$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+						$headers .= 'To: ' . $email . "\r\n";
+						$headers .= 'From: Proficient Logistic <lisa@a1express.com>' . "\r\n";
+
+						$r = mail($email, "ProficientLogistic QuickQuote", $mailBody, $headers);
+					}
 				}
 			?>
 

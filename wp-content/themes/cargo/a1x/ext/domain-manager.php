@@ -3,6 +3,7 @@
 class DomainManager {
     const DOMAIN_MANHATTAN_COURIER_SERVICE = "manhattancourierservice.com";
     const DOMAIN_PROFICIENT_LOGISTIC = "proficientlogistic.com";
+    const DOMAIN_EXPRESS_WAY_COURIER = "expresswaycourier.com";
 
     public static function IsManhattanCourierServiceDomain()
     {
@@ -18,6 +19,13 @@ class DomainManager {
         return $domain == self::DOMAIN_PROFICIENT_LOGISTIC || strpos( $domain, self::DOMAIN_PROFICIENT_LOGISTIC ) !== false;
     }
 
+    public static function IsExpressWayCourierDomain()
+    {
+        $domain = self;:self::GetCurrentDomain();
+
+        return $domain == self::DOMAIN_EXPRESS_WAY_COURIER || strpos( $domain, self::DOMAIN_EXPRESS_WAY_COURIER ) !== false;
+    }
+
     public static function IsLocalhostDomain()
     {
         $domain = self::GetCurrentDomain();
@@ -31,7 +39,7 @@ class DomainManager {
         return isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '';
     }
 
-    public static function GetVariable($manhattanVariable, $proficientVariable, $localhostVariable, $defaultVariable = '')
+    public static function GetVariable($manhattanVariable, $proficientVariable, $expressVariable, $localhostVariable, $defaultVariable = '')
     {
         $variable = $defaultVariable;
 
@@ -39,14 +47,11 @@ class DomainManager {
             $variable = $manhattanVariable;
         else if ( self::IsProficientLogisticDomain() )
             $variable = $proficientVariable;
+        else if ( self::IsExpressWayCourierDomain() )
+            $variable = $expressVariable;
         else if ( self::IsLocalhostDomain() )
             $variable = $localhostVariable;
 
         return $variable;
-    }
-
-    public static function EchoVariable($manhattanVariable, $proficientVariable, $localhostVariable, $defaultVariable = '')
-    {
-        echo self::GetVariable($manhattanVariable, $proficientVariable, $localhostVariable, $defaultVariable);
     }
 }
