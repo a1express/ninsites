@@ -21,7 +21,7 @@ class DomainManager {
 
     public static function IsExpressWayCourierDomain()
     {
-        $domain = self;:self::GetCurrentDomain();
+        $domain = self::GetCurrentDomain();
 
         return $domain == self::DOMAIN_EXPRESS_WAY_COURIER || strpos( $domain, self::DOMAIN_EXPRESS_WAY_COURIER ) !== false;
     }
