@@ -10,7 +10,8 @@
 
 	wp_head();
 
-	DomainManager::GetCurrentDomain();
+	DomainManager::EchoVariable('m', 'p', 'l');
+	die();
 	
 	?>
 
