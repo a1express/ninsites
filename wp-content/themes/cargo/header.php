@@ -12,77 +12,6 @@
 	
 	?>
 
-	<style type="text/css">
-		body.page-id-1739 .btContent { text-align: center; }
-		body.page-id-1739 .btContent table {
-			display: block;
-			margin: 0px auto;
-			width: 660px;
-		}
-		body.page-id-1739 .btContent table tbody,
-		body.page-id-1739 .btContent table tr,
-		body.page-id-1739 .btContent table td {
-			display: block;
-		}
-		body.page-id-1739 .btContent table iframe { height: 1360px !important; }
-		.mainHeader .btCurveHeader .btCurveHolder { max-width: none; }
-		.mainHeader .btCurveHeader .btCurveLeftHolder,
-		.mainHeader .btCurveHeader .btCurveRightHolder {
-			background: #fff;
-			height: 20px;
-			overflow: hidden;
-		}
-
-		.btIconImageRow { display: none; }
-		.btIconImageRow.active { display: block; }
-
-		.banner-qq label {
-			display: inline-block;
-			vertical-align: middle;
-			margin: 0px 5px;
-		}
-		.banner-qq input {
-			display: inline-block;
-			vertical-align: middle;
-			width: 100px;
-			text-align: center;
-			margin: 0px 5px;
-			color: #333 !important;
-			padding: 0px;
-			height: 35px;
-		}
-		.banner-qq .submit-button {  
-			border: 0px none;
-			-webkit-appearance: none;
-			text-transform: uppercase;
-			font-weight: 700;
-			padding: 5px 20px;
-			cursor: pointer;
-			color: #fff;
-			background: #272bf7;
-			border-radius: 2px;
-			border: 1px solid transparent;
-			transition: all 300ms linear;
-			display: inline-block;
-			vertical-align: middle;
-			margin: 0px 5px;
-		}
-		.banner-qq .submit-button:hover {
-			color: #272bf7;
-			background: #fff;
-			border: 1px solid #aaa;
-			box-shadow: 0px 0px 5px #ccc;
-		}
-
-		@media screen and (max-width: 767px) {
-    		.banner-qq label, .banner-qq input, .banner-qq button {
-    			display: block;
-    			text-align: center;
-    			margin: 0px auto 10px;
-    		}
-		}
-	</style>
-
 	<script type="text/javascript">
 		(function($) {
 			$(document).ready(function(){
@@ -115,6 +44,8 @@
 <div class="btPageWrap" id="top">
 	
     <header class="mainHeader btClear">
+		<h1 id="seo-bar"><?php echo SeoBar::GetMessage(get_queried_object_id()); ?></h1>
+
 		<?php if ( ! bt_get_option( 'top_tools_in_menu' ) ) echo bt_top_bar_html("top"); ?>
         <div class="port">
 			<div class="menuHolder btClear">

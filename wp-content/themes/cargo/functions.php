@@ -1,5 +1,9 @@
 <?php
 
+define( 'WP_POST_REVISIONS', 10 );
+
+include "a1x/ext/seo-bar.php";
+
 if ( ! class_exists( 'CargoTheme' ) ) {
 	
 	class CargoTheme {
@@ -223,6 +227,7 @@ if ( ! class_exists( 'CargoTheme' ) ) {
 				wp_add_inline_style( 'bt_style_css', $css_override );
 			}
 
+			wp_enqueue_style( 'a1x_custom', get_stylesheet_directory_uri() . '/custom.css', array(), time() );
 		}
 		
 		/**
