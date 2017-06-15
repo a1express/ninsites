@@ -123,8 +123,9 @@
 .how-it-works .step:first-child figure img { width: 500px; }
 .how-it-works .step:first-child .content {
     float: right;
-    margin-top: 140px;
+    margin-top: 110px;
 }
+.how-it-works .step:first-child .content .point { margin-top: 15px; }
 
 .how-it-works .step:nth-child(2) { margin-bottom: 230px; }
 .how-it-works .step:nth-child(2) figure {
