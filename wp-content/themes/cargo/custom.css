@@ -136,3 +136,8 @@
 
 .how-it-works .step:nth-child(3) figure { margin: 0px 70px 0px 100px; }
 .how-it-works .step:nth-child(3) .content { margin-top: 120px; }
+
+.btQuoteBooking .btContactNext {
+    color: #fff !important;
+    background: #999 !important;
+}
