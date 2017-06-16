@@ -47,6 +47,8 @@
 
 					imageRow.addClass("active");
 				});
+
+				$("input.btContactAddress").attr('placeholder', 'Company')
 			});
 		})( jQuery );
 	</script>
