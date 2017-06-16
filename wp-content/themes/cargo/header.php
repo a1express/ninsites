@@ -48,7 +48,16 @@
 					imageRow.addClass("active");
 				});
 
-				$("input.btContactAddress").attr('placeholder', 'Company')
+				$("input.btContactAddress").attr('placeholder', 'Company');
+
+				$('img[src*="luggage"]').each(function(){
+					var img = $(this);
+					var row = img.parents(".boldRow").eq(0);
+
+					$(window).on("load resize", function(){
+						img.width( row.width() - 20 ).css('max-width', 'none');
+					});
+				});
 			});
 		})( jQuery );
 	</script>
