@@ -28,6 +28,30 @@
                         alert('Please enter the destination ZIP');
                         return false;
                     }
+
+                    if ( $.trim( form.find('input[name=pieces]').val() ) == '' || isNaN( $.trim( form.find('input[name=pieces]').val() ) ) )
+                    {
+                        alert('Please enter the pieces #');
+                        return false;
+                    }
+
+                    if ( $.trim( form.find('input[name=weight]').val() ) == '' || isNaN( $.trim( form.find('input[name=weight]').val() ) ) )
+                    {
+                        alert('Please enter the weight');
+                        return false;
+                    }
+
+                    if ( $.trim( form.find('input[name=date]').val() ) == '' )
+                    {
+                        alert('Please select the date');
+                        return false;
+                    }
+
+                    if ( $.trim( form.find('input[name=track2]').val() ) == '' )
+                    {
+                        alert('Please enter the time');
+                        return false;
+                    }
                 });
             });
 

@@ -142,7 +142,7 @@
 }
 
 /* Quick Quote */
-#qq-holder { padding: 50px 0px 200px; }
+#qq-holder { padding: 50px 0px; }
 #qq-holder form .formfield { margin-bottom: 30px; }
 #qq-holder form .formfield:after {
     content: "";
