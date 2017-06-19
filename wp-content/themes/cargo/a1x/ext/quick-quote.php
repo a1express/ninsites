@@ -4,7 +4,11 @@ class QuickQuote {
     public static function Init($content) {
         $pageId = get_queried_object_id();
 
-        if ( ( DomainManager::IsManhattanCourierServiceDomain() || DomainManager::IsLocalhostDomain() ) && ( $pageId == 76 || $pageId == 1765 ) )
+        if  (
+                ( ( DomainManager::IsManhattanCourierServiceDomain() || DomainManager::IsLocalhostDomain() ) && ( $pageId == 76 || $pageId == 1765 ) )
+                && ( DomainManager::IsProficientLogisticDomain() && ( $pageId == 2399 || $pageId == 2344 ) )
+                && ( DomainManager::IsExpressWayCourierDomain() && ( $pageId == 1682 || $pageId == 1711 ) )
+            )
         {
             ob_start();
             get_template_part( "a1x/templates/quick-quote" );
