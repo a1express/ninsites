@@ -52,6 +52,8 @@
                         alert('Please enter the time');
                         return false;
                     }
+
+                    $('#btPreloader').removeClass("removePreloader");
                 });
             });
 
