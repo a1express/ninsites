@@ -5,7 +5,8 @@ define( 'WP_POST_REVISIONS', 10 );
 include "a1x/ext/domain-manager.php";
 include "a1x/ext/seo-bar.php";
 include "a1x/ext/how-it-works.php";
-include"a1x/ext/quick-quote.php";
+include "a1x/ext/quick-quote.php";
+include "a1x/ext/air-freight.php";
 
 if ( ! class_exists( 'CargoTheme' ) ) {
 	

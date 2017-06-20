@@ -229,13 +229,7 @@
 
             if ( DomainManager::IsManhattanCourierServiceDomain() )
             {
-                $solve360Url = "http://www.webicise.com/Solve360/Manhattan/QuickQuote/Solve360ContactSave.php" . $params;
-
-                $ch = curl_init();
-                curl_setopt($ch, CURLOPT_URL, $solve360Url);
-                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                curl_exec($ch);
-                curl_close($ch);
+                Solve360::Call("http://www.webicise.com/Solve360/Manhattan/QuickQuote/Solve360ContactSave.php", $params);
 
                 $mailBody = "<HTML><head></head><body><table width=800>";
                 $mailBody .= "<tr><td valign=top><img src='https://www.manhattancourierservice.com/wp-content/themes/cargo/img/Manhattan_Courier_Logo.png' alt='manhattancourierservice.com'></td></tr>";
@@ -253,13 +247,7 @@
             }
             else if ( DomainManager::IsProficientLogisticDomain() )
             {
-                $solve360Url = "http://www.webicise.com/Solve360/Proficient/QuickQuote/Solve360ContactSave.php" . $params;
-
-                $ch = curl_init();
-                curl_setopt($ch, CURLOPT_URL, $solve360Url);
-                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                curl_exec($ch);
-                curl_close($ch);
+                Solve360::Call("http://www.webicise.com/Solve360/Proficient/QuickQuote/Solve360ContactSave.php", $params);
 
                 $mailBody = "<HTML><head></head><body><table width=800>";
                 $mailBody .= "<tr><td valign=top><img src='https://www.proficientlogistic.com/wp-content/themes/cargo/img/Proficient_Logistic_Logo.png' alt='proficientlogistic.com'></td></tr>";
@@ -277,13 +265,7 @@
             }
             else if ( DomainManager::IsExpressWayCourierDomain() )
             {
-                $solve360Url = "http://www.webicise.com/Solve360/ExpressWay/QuickQuote/Solve360ContactSave.php" . $params;
-
-                $ch = curl_init();
-                curl_setopt($ch, CURLOPT_URL, $solve360Url);
-                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                curl_exec($ch);
-                curl_close($ch);
+                Solve360::Call("http://www.webicise.com/Solve360/ExpressWay/QuickQuote/Solve360ContactSave.php", $params);
 
                 $mailBody = "<HTML><head></head><body><table width=800>";
                 $mailBody .= "<tr><td valign=top><img src='http://www.expresswaycourier.com/wp-content/themes/cargo/img/Expressway_Logo.png' alt='expresswaycourier.com'></td></tr>";
