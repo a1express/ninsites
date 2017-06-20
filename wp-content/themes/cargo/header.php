@@ -75,7 +75,7 @@
 	</script>
 </head>
 
-<body <?php body_class( bt_get_body_class() ); ?> id="btBody">
+<body <?php body_class( bt_get_body_class() . ' ' . get_bloginfo('siteurl') ); ?> id="btBody">
 
 <?php echo bt_preloader_html(); ?>
 
