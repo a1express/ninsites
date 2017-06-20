@@ -1,5 +1,5 @@
 #seo-bar {
-    background: #272bf7;
+    background: #2a868f;
     color: #fff;
     text-transform: none;
     border: 0 none;
@@ -11,6 +11,10 @@
     padding: 0;
     text-align: center;
 }
+
+.manhattancourierservice-site #seo-bar { background: #2a868f; }
+.proficientlogistic-site #seo-bar { background: #2a868f; }
+.expresswaycourier-site #seo-bar { background: #2a868f; }
 
 .mainHeader .btCurveHeader .btCurveHolder { max-width: none; }
 .mainHeader .btCurveHeader .btCurveLeftHolder,
