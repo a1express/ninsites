@@ -26,7 +26,8 @@
 		body.page-id-<?php echo $iframePage; ?> .btContent table iframe { height: 1360px !important; }
 
 		<?php $iframePage2 = DomainManager::GetVariable(2188, 2532, 1746, 1739); ?>
-		body.page-id-<?php echo $iframePage2; ?> .btContent { text-align: center; }
+		body.page-id-<?php echo $iframePage2; ?> .btContent,
+		body.page-id-<?php echo $iframePage2; ?> .btContent h3 { text-align: center; }
 		body.page-id-<?php echo $iframePage2; ?> .btContent table {
 			display: block;
 			margin: 0px auto;
