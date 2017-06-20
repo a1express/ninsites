@@ -6,7 +6,7 @@ include "a1x/ext/domain-manager.php";
 include "a1x/ext/seo-bar.php";
 include "a1x/ext/how-it-works.php";
 include "a1x/ext/quick-quote.php";
-include "a1x/ext/air-freight.php";
+include "a1x/ext/solve-360.php";
 
 if ( ! class_exists( 'CargoTheme' ) ) {
 	
