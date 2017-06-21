@@ -46,11 +46,6 @@ class Solve360 {
             }
             $params = trim($params, '&');
 
-            echo $url . $params;
-
-
-            die('here');
-
             self::Call( $url, $params );
         }
     }
