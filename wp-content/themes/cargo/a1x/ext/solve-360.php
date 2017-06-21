@@ -16,7 +16,8 @@ class Solve360 {
                 'firstname' => '',
                 'lastname' => '',
                 'businessemail' => '',
-                'businessphonedirect' => ''
+                'businessphonedirect' => '',
+                'message' => ''
             );
             $params = '?';
 
@@ -28,10 +29,14 @@ class Solve360 {
                     $data['businessphonedirect'] = $value;
                 else if ( $key == 'address' )
                     $data['company'] = $value;
+                else if ( $key == 'message' )
+                    $data['message'] = $value;
                 else if ( $key == 'name' )
                 {
-                    $data['firstname'] = $value;
-                    $data['lastname'] = $value;
+                    $namePieces = explode(' ', str_replace('  ', '', trim($value)));
+
+                    $data['firstname'] = isset($namePieces[0]) ? $namePieces[0] : '';
+                    $data['lastname'] = isset($namePieces[1]) ? $namePieces[1] : '';
                 }
             }
 
