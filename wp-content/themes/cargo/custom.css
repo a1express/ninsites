@@ -39,7 +39,7 @@ body.page-layout-iframe .btContent table iframe { height: 1360px !important; }
 
 /* Tracking pages */
 body.page-layout-tracking .btContent .col-sm-6 { width: 600px; max-width: 100%; float: none; margin: 0px auto; }
-body.page-layout-tracking .btContent .col-sm-6 td.green { font-size: 30px; font-weight: 500; }
+body.page-layout-tracking .btContent .col-sm-6 td.green { font-size: 30px; font-weight: 500; font-family: Cabin; text-transform: uppercase; }
 /* End tracking pages */
 
 .banner-qq label {
