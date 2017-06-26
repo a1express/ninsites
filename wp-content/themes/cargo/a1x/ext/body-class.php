@@ -8,6 +8,10 @@ class BodyClass {
         if ( strpos( $page->post_content, '<iframe' ) !== false && strpos( $page->post_content, '.e-courier.com/' ) !== false )
             $classes[] = 'page-layout-iframe';
 
+        // Class for tracking pages layout
+        if ( strpos( $page->post_content, '<form' ) !== false && strpos( $page->post_content, '.e-courier.com/' ) !== false && strpos( $page->post_content, 'Wizard_tracking.asp' ) !== false )
+            $classes[] = 'page-layout-tracking';
+
         // Site specific class
         $classes[] = str_replace( array( 'http://', 'https://', '.com', 'www.' ), '', get_bloginfo('siteurl') ) . '-site';
 
