@@ -12,33 +12,6 @@
 
 	?>
 
-	<style type="text/css">
-		<?php $iframePage = DomainManager::GetVariable(1739, 2332, 1719, 1739); ?>
-		body.page-id-<?php echo $iframePage; ?> .btContent { text-align: center; }
-		body.page-id-<?php echo $iframePage; ?> .btContent table {
-			display: block;
-			margin: 0px auto;
-			width: 660px;
-		}
-		body.page-id-<?php echo $iframePage; ?> .btContent table tbody,
-		body.page-id-<?php echo $iframePage; ?> .btContent table tr,
-		body.page-id-<?php echo $iframePage; ?> .btContent table td { display: block; }
-		body.page-id-<?php echo $iframePage; ?> .btContent table iframe { height: 1360px !important; }
-
-		<?php $iframePage2 = DomainManager::GetVariable(2188, 2532, 1746, 1739); ?>
-		body.page-id-<?php echo $iframePage2; ?> .btContent,
-		body.page-id-<?php echo $iframePage2; ?> .btContent h3 { text-align: center; }
-		body.page-id-<?php echo $iframePage2; ?> .btContent table {
-			display: block;
-			margin: 0px auto;
-			width: 660px;
-		}
-		body.page-id-<?php echo $iframePage2; ?> .btContent table tbody,
-		body.page-id-<?php echo $iframePage2; ?> .btContent table tr,
-		body.page-id-<?php echo $iframePage2; ?> .btContent table td { display: block; }
-		body.page-id-<?php echo $iframePage2; ?> .btContent table iframe { height: 1360px !important; }
-	</style>
-
 	<script type="text/javascript">
 		(function($) {
 			$(document).ready(function(){

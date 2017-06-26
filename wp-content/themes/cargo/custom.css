@@ -27,6 +27,16 @@
 .btIconImageRow { display: none; }
 .btIconImageRow.active { display: block; }
 
+/* Iframe pages */
+body.page-layout-iframe .btContent { text-align: center; }
+body.page-layout-iframe .btContent h3 { text-align: center; }
+body.page-layout-iframe .btContent table { display: block; margin: 0px auto; width: 660px; }
+body.page-layout-iframe .btContent table tbody,
+body.page-layout-iframe .btContent table tr,
+body.page-layout-iframe .btContent table td { display: block; }
+body.page-layout-iframe .btContent table iframe { height: 1360px !important; }
+/* End iframe pages */
+
 .banner-qq label {
     display: inline-block;
     vertical-align: middle;
