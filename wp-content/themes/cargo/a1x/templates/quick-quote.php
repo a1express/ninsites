@@ -267,7 +267,7 @@
             }
             else if ( DomainManager::IsExpressWayCourierDomain() )
             {
-                Solve360::Call("http://www.webicise.com/Solve360/ExpressWay/QuickQuote/Solve360ContactSave.php", $params);
+                Solve360::Call("http://www.webicise.com/Solve360/Expressway/QuickQuote/Solve360ContactSave.php", $params);
 
                 $mailBody = "<HTML><head></head><body><table width=800>";
                 $mailBody .= "<tr><td valign=top><img src='http://www.expresswaycourier.com/wp-content/themes/cargo/img/Expressway_Logo.png' alt='expresswaycourier.com'></td></tr>";
