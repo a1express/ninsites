@@ -422,7 +422,7 @@
                         $xml_post_string = sprintf('<SOAP:Envelope xmlns:SOAP="https://schemas.xmlsoap.org/soap/envelope/">
 																<SOAP:Body UserGUID="%s">
 																	<m:QuoteOrder xmlns:m="https://www.e-courier.com/schemas/" WebSite="Expressway">
-																		<m:Order Weight="%s" Pieces="%s" VehicleTypeID="%s" CustomerCode="A1XQUOTE">
+																		<m:Order Weight="%s" Pieces="%s" VehicleTypeID="%s" CustomerCode="52">
 																			<Stops>
 																				<Stop Sequence="1" Zip="%s" ScheduledDateTime ="%s %s %s"/>
 																				<Stop Sequence="2" Zip="%s"/>
