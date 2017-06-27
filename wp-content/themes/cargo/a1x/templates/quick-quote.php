@@ -380,8 +380,8 @@
                     {
                         $xml_post_string = '<SOAP:Envelope xmlns:SOAP="https://schemas.xmlsoap.org/soap/envelope/">
 														<SOAP:Body>
-															<m:Login xmlns:m="https://www.e-courier.com/software/schema/public/" UserName="remote" Password="remotequote" HttpReferer
-							="/courier/quickquote.asp" LoginMode="Public" WebSite="a1express"/>
+															<m:Login xmlns:m="https://www.e-courier.com/software/schema/public/" UserName="remoteexw" Password="remotequote" HttpReferer
+							="/courier/quickquote.asp" LoginMode="Public" WebSite="Expressway"/>
 														</SOAP:Body>
 													</SOAP:Envelope>
 													';
@@ -421,7 +421,7 @@
 
                         $xml_post_string = sprintf('<SOAP:Envelope xmlns:SOAP="https://schemas.xmlsoap.org/soap/envelope/">
 																<SOAP:Body UserGUID="%s">
-																	<m:QuoteOrder xmlns:m="https://www.e-courier.com/schemas/" WebSite="a1express">
+																	<m:QuoteOrder xmlns:m="https://www.e-courier.com/schemas/" WebSite="Expressway">
 																		<m:Order Weight="%s" Pieces="%s" VehicleTypeID="%s" CustomerCode="A1XQUOTE">
 																			<Stops>
 																				<Stop Sequence="1" Zip="%s" ScheduledDateTime ="%s %s %s"/>
