@@ -35,6 +35,12 @@ body.page-layout-iframe .btContent table tbody,
 body.page-layout-iframe .btContent table tr,
 body.page-layout-iframe .btContent table td { display: block; }
 body.page-layout-iframe .btContent table iframe { height: 1360px !important; }
+
+body.page-layout-tracking .btContent table.tracking-table { display: block; margin: 0px auto; width: 660px; }
+body.page-layout-tracking .btContent table.tracking-table tbody,
+body.page-layout-tracking .btContent table.tracking-table tr,
+body.page-layout-tracking .btContent table.tracking-table td { display: block; }
+body.page-layout-tracking .btContent table.tracking-table iframe { height: 1360px !important; }
 /* End iframe pages */
 
 /* Tracking pages */

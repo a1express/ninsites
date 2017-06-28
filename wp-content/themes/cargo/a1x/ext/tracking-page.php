@@ -12,11 +12,11 @@ class TrackingPage {
                                         <div class="rowItemContent">
                                             <div class="btText">
                                                 <h3>Quick Track</h3>
-                                                <table width="500" align="center">
+                                                <table width="500" align="center" class="tracking-table">
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <iframe style="width: 100%;" width="687" height="660"></iframe>
+                                                                <iframe style="width: 100%;" width="687" height="660" name="inside-browser"></iframe>
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -32,6 +32,7 @@ class TrackingPage {
 
         if ( strpos( $content, '<form' ) !== false && strpos( $content, '.e-courier.com/' ) !== false && strpos( $content, 'Wizard_tracking.asp' ) !== false )
         {
+            $content = str_replace('<form ', '<form target="inside-browser" ', $content);
             $content = $body . $content;
         }
 
