@@ -27,6 +27,13 @@
 .btIconImageRow { display: none; }
 .btIconImageRow.active { display: block; }
 
+.menuPort nav > ul > li > a.btn-style {
+    padding: 0px 20px;
+    background: #da251d;
+    color: #fff;
+    border-radius: 5px;
+}
+
 /* Iframe pages */
 body.page-layout-iframe .btContent { text-align: center; }
 body.page-layout-iframe .btContent h3 { text-align: center; }

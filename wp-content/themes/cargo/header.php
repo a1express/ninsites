@@ -43,6 +43,13 @@
 						img.width( row.width() - 20 ).css('max-width', 'none');
 					});
 				});
+
+				$('.mainHeader nav a').each(function(){
+					if ( $.trim( $(this).text() ).toLowerCase() == 'login' )
+					{
+						$(this).addClass('btn-style');
+					}
+				});
 			});
 		})( jQuery );
 	</script>
