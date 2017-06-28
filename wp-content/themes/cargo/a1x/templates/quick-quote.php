@@ -288,84 +288,6 @@
 
         <div class="boldRow">
             <div class="rowItemContent">
-                <div class="rowItem col-md-6">
-                    <h3>GET AN INSTANT COURIER QUOTE</h3>
-                    <form method="post" name="quickquote" action="">
-                        <div class="formfield mention">
-                            <label>* Required fields</label>
-                        </div>
-                        <div class="formfield">
-                            <div class="rows2">
-                                <label>*Origin ZIP</label>
-                                <input class="text" name="origin" value="<?php echo isset($_POST['origin']) ? trim($_POST['origin']) : ( isset($_GET['origin']) ? trim($_GET['origin']) : '' ); ?>" id="input-origin" type="text" />
-                            </div>
-                            <div class="rows2">
-                                <label>*Destination ZIP</label>
-                                <input class="text" name="destination" value="<?php echo isset($_POST['destination']) ? $_POST['destination'] : ''; ?>" id="input-destination" type="text" />
-                            </div>
-                        </div>
-                        <div class="formfield">
-                            <div class="rows2">
-                                <label>*No. of  pieces</label>
-                                <input class="text" name="pieces" value="1" type="text" />
-                            </div>
-                            <div class="rows2">
-                                <label>*Weight (LBS)</label>
-                                <input class="text" name="weight" value="1" type="text" />
-                            </div>
-                        </div>
-                        <div class="formfield">
-                            <div class="rows3">
-                                <label>*Ready Date</label>
-                                <input type="text" id="datepicker" name="date" />
-                            </div>
-                            <div class="rows3">
-                                <div class="hasDatepicker2"></div>
-
-                                <label>*Ready Time</label>
-                                <input class="text short" id="track2" name="track2" value="" type="text" />
-                            </div>
-                            <div class="rows3">
-                                <label>&nbsp;</label>
-                                <select class="body short" name="jumpMenu" id="jumpMenu">
-                                    <option value="AM">AM</option>
-                                    <option value="PM">PM</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="formfield">
-                            <div class="rows2">
-                                <label>E-mail Address</label>
-                                <input class="text" name="email" value="" type="text" />
-                            </div>
-                            <div class="rows2">
-                                <label>Vehicle/Service Type</label>
-                                <select name="jumpMenu2" id="jumpMenu2">
-                                    <option value="1" <?php echo $vehicle == '1' ? 'selected="selected"': ''; ?>>Any Vehicle</option>
-                                    <option value="4" <?php echo $vehicle == '4' ? 'selected="selected"': ''; ?>>Car</option>
-                                    <option value="7" <?php echo $vehicle == '7' ? 'selected="selected"': ''; ?>>Sm Cov P/U/Mini Van</option>
-                                    <option value="15" <?php echo $vehicle == '15' ? 'selected="selected"': ''; ?>>Cargo Van</option>
-                                    <option value="30" <?php echo $vehicle == '30' ? 'selected="selected"': ''; ?>>24ft Strt Truck</option>
-                                    <option value="3" <?php echo $vehicle == '3' ? 'selected="selected"': ''; ?>>Bike (Limited)</option>
-                                </select>
-                            </div>
-                        </div>
-                        <button class="submit-button">Get Quote</button>
-                        <button class="submit-button" onclick="location.href='/ship-now/'" type="button">Ship Now</button>
-			<button class="submit-button" onclick="location.href='/new-account/'" type="button">Create an Account</button>
-                    </form>
-                </div>
-            </div>
-
-            <div class="rowItem col-md-6">
-                <div class="rowItemContent">
-                    <div id="map_canvas" style="width: 100%; height:380px; border: 0px none;"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="boldRow">
-            <div class="rowItemContent">
                 <div class="rowItem col-md-12">
                     <?php
                     function parseTime($time)
@@ -388,7 +310,7 @@
                             DomainManager::GetVariable(DomainManager::QQ_MANH_USERNAME, DomainManager::QQ_PROF_USERNAME, DomainManager::QQ_EXPR_USERNAME, DomainManager::QQ_MANH_USERNAME, DomainManager::QQ_MANH_USERNAME),
                             DomainManager::GetVariable(DomainManager::QQ_MANH_PASSWORD, DomainManager::QQ_PROF_PASSWORD, DomainManager::QQ_EXPR_PASSWORD, DomainManager::QQ_MANH_PASSWORD, DomainManager::QQ_MANH_PASSWORD),
                             DomainManager::GetVariable(DomainManager::QQ_MANH_WEBSITE, DomainManager::QQ_PROF_WEBSITE, DomainManager::QQ_EXPR_WEBSITE, DomainManager::QQ_MANH_WEBSITE, DomainManager::QQ_MANH_WEBSITE)
-                            );
+                        );
 
                         function CallSoap($xml_post_string)
                         {
@@ -454,8 +376,6 @@
                     ?>
 
                     <?php if ( isset($orders) ): ?>
-                        <br/><br/>
-
                         <?php if ( count( $orders ) == 0 ): ?>
                             <p>Service is not available via the web for the criteria you have entered. If you have questions, please call our office at (800) 469-0929.</p>
                             <p>
@@ -470,7 +390,7 @@
                                 Orders with after hour ready times may be placed with our office over the phone during regular business hours.
                             </p>
                         <?php else: ?>
-                            <table>
+                            <table class="qq-results">
                                 <tr>
                                     <th>Description</th>
                                     <th>ReadyDateTime</th>
@@ -481,10 +401,21 @@
                                 <?php foreach( $orders as $order ): ?>
                                     <?php $orderAttrs = $order->attributes(); ?>
                                     <tr>
-                                        <td><?php echo $orderAttrs->Description->__toString(); ?></td>
-                                        <td><?php echo parseTime($orderAttrs->ReadyDateTime->__toString()); ?></td>
-                                        <td><?php echo parseTime($orderAttrs->DueDateTime->__toString()); ?></td>
-                                        <td><?php echo $orderAttrs->AmountCharged->__toString(); ?></td>
+                                        <td>
+                                            <div class="mobile-label">Description</div>
+                                            <?php echo $orderAttrs->Description->__toString(); ?></td>
+                                        <td>
+                                            <div class="mobile-label">ReadyDateTime</div>
+                                            <?php echo parseTime($orderAttrs->ReadyDateTime->__toString()); ?>
+                                        </td>
+                                        <td>
+                                            <div class="mobile-label">DueDateTime</div>
+                                            <?php echo parseTime($orderAttrs->DueDateTime->__toString()); ?>
+                                        </td>
+                                        <td>
+                                            <div class="mobile-label">AmountCharged</div>
+                                            <?php echo $orderAttrs->AmountCharged->__toString(); ?>
+                                        </td>
                                     </tr>
                                 <?php endforeach; ?>
                             </table>
@@ -640,6 +571,84 @@
                             </div>
                         <?php endif; ?>
                     <?php endif; ?>
+                </div>
+            </div>
+        </div>
+
+        <div class="boldRow">
+            <div class="rowItemContent">
+                <div class="rowItem col-md-6">
+                    <h3>GET AN INSTANT COURIER QUOTE</h3>
+                    <form method="post" name="quickquote" action="">
+                        <div class="formfield mention">
+                            <label>* Required fields</label>
+                        </div>
+                        <div class="formfield">
+                            <div class="rows2">
+                                <label>*Origin ZIP</label>
+                                <input class="text" name="origin" value="<?php echo isset($_POST['origin']) ? trim($_POST['origin']) : ( isset($_GET['origin']) ? trim($_GET['origin']) : '' ); ?>" id="input-origin" type="text" />
+                            </div>
+                            <div class="rows2">
+                                <label>*Destination ZIP</label>
+                                <input class="text" name="destination" value="<?php echo isset($_POST['destination']) ? $_POST['destination'] : ''; ?>" id="input-destination" type="text" />
+                            </div>
+                        </div>
+                        <div class="formfield">
+                            <div class="rows2">
+                                <label>*No. of  pieces</label>
+                                <input class="text" name="pieces" value="1" type="text" />
+                            </div>
+                            <div class="rows2">
+                                <label>*Weight (LBS)</label>
+                                <input class="text" name="weight" value="1" type="text" />
+                            </div>
+                        </div>
+                        <div class="formfield">
+                            <div class="rows3">
+                                <label>*Ready Date</label>
+                                <input type="text" id="datepicker" name="date" />
+                            </div>
+                            <div class="rows3">
+                                <div class="hasDatepicker2"></div>
+
+                                <label>*Ready Time</label>
+                                <input class="text short" id="track2" name="track2" value="" type="text" />
+                            </div>
+                            <div class="rows3">
+                                <label>&nbsp;</label>
+                                <select class="body short" name="jumpMenu" id="jumpMenu">
+                                    <option value="AM">AM</option>
+                                    <option value="PM">PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="formfield">
+                            <div class="rows2">
+                                <label>E-mail Address</label>
+                                <input class="text" name="email" value="" type="text" />
+                            </div>
+                            <div class="rows2">
+                                <label>Vehicle/Service Type</label>
+                                <select name="jumpMenu2" id="jumpMenu2">
+                                    <option value="1" <?php echo $vehicle == '1' ? 'selected="selected"': ''; ?>>Any Vehicle</option>
+                                    <option value="4" <?php echo $vehicle == '4' ? 'selected="selected"': ''; ?>>Car</option>
+                                    <option value="7" <?php echo $vehicle == '7' ? 'selected="selected"': ''; ?>>Sm Cov P/U/Mini Van</option>
+                                    <option value="15" <?php echo $vehicle == '15' ? 'selected="selected"': ''; ?>>Cargo Van</option>
+                                    <option value="30" <?php echo $vehicle == '30' ? 'selected="selected"': ''; ?>>24ft Strt Truck</option>
+                                    <option value="3" <?php echo $vehicle == '3' ? 'selected="selected"': ''; ?>>Bike (Limited)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="submit-button">Get Quote</button>
+                        <button class="submit-button" onclick="location.href='/ship-now/'" type="button">Ship Now</button>
+			<button class="submit-button" onclick="location.href='/new-account/'" type="button">Create an Account</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="rowItem col-md-6">
+                <div class="rowItemContent">
+                    <div id="map_canvas" style="width: 100%; height:380px; border: 0px none;"></div>
                 </div>
             </div>
         </div>

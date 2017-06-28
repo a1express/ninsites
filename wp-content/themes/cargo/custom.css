@@ -93,11 +93,37 @@ body.page-layout-tracking .btContent .col-sm-6 td.green { font-size: 30px; font-
     box-shadow: 0px 0px 5px #ccc;
 }
 
+.qq-results .mobile-label { display: none; }
+
 @media screen and (max-width: 767px) {
     .banner-qq label, .banner-qq input, .banner-qq button {
         display: block;
         text-align: center;
         margin: 0px auto 10px;
+    }
+
+    .qq-results {
+        display: block;
+        width: 100%;
+    }
+    .qq-results tbody {
+        display: block;
+        border-bottom: 2px solid #555;
+        width: 100%;
+    }
+    .qq-results tr {
+        border-top: 2px solid #555;
+        display: block;
+        width: 100%;
+    }
+    .qq-results tr:first-child { display: none; }
+    .qq-results tr td {
+        display: block;
+        width: 100%;
+    }
+    .qq-results .mobile-label {
+        display: block;
+        font-weight: bold;
     }
 }
 
