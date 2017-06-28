@@ -15,7 +15,7 @@ class TrackingPage {
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <iframe style="width: 100%;" width="687" height="660" name="inside-browser" onload="jQuery(\'#btPreloader\').addClass("removePreloader");"></iframe>
+                                                                <iframe style="width: 100%;" width="687" height="660" name="inside-browser" onload="jQuery(\'#btPreloader\').addClass(\'removePreloader\');"></iframe>
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -31,7 +31,7 @@ class TrackingPage {
 
         if ( strpos( $content, '<form' ) !== false && strpos( $content, '.e-courier.com/' ) !== false && strpos( $content, 'Wizard_tracking.asp' ) !== false )
         {
-            $content = str_replace('<form ', '<form target="inside-browser" onsubmit="jQuery(\'#tracking-results\').show(); jQuery(\'#btPreloader\').removeClass("removePreloader");" ', $content);
+            $content = str_replace('<form ', '<form target="inside-browser" onsubmit="jQuery(\'#tracking-results\').show(); jQuery(\'#btPreloader\').removeClass(\'removePreloader\');" ', $content);
             $content = $content . $body;
         }
 
