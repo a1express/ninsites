@@ -472,6 +472,7 @@
                         <?php else: ?>
                             <table>
                                 <tr>
+                                    <th>Service</th>
                                     <th>Description</th>
                                     <th>ReadyDateTime</th>
                                     <th>DueDateTime</th>
@@ -481,6 +482,7 @@
                                 <?php foreach( $orders as $order ): ?>
                                     <?php $orderAttrs = $order->attributes(); ?>
                                     <tr>
+                                        <td><?php echo $orderAttrs->Service->__toString(); ?></td>
                                         <td><?php echo $orderAttrs->Description->__toString(); ?></td>
                                         <td><?php echo parseTime($orderAttrs->ReadyDateTime->__toString()); ?></td>
                                         <td><?php echo parseTime($orderAttrs->DueDateTime->__toString()); ?></td>
