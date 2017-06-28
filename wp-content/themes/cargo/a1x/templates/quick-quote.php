@@ -378,13 +378,17 @@
 
                     if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
                     {
-                        $xml_post_string = '<SOAP:Envelope xmlns:SOAP="https://schemas.xmlsoap.org/soap/envelope/">
+                        $xml_post_string = sprintf('<SOAP:Envelope xmlns:SOAP="https://schemas.xmlsoap.org/soap/envelope/">
 														<SOAP:Body>
-															<m:Login xmlns:m="https://www.e-courier.com/software/schema/public/" UserName="remoteexw" Password="remotequote" HttpReferer
-							="/courier/quickquote.asp" LoginMode="Public" WebSite="Expressway"/>
+															<m:Login xmlns:m="https://www.e-courier.com/software/schema/public/" UserName="%s" Password="%s" HttpReferer
+							="/courier/quickquote.asp" LoginMode="Public" WebSite="%s"/>
 														</SOAP:Body>
 													</SOAP:Envelope>
-													';
+													',
+                            DomainManager::GetVariable(DomainManager::QQ_MANH_USERNAME, DomainManager::QQ_PROF_USERNAME, DomainManager::QQ_EXPR_USERNAME, DomainManager::QQ_MANH_USERNAME, DomainManager::QQ_MANH_USERNAME),
+                            DomainManager::GetVariable(DomainManager::QQ_MANH_PASSWORD, DomainManager::QQ_PROF_PASSWORD, DomainManager::QQ_EXPR_PASSWORD, DomainManager::QQ_MANH_PASSWORD, DomainManager::QQ_MANH_PASSWORD),
+                            DomainManager::GetVariable(DomainManager::QQ_MANH_WEBSITE, DomainManager::QQ_PROF_WEBSITE, DomainManager::QQ_EXPR_WEBSITE, DomainManager::QQ_MANH_WEBSITE, DomainManager::QQ_MANH_WEBSITE)
+                            );
 
                         function CallSoap($xml_post_string)
                         {
@@ -421,8 +425,8 @@
 
                         $xml_post_string = sprintf('<SOAP:Envelope xmlns:SOAP="https://schemas.xmlsoap.org/soap/envelope/">
 																<SOAP:Body UserGUID="%s">
-																	<m:QuoteOrder xmlns:m="https://www.e-courier.com/schemas/" WebSite="Expressway">
-																		<m:Order Weight="%s" Pieces="%s" VehicleTypeID="%s" CustomerCode="52">
+																	<m:QuoteOrder xmlns:m="https://www.e-courier.com/schemas/" WebSite="%s">
+																		<m:Order Weight="%s" Pieces="%s" VehicleTypeID="%s" CustomerCode="%s">
 																			<Stops>
 																				<Stop Sequence="1" Zip="%s" ScheduledDateTime ="%s %s %s"/>
 																				<Stop Sequence="2" Zip="%s"/>
@@ -430,7 +434,19 @@
 																		</m:Order>
 																	</m:QuoteOrder>
 																</SOAP:Body >
-															</SOAP:Envelope>', $guid, $weight, $pieces, $vehicle, $origin, $date, $time, $ampm, $destination);
+															</SOAP:Envelope>',
+                            $guid,
+                            DomainManager::GetVariable(DomainManager::QQ_MANH_WEBSITE, DomainManager::QQ_PROF_WEBSITE, DomainManager::QQ_EXPR_WEBSITE, DomainManager::QQ_MANH_WEBSITE, DomainManager::QQ_MANH_WEBSITE),
+                            $weight,
+                            $pieces,
+                            $vehicle,
+                            DomainManager::GetVariable(DomainManager::QQ_MANH_CUSTOMER, DomainManager::QQ_PROF_CUSTOMER, DomainManager::QQ_EXPR_CUSTOMER, DomainManager::QQ_MANH_CUSTOMER, DomainManager::QQ_MANH_CUSTOMER),
+                            $origin,
+                            $date,
+                            $time,
+                            $ampm,
+                            $destination
+                        );
 
                         $parser = CallSoap($xml_post_string);
                         $orders = isset($parser->SOAPBody->mQuoteOrderResponse->Order) ? $parser->SOAPBody->mQuoteOrderResponse->Order : array();
