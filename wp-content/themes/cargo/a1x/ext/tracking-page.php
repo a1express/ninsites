@@ -3,7 +3,7 @@
 class TrackingPage {
     public static function RedirectFormToIframe($content) {
 
-        $body = '<section class="boldSection gutter">
+        $body = '<section class="boldSection gutter" id="tracking-results" style="display: none;">
                     <div class="port">
                         <div class="boldCell">
                             <div class="boldCellInner">
@@ -11,7 +11,6 @@ class TrackingPage {
                                     <div class="rowItem col-md-12 col-ms-12  btTextCenter btTopVertical btNoPadding">
                                         <div class="rowItemContent">
                                             <div class="btText">
-                                                <h3>Quick Track</h3>
                                                 <table width="500" align="center" class="tracking-table">
                                                     <tbody>
                                                         <tr>
@@ -32,8 +31,8 @@ class TrackingPage {
 
         if ( strpos( $content, '<form' ) !== false && strpos( $content, '.e-courier.com/' ) !== false && strpos( $content, 'Wizard_tracking.asp' ) !== false )
         {
-            $content = str_replace('<form ', '<form target="inside-browser" ', $content);
-            $content = $body . $content;
+            $content = str_replace('<form ', '<form target="inside-browser" onclick="jQuery(\'tracking-results\').show();" ', $content);
+            $content = $content . $body;
         }
 
         return $content;
