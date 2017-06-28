@@ -5,10 +5,10 @@ class DomainManager {
     const DOMAIN_PROFICIENT_LOGISTIC = "proficientlogistic.com";
     const DOMAIN_EXPRESS_WAY_COURIER = "expresswaycourier.com";
 
-    const QQ_MANH_USERNAME = "remoteexw";
+    const QQ_MANH_USERNAME = "remote";
     const QQ_MANH_PASSWORD = "remotequote";
-    const QQ_MANH_WEBSITE = "Expressway";
-    const QQ_MANH_CUSTOMER = "52";
+    const QQ_MANH_WEBSITE = "a1express";
+    const QQ_MANH_CUSTOMER = "A1XQOUTE";
 
     const QQ_PROF_USERNAME = "remoteexw";
     const QQ_PROF_PASSWORD = "remotequote";
