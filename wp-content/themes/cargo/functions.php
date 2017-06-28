@@ -7,6 +7,7 @@ include "a1x/ext/seo-bar.php";
 include "a1x/ext/how-it-works.php";
 include "a1x/ext/quick-quote.php";
 include "a1x/ext/solve-360.php";
+include "a1x/ext/tracking-page.php";
 include "a1x/ext/body-class.php";
 
 if ( ! class_exists( 'CargoTheme' ) ) {
