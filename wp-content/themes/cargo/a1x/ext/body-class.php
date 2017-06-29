@@ -12,6 +12,10 @@ class BodyClass {
         if ( strpos( $page->post_content, '<form' ) !== false && strpos( $page->post_content, '.e-courier.com/' ) !== false && strpos( $page->post_content, 'Wizard_tracking.asp' ) !== false )
             $classes[] = 'page-layout-tracking';
 
+        // Class for login pages layout
+        if ( strpos( $page->post_content, '<iframe' ) !== false && strpos( $page->post_content, '.e-courier.com/' ) !== false && strpos( $page->post_content, 'home/index.asp' ) !== false )
+            $classes[] = 'page-layout-login';
+
         // Site specific class
         $classes[] = str_replace( array( 'http://', 'https://', '.com', 'www.' ), '', get_bloginfo('siteurl') ) . '-site';
 
