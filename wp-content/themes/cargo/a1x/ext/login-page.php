@@ -24,7 +24,7 @@ class LoginPage {
 
             $body = str_replace( '__action_url__', $action, $body );
 
-            $content = str_replace( 'src="' . $action . '"', '', $body );
+            $content = str_replace( 'src="' . $action . '"', '', $content );
             $content = str_replace('<table width="500" align="center">', $body . '<table width="500" align="center">', $content);
             $content = str_replace('<iframe ', '<iframe name="login-browser" ', $content);
         }
