@@ -15,7 +15,7 @@ class LoginPage {
                     <button class="btBtn btnFilled btContactSubmit">Submit</button>
                 </form>';
 
-        if ( strpos( $content, '<form' ) !== false && strpos( $content, '.e-courier.com/' ) !== false && strpos( $content, '/home/index.asp' ) !== false )
+        if ( strpos( $content, '<iframe' ) !== false && strpos( $content, '.e-courier.com/' ) !== false && strpos( $content, '/home/index.asp' ) !== false )
         {
             $content = str_replace('<table width="500" align="center">', $body . '<table width="500" align="center">', $content);
             $content = $content . $body;
