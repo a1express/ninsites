@@ -21,6 +21,7 @@ class LoginPage {
             $action = substr( $content, strpos( $content, '<iframe ' ) );
             $action = substr( $action, strpos( $action, 'src="' ) + 5 );
             $action = substr( $action, 0, strpos( $action, '"' ) );
+            $action = str_replace( 'index.asp', 'wizard_oe2.asp?UserGUID=', $action );
 
             $body = str_replace( '__action_url__', $action, $body );
 
