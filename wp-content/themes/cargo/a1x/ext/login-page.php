@@ -3,7 +3,7 @@
 class LoginPage {
     public static function ConnectFormToIframe($content) {
 
-        $body = '<form class="btLightSkin btQuoteBooking" style="opacity: 1;">
+        $body = '<form action="__action_url__" method="post" class="btLightSkin btQuoteBooking login-form" onsubmit="jQuery(this).addClass(\'hidden\'); jQuery(\'iframe\').addClass(\'visible\');" target="login-browser">
                     <div class="btQuoteItem btQuoteItemFullWidth">
                         <label>Email address</label>
                         <input type="email" class="form-control" placeholder="Email" />
@@ -17,7 +17,14 @@ class LoginPage {
 
         if ( strpos( $content, '<iframe' ) !== false && strpos( $content, '.e-courier.com/' ) !== false && strpos( $content, '/home/index.asp' ) !== false )
         {
+            $action = substr( $content, strpos( $content, '<iframe' ) );
+            $action = substr( $action, strpos( $action, 'src="' ) + 5 );
+            $action = substr( $action, 0, strpos( $action, '"' ) );
+
+            $body = str_replace( '__action_url__', $action, $body );
+
             $content = str_replace('<table width="500" align="center">', $body . '<table width="500" align="center">', $content);
+            $content = str_replace('<iframe ', '<iframe name="login-browser" ', $content);
             $content = $content . $body;
         }
 
