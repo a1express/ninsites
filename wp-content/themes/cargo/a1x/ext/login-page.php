@@ -2,19 +2,7 @@
 
 class LoginPage {
     public static function ConnectFormToIframe($content) {
-//        target="login-browser"
-
-        $body = '
-
-<form action="https://expressway.e-courier.com/expressway/home/wizard_oe2.asp?UserGUID=" method="post">
-    <input name="Type" value="1" type="hidden">
-    <input name="name" size="12" value="" type="text">
-    <input name="password" size="12" maxlength="50" autocomplete="off" type="password">
-    <input class="Go" value="GO!" name="Go" type="submit">
-</form>
-
-
-<form action="__action_url__" method="post" class="btLightSkin btQuoteBooking login-form" onsubmit="jQuery(this).addClass(\'hidden\'); jQuery(\'iframe\').addClass(\'visible\'); jQuery(\'#btPreloader\').removeClass(\'removePreloader\');">
+        $body = '<form action="__action_url__" method="post" class="btLightSkin btQuoteBooking login-form" onsubmit="jQuery(this).addClass(\'hidden\'); jQuery(\'iframe\').addClass(\'visible\'); jQuery(\'#btPreloader\').removeClass(\'removePreloader\');" target="login-browser">
                     <div class="btQuoteItem btQuoteItemFullWidth">
                         <label>User Name</label>
                         <input type="text" class="form-control" name="name" />

@@ -51,6 +51,7 @@ body.page-layout-tracking .btContent table.tracking-table iframe { height: 800px
 
 body.page-layout-login .login-form { opacity: 1; max-width: 660px; margin: 0px auto 20px; }
 body.page-layout-login .login-form.hidden { display: none; }
+body.page-layout-login .btContent table { width: 100%; }
 body.page-layout-login iframe { display: none; }
 body.page-layout-login iframe.visible { display: block; }
 /* End iframe pages */
