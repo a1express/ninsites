@@ -26,7 +26,7 @@ class LoginPage {
 
             $content = str_replace( 'src="' . $action . '"', '', $content );
             $content = str_replace('<table width="500" align="center">', $body . '<table width="500" align="center">', $content);
-            $content = str_replace('<iframe ', '<iframe name="login-browser" onload="jQuery(\'#btPreloader\').addClass(\'removePreloader\'); ', $content);
+            $content = str_replace('<iframe ', '<iframe name="login-browser" onload="jQuery(\'#btPreloader\').addClass(\'removePreloader\');" ', $content);
         }
 
         return $content;
