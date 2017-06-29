@@ -17,7 +17,7 @@ class LoginPage {
 
         if ( strpos( $content, '<iframe' ) !== false && strpos( $content, '.e-courier.com/' ) !== false && strpos( $content, '/home/index.asp' ) !== false )
         {
-            $action = substr( $content, strpos( $content, '<iframe' ) );
+            $action = substr( $content, strpos( $content, '<iframe ' ) );
             $action = substr( $action, strpos( $action, 'src="' ) + 5 );
             $action = substr( $action, 0, strpos( $action, '"' ) );
 
