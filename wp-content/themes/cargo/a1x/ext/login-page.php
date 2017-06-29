@@ -17,13 +17,12 @@ class LoginPage {
 <form action="__action_url__" method="post" class="btLightSkin btQuoteBooking login-form" onsubmit="jQuery(this).addClass(\'hidden\'); jQuery(\'iframe\').addClass(\'visible\'); jQuery(\'#btPreloader\').removeClass(\'removePreloader\');">
                     <div class="btQuoteItem btQuoteItemFullWidth">
                         <label>User Name</label>
-                        <input type="text" class="form-control" placeholder="name" />
+                        <input type="text" class="form-control" name="name" />
                     </div>
                     <div class="btQuoteItem btQuoteItemFullWidth">
                         <label>Password</label>
-                        <input type="password" class="form-control" placeholder="Password" />
+                        <input type="password" class="form-control" name="Password" />
                     </div>
-                    <input type="hidden" name="Go" value="GO!" />
                     <input name="Type" value="1" type="hidden" />
                     <button class="btBtn btnFilled btContactSubmit">Submit</button>
                 </form>';
