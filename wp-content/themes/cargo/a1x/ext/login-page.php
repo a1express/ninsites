@@ -3,7 +3,7 @@
 class LoginPage {
     public static function ConnectFormToIframe($content) {
 
-        $body = '<form action="__action_url__" method="post" class="btLightSkin btQuoteBooking login-form" onsubmit="jQuery(this).addClass(\'hidden\'); jQuery(\'iframe\').addClass(\'visible\');" target="login-browser">
+        $body = '<form action="__action_url__" method="post" class="btLightSkin btQuoteBooking login-form" onsubmit="jQuery(this).addClass(\'hidden\'); jQuery(\'iframe\').addClass(\'visible\'); jQuery(\'#btPreloader\').removeClass(\'removePreloader\');" target="login-browser">
                     <div class="btQuoteItem btQuoteItemFullWidth">
                         <label>User Name</label>
                         <input type="text" class="form-control" placeholder="name" />
@@ -26,7 +26,7 @@ class LoginPage {
 
             $content = str_replace( 'src="' . $action . '"', '', $content );
             $content = str_replace('<table width="500" align="center">', $body . '<table width="500" align="center">', $content);
-            $content = str_replace('<iframe ', '<iframe name="login-browser" ', $content);
+            $content = str_replace('<iframe ', '<iframe name="login-browser" onload="jQuery(\'#btPreloader\').addClass(\'removePreloader\'); ', $content);
         }
 
         return $content;
