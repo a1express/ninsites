@@ -61,6 +61,46 @@ class Solve360 {
 
         return $r;
     }
+
+    public static function ExtendMessageBody($content) {
+        $js = '<script type="text/javascript">
+                    if ( window.location.pathname == "/services/routes/" )
+                    {
+                        (function($) {
+                            $(".btContactSubmit").on("click", function(){
+                                var textarea = $("textarea");
+                                var initialValue = textarea.val();
+                                
+                                var str = "Pre-Schduled Form: Radius: ";
+                                str = str + $(".btQuoteSliderValue").eq(0).text();
+                                str = str + ", ParcelNumber: ";
+                                str = str + $(".btQuoteSliderValue").eq(1).text();
+                                str = str + ", ParcelType: ";
+                                str = str + $(".ddlabel").eq(0).text();
+                                str = str + ", Before8: ";
+                                str = str + ($(".btQuoteSwitch").hasClass("on") ? "yes" : "no");
+                                str = str + ", Message: " + initialValue;
+
+                                textarea.val( str );
+                                
+                                setTimeout(function(){
+                                    textarea.val( initialValue );
+                                }, 200);
+                            });
+                        })( jQuery );
+                    }
+                </script>';
+
+        $target = '<button type="submit" class="btContactSubmit">Submit</button>';
+
+        if ( strpos( $content, $target ) !== false )
+        {
+            $content = str_replace( $target, $target . $js, $content );
+        }
+
+        return $content;
+    }
 }
 
 add_action( 'init', [ 'Solve360', 'ConnectAirFreight' ], 100000 );
+add_filter( 'the_content', [ 'Solve360', 'ExtendMessageBody' ], 100000 );
