@@ -108,6 +108,39 @@ class Solve360 {
                             });
                         })( jQuery );
                     }
+                    else if ( window.location.pathname == "/services/air-freight/" )
+                    {
+                        (function($) {
+                            $(".btContactSubmit").on("click", function(){
+                                var textarea = $("textarea");
+                                var initialValue = textarea.val();
+                                
+                                var str = "Air Freight Form: Width: ";
+                                str = str + $(".btQuoteText").eq(0).val();
+                                str = str + ", Height: ";
+                                str = str + $(".btQuoteText").eq(1).val();
+                                str = str + ", Length: ";
+                                str = str + $(".btQuoteText").eq(2).val();
+                                str = str + ", OriginDistance: ";
+                                str = str + $(".btQuoteSliderValue").eq(0).text();
+                                str = str + ", Weight: ";
+                                str = str + $(".btQuoteText").eq(3).val();
+                                str = str + ", Destination: ";
+                                str = str + $(".btQuoteSliderValue").eq(1).text();
+                                str = str + ", TypeofService: ";
+                                str = str + $(".ddlabel").eq(0).text();
+                                str = str + ", Insurance: ";
+                                str = str + ($(".btQuoteSwitch").hasClass("on") ? "yes" : "no");
+                                str = str + ", Message: " + initialValue;
+                                
+                                textarea.val( str );
+                                
+                                setTimeout(function(){
+                                    textarea.val( initialValue );
+                                }, 200);
+                            });
+                        })( jQuery );
+                    }
                 </script>';
 
         $target = '<button type="submit" class="btContactSubmit">Submit</button>';
