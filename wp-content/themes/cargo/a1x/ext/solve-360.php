@@ -76,7 +76,7 @@ class Solve360 {
                                 str = str + ", ParcelNumber: ";
                                 str = str + $(".btQuoteSliderValue").eq(1).text();
                                 str = str + ", ParcelType: ";
-                                str = str + $(".ddlabel").eq(0).text();
+                                str = str + $(".ddlabel").eq(0).clone().children().remove().end().text();
                                 str = str + ", Before8: ";
                                 str = str + ($(".btQuoteSwitch").hasClass("on") ? "yes" : "no");
                                 str = str + ", Message: " + initialValue;
@@ -128,7 +128,7 @@ class Solve360 {
                                 str = str + ", Destination: ";
                                 str = str + $(".btQuoteSliderValue").eq(1).text();
                                 str = str + ", TypeofService: ";
-                                str = str + $(".ddlabel").eq(0).text();
+                                str = str + $(".ddlabel").eq(0).clone().children().remove().end().text();
                                 str = str + ", Insurance: ";
                                 str = str + ($(".btQuoteSwitch").hasClass("on") ? "yes" : "no");
                                 str = str + ", Message: " + initialValue;
