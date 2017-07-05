@@ -4,7 +4,7 @@ class DomainManager {
     const DOMAIN_MANHATTAN_COURIER_SERVICE = "manhattancourierservice.com";
     const DOMAIN_PROFICIENT_LOGISTIC = "proficientlogistic.com";
     const DOMAIN_EXPRESS_WAY_COURIER = "expresswaycourier.com";
-    const DOMAIN_ASAP_COURIER = "dev.asapcourierfl.com";
+    const DOMAIN_ASAP_COURIER = "dev.boxonaplane.com";
 
     const QQ_MANH_USERNAME = "remote";
     const QQ_MANH_PASSWORD = "remotequote";
