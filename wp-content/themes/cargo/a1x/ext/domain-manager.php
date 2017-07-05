@@ -11,10 +11,10 @@ class DomainManager {
     const QQ_MANH_WEBSITE = "a1express";
     const QQ_MANH_CUSTOMER = "A1XQOUTE";
 
-    const QQ_PROF_USERNAME = "remoteexw";
-    const QQ_PROF_PASSWORD = "remotequote";
-    const QQ_PROF_WEBSITE = "Expressway";
-    const QQ_PROF_CUSTOMER = "52";
+    const QQ_PROF_USERNAME = "anonproficient";
+    const QQ_PROF_PASSWORD = "anon";
+    const QQ_PROF_WEBSITE = "proficient";
+    const QQ_PROF_CUSTOMER = "18635";
 
     const QQ_EXPR_USERNAME = "remoteexw";
     const QQ_EXPR_PASSWORD = "remotequote";
