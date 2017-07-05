@@ -10,7 +10,8 @@ class Solve360 {
                 $url = 'http://www.webicise.com/Solve360/Proficient/Calculator/Solve360ContactSave.php';
             else if (DomainManager::IsExpressWayCourierDomain())
                 $url = 'http://www.webicise.com/Solve360/Expressway/Calculator/Solve360ContactSave.php';
-
+	    else if (DomainManager::IsASAPCourierDomain())
+                $url = 'http://www.webicise.com/Solve360/ASAP/Calculator/Solve360ContactSave.php';
             $data = array(
                 'company' => '',
                 'firstname' => '',

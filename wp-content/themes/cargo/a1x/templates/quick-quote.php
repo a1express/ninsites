@@ -283,6 +283,27 @@
 
                 $r = mail($email, "ExpresswayCourierService QuickQuote", $mailBody, $headers);
             }
+
+ else if ( DomainManager::IsASAPCourierDomain() )
+            {
+                Solve360::Call("http://www.webicise.com/Solve360/ASAP/QuickQuote/Solve360ContactSave.php", $params);
+
+                $mailBody = "<HTML><head></head><body><table width=800>";
+                $mailBody .= "<tr><td valign=top><img src='http://www.asapcourierfl.com/wp-content/themes/cargo/img/ASAP_Logo.png' alt='expresswaycourier.com'></td></tr>";
+                $mailBody .= "<tr><td><table width='100%'><tr align=center><td valign=top><a href='http://asapcourierfl.com/quick-quote/' title='Quick Quote'>QUICK QUOTE</a> | <a href='http://asapcourierfl.com/order-now/' title='Order Now'>ORDER NOW</a> | <a href='http://asapcourierfl.com/about-us/' title='About us'>ABOUT US</a> | <a href='http://asapcourierfl.com/services/' title='Services'>SERVICES</a></td></tr></table></td></tr>";
+                $mailBody .= "<tr align=center><td valign=top><font color=#50A21E size=8>Save Time & Gas</font></td></tr>";
+                $mailBody .= "<tr align=center><td valign=top><a href='http://asapcourierfl.com/order-now/' title='Order Now'><img src='http://www.asapcourierfl.com/wp-content/themes/cargo/img/ASAP_Special.png' border=0 alt='Order Now and get $5.00 off'></a></td></tr>";
+                $mailBody .= "<tr align=center><td><font color=#50A21E>You recently requested a same day courier service quote at asapcourierfl.com.  Place an order for your<br>1st courier delivery within the next 7 days and get $5 off with the coupon code AC100X.<br><br>If you place an order online; place the code in the reference field on the order form and $5.00 will be<br>deducted from the order before final charges.</font></td></tr>";
+                $mailBody .= "<tr><td><table width='100%' bgcolor=#0A8C3B><tr align=center><td><font color=#FFFFFF>ASAP Courier Service | (800) 955-1755 | 36 Mill Plain Road, Suite 407 | Danbury, CT| 06811</font></td valign=right><td></td></tr></table></td></tr>";
+                $mailBody .= "<tr><td>If you would like to unsubscribe and stop receiving these emails <a href=mailto:lisa@a1express.com?subject=Unsubscribe%20to%20ASAP%20QuickQuotes>click here</a></td></tr>";
+                $mailBody .= "</td></tr></table></body></html>";
+
+                $headers .= 'From: ASAP Courier Service <lisa@a1express.com>' . "\r\n";
+
+                $r = mail($email, "ASAPCourierService QuickQuote", $mailBody, $headers);
+            }
+
+
         }
         ?>
 
@@ -307,9 +328,9 @@
 														</SOAP:Body>
 													</SOAP:Envelope>
 													',
-                            DomainManager::GetVariable(DomainManager::QQ_MANH_USERNAME, DomainManager::QQ_PROF_USERNAME, DomainManager::QQ_EXPR_USERNAME, DomainManager::QQ_MANH_USERNAME, DomainManager::QQ_MANH_USERNAME),
-                            DomainManager::GetVariable(DomainManager::QQ_MANH_PASSWORD, DomainManager::QQ_PROF_PASSWORD, DomainManager::QQ_EXPR_PASSWORD, DomainManager::QQ_MANH_PASSWORD, DomainManager::QQ_MANH_PASSWORD),
-                            DomainManager::GetVariable(DomainManager::QQ_MANH_WEBSITE, DomainManager::QQ_PROF_WEBSITE, DomainManager::QQ_EXPR_WEBSITE, DomainManager::QQ_MANH_WEBSITE, DomainManager::QQ_MANH_WEBSITE)
+                            DomainManager::GetVariable(DomainManager::QQ_MANH_USERNAME, DomainManager::QQ_PROF_USERNAME, DomainManager::QQ_EXPR_USERNAME, DomainManager::QQ_ASAP_USERNAME, DomainManager::QQ_MANH_USERNAME),
+                            DomainManager::GetVariable(DomainManager::QQ_MANH_PASSWORD, DomainManager::QQ_PROF_PASSWORD, DomainManager::QQ_EXPR_PASSWORD, DomainManager::QQ_ASAP_PASSWORD, DomainManager::QQ_MANH_PASSWORD),
+                            DomainManager::GetVariable(DomainManager::QQ_MANH_WEBSITE, DomainManager::QQ_PROF_WEBSITE, DomainManager::QQ_EXPR_WEBSITE, DomainManager::QQ_ASAP_WEBSITE, DomainManager::QQ_MANH_WEBSITE)
                         );
 
                         function CallSoap($xml_post_string)
@@ -358,11 +379,11 @@
 																</SOAP:Body >
 															</SOAP:Envelope>',
                             $guid,
-                            DomainManager::GetVariable(DomainManager::QQ_MANH_WEBSITE, DomainManager::QQ_PROF_WEBSITE, DomainManager::QQ_EXPR_WEBSITE, DomainManager::QQ_MANH_WEBSITE, DomainManager::QQ_MANH_WEBSITE),
+                            DomainManager::GetVariable(DomainManager::QQ_MANH_WEBSITE, DomainManager::QQ_PROF_WEBSITE, DomainManager::QQ_EXPR_WEBSITE, DomainManager::QQ_ASAP_WEBSITE, DomainManager::QQ_MANH_WEBSITE),
                             $weight,
                             $pieces,
                             $vehicle,
-                            DomainManager::GetVariable(DomainManager::QQ_MANH_CUSTOMER, DomainManager::QQ_PROF_CUSTOMER, DomainManager::QQ_EXPR_CUSTOMER, DomainManager::QQ_MANH_CUSTOMER, DomainManager::QQ_MANH_CUSTOMER),
+                            DomainManager::GetVariable(DomainManager::QQ_MANH_CUSTOMER, DomainManager::QQ_PROF_CUSTOMER, DomainManager::QQ_EXPR_CUSTOMER, DomainManager::QQ_ASAP_CUSTOMER, DomainManager::QQ_MANH_CUSTOMER),
                             $origin,
                             $date,
                             $time,
