@@ -19,7 +19,7 @@ class DomainManager {
     const QQ_EXPR_USERNAME = "remoteexw";
     const QQ_EXPR_PASSWORD = "remotequote";
     const QQ_EXPR_WEBSITE = "Expressway";
-    const QQ_EXPR_CUSTOMER = "52";
+    const QQ_EXPR_CUSTOMER = "18600";
 
     const QQ_ASAP_USERNAME = "remoteexw";
     const QQ_ASAP_PASSWORD = "remotequote";
