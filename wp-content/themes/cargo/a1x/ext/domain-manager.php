@@ -21,10 +21,10 @@ class DomainManager {
     const QQ_EXPR_WEBSITE = "Expressway";
     const QQ_EXPR_CUSTOMER = "18600";
 
-    const QQ_ASAP_USERNAME = "anonasap";
-    const QQ_ASAP_PASSWORD = "anon";
-    const QQ_ASAP_WEBSITE = "asap";
-    const QQ_ASAP_CUSTOMER = "18630";
+    const QQ_ASAP_USERNAME = "remoteexw";
+    const QQ_ASAP_PASSWORD = "remotequote";
+    const QQ_ASAP_WEBSITE = "Expressway";
+    const QQ_ASAP_CUSTOMER = "18600";
 
     public static function IsManhattanCourierServiceDomain()
     {
