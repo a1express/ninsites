@@ -113,6 +113,12 @@ body.page-layout-tracking .btContent .col-sm-6 td.green { font-size: 30px; font-
     border: 1px solid #aaa;
     box-shadow: 0px 0px 5px #ccc;
 }
+.banner-qq .submit-button1:hover {
+    color: #272bf7;
+    background: #fff;
+    border: 1px solid #aaa;
+    box-shadow: 0px 0px 5px #ccc;
+}
 
 .qq-results .mobile-label { display: none; }
 
