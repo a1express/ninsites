@@ -660,7 +660,7 @@
                                 </select>
                             </div>
                         </div>
-                        <button class="submit-button">Get Quote</button>
+                        <button class="submit-button1">Get Quote</button>
                         <button class="submit-button" onclick="location.href='/ship-now/'" type="button">Ship Now</button>
 			<button class="submit-button" onclick="location.href='/new-account/'" type="button">Create an Account</button>
                     </form>
