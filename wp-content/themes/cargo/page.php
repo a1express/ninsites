@@ -24,4 +24,4 @@ if ( comments_open() || get_comments_number() ) {
 	echo '</section>';
 }
 
-get_footer(); 
+get_footer();

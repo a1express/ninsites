@@ -457,3 +457,17 @@ body.page-layout-tracking .btContent .col-sm-6 td.green { font-size: 30px; font-
 }
 .box-options .note a { color: #000; }
 /* End Quick Quote */
+
+/* Locations */
+.jqvmap-label {
+    position: absolute;
+    display: none;
+    background: #fff;
+    font-size: 13px;
+    border: 1px solid #000;
+    padding: 10px;
+    color: #333;
+    pointer-events:none;
+}
+.jqvmap-region { cursor: pointer; }
+/* End Locations */
