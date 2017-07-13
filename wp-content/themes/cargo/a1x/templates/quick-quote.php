@@ -328,9 +328,30 @@
 														</SOAP:Body>
 													</SOAP:Envelope>
 													',
-                            DomainManager::GetVariable(DomainManager::QQ_MANH_USERNAME, DomainManager::QQ_PROF_USERNAME, DomainManager::QQ_EXPR_USERNAME, DomainManager::QQ_ASAP_USERNAME, DomainManager::QQ_MANH_USERNAME),
-                            DomainManager::GetVariable(DomainManager::QQ_MANH_PASSWORD, DomainManager::QQ_PROF_PASSWORD, DomainManager::QQ_EXPR_PASSWORD, DomainManager::QQ_ASAP_PASSWORD, DomainManager::QQ_MANH_PASSWORD),
-                            DomainManager::GetVariable(DomainManager::QQ_MANH_WEBSITE, DomainManager::QQ_PROF_WEBSITE, DomainManager::QQ_EXPR_WEBSITE, DomainManager::QQ_ASAP_WEBSITE, DomainManager::QQ_MANH_WEBSITE)
+                            DomainManager::GetVariable(
+                                DomainManager::QQ_MANH_USERNAME,
+                                DomainManager::QQ_PROF_USERNAME,
+                                DomainManager::QQ_EXPR_USERNAME,
+                                DomainManager::QQ_ASAP_USERNAME,
+                                DomainManager::QQ_DEV_USERNAME,
+                                DomainManager::QQ_MANH_USERNAME
+                            ),
+                            DomainManager::GetVariable(
+                                DomainManager::QQ_MANH_PASSWORD,
+                                DomainManager::QQ_PROF_PASSWORD,
+                                DomainManager::QQ_EXPR_PASSWORD,
+                                DomainManager::QQ_ASAP_PASSWORD,
+                                DomainManager::QQ_DEV_PASSWORD,
+                                DomainManager::QQ_MANH_PASSWORD
+                            ),
+                            DomainManager::GetVariable(
+                                DomainManager::QQ_MANH_WEBSITE,
+                                DomainManager::QQ_PROF_WEBSITE,
+                                DomainManager::QQ_EXPR_WEBSITE,
+                                DomainManager::QQ_ASAP_WEBSITE,
+                                DomainManager::QQ_DEV_WEBSITE,
+                                DomainManager::QQ_MANH_WEBSITE
+                            )
                         );
 
                         function CallSoap($xml_post_string)
@@ -379,11 +400,25 @@
 																</SOAP:Body >
 															</SOAP:Envelope>',
                             $guid,
-                            DomainManager::GetVariable(DomainManager::QQ_MANH_WEBSITE, DomainManager::QQ_PROF_WEBSITE, DomainManager::QQ_EXPR_WEBSITE, DomainManager::QQ_ASAP_WEBSITE, DomainManager::QQ_MANH_WEBSITE),
+                            DomainManager::GetVariable(
+                                DomainManager::QQ_MANH_WEBSITE,
+                                DomainManager::QQ_PROF_WEBSITE,
+                                DomainManager::QQ_EXPR_WEBSITE,
+                                DomainManager::QQ_ASAP_WEBSITE,
+                                DomainManager::QQ_DEV_WEBSITE,
+                                DomainManager::QQ_MANH_WEBSITE
+                            ),
                             $weight,
                             $pieces,
                             $vehicle,
-                            DomainManager::GetVariable(DomainManager::QQ_MANH_CUSTOMER, DomainManager::QQ_PROF_CUSTOMER, DomainManager::QQ_EXPR_CUSTOMER, DomainManager::QQ_ASAP_CUSTOMER, DomainManager::QQ_MANH_CUSTOMER),
+                            DomainManager::GetVariable(
+                                DomainManager::QQ_MANH_CUSTOMER,
+                                DomainManager::QQ_PROF_CUSTOMER,
+                                DomainManager::QQ_EXPR_CUSTOMER,
+                                DomainManager::QQ_ASAP_CUSTOMER,
+                                DomainManager::QQ_DEV_CUSTOMER,
+                                DomainManager::QQ_MANH_CUSTOMER
+                            ),
                             $origin,
                             $date,
                             $time,

@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-<?php if ( get_queried_object_id() == DomainManager::GetVariable(1943, 2410, 1716, 1731, 1950) ): ?>
+<?php if ( get_queried_object_id() == DomainManager::GetVariable(1943, 2410, 1716, 1731, 1731, 1950) ): ?>
 	<?php get_template_part( 'a1x/templates/quick-quote' ); ?>
 <?php endif; ?>
-	
+
 <?php
 
 the_post();
