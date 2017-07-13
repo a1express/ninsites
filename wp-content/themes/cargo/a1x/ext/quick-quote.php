@@ -9,6 +9,7 @@ class QuickQuote {
                 || ( DomainManager::IsProficientLogisticDomain() && ( $pageId == 2399 || $pageId == 2344 ) )
                 || ( DomainManager::IsExpressWayCourierDomain() && ( $pageId == 1682 || $pageId == 1711 ) )
 		|| ( DomainManager::IsASAPCourierDomain() && ( $pageId == 1683 || $pageId == 1711 ) )
+		|| ( DomainManager::IsDEVCourierDomain() && ( $pageId == 1683 || $pageId == 1711 ) )
             )
         {
             ob_start();
