@@ -4,9 +4,6 @@
 
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/a1x/js/jquery.vmap.min.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/a1x/js/jquery.vmap.usa.js"></script>
-	<script type="text/javascript">
-		alert('yes it works!');
-	</script>
 
 	<section class="boldSection bottomSpaced gutter inherit">
 		<div class="port">
