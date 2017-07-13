@@ -3,7 +3,18 @@
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
 
 <script type="text/javascript">
-    var atlanta = new google.maps.LatLng(40.7590402,-74.0394423);
+    var defaultOrigin = new google.maps.LatLng(
+        <?php
+            echo DomainManager::GetVariable(
+                '40.7590402,-74.0394423',
+                '38.0057006,-84.4519174',
+                '41.3885469,-73.4999866',
+                '26.1103601,-80.1733113',
+                '40.7590402,-74.0394423',
+                '40.7590402,-74.0394423'
+            ),
+        ?>
+    );
 
     (function($) {
         $(document).ready(function(){
@@ -101,7 +112,7 @@
             {
                 if ( address == '' )
                 {
-                    address = atlanta.toString().replace("(", "").replace(")", "");
+                    address = defaultOrigin.toString().replace("(", "").replace(")", "");
                 }
 
                 if (typeof originPin != 'undefined')
@@ -163,7 +174,7 @@
                 var myOptions = {
                     zoom:11,
                     mapTypeId: google.maps.MapTypeId.ROADMAP,
-                    center: atlanta
+                    center: defaultOrigin
                 }
                 map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
                 directionsDisplay.setMap(map);
