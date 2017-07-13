@@ -293,11 +293,13 @@
 									<script type="text/javascript">
 										(function($) {
 											$(document).ready(function(){
-												$(".bullet").click(function(){
+												$(".bullet").hover(function(){
 													var targetClass = $(this).attr('class').replace("bullet ", "");
 
 													$(".default-box").hide();
 													$(".info-box").removeClass("active").filter("." + targetClass).addClass('active');
+												}, function() {
+													
 												});
 
 												$(".map-info-box .close").on("click", function(){
