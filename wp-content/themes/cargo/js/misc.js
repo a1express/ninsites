@@ -188,6 +188,7 @@ window.onunload = function(){};
 	 	
 		// delay click to allow on page leave screen
 
+		/*
 		$( document ).on( 'click', 'a:not(.lightbox)', function() {
 			var href = $( this ).attr( 'href' );
 			if ( href !== undefined ) {
@@ -208,6 +209,7 @@ window.onunload = function(){};
 			}
 			
 		});
+		*/
 
 		// Vertical alignment fix
 

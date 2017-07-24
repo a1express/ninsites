@@ -64,7 +64,7 @@
                         return false;
                     }
 
-                    $('#btPreloader').removeClass("removePreloader");
+                    $('#btPreloader').removeClass("removePreloader").addClass("forceShowing");
                 });
             });
 

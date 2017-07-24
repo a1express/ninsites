@@ -595,3 +595,6 @@ body.page-layout-tracking .btContent .col-sm-6 td.green { font-size: 30px; font-
     text-decoration: underline;
 }
 /* End Locations */
+
+.btPreloader { display: none !important; }
+.btPreloader.forceShowing { display: block !important; }
