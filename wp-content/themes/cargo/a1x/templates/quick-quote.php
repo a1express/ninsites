@@ -11,6 +11,7 @@
                 '41.3885469,-73.4999866',
                 '26.1103601,-80.1733113',
                 '40.7590402,-74.0394423',
+                '40.7590402,-74.0394423',
                 '40.7590402,-74.0394423'
             );
         ?>
@@ -314,6 +315,24 @@
                 $r = mail($email, "ASAPCourierService QuickQuote", $mailBody, $headers);
             }
 
+else if ( DomainManager::IsMMCourierDomain() )
+            {
+                Solve360::Call("http://www.webicise.com/Solve360/MM/QuickQuote/Solve360ContactSave.php", $params);
+
+                $mailBody = "<HTML><head></head><body><table width=800>";
+                $mailBody .= "<tr><td valign=top><img src='https://asapcourierfl.com/wp-content/themes/cargo/img/asap_Logo.png' alt='asapcourierfl.com'></td></tr>";
+                $mailBody .= "<tr><td><table width='100%'><tr align=center><td valign=top><a href='https://asapcourierfl.com/quick-quote/' title='Quick Quote'>QUICK QUOTE</a> | <a href='https://asapcourierfl.com/new-account/' title='Order Now'>ORDER NOW</a> | <a href='https://asapcourierfl.com/about-us/' title='About us'>ABOUT US</a> | <a href='https://asapcourierfl.com/services/' title='Services'>SERVICES</a></td></tr></table></td></tr>";
+                $mailBody .= "<tr align=center><td valign=top><font color=#50A21E size=8>Save Time & Gas</font></td></tr>";
+                $mailBody .= "<tr align=center><td valign=top><a href='https://asapcourierfl.com/new-account/' title='Order Now'><img src='https://asapcourierfl.com/wp-content/themes/cargo/img/asap_Special.png' border=0 alt='Order Now and get $5.00 off'></a></td></tr>";
+                $mailBody .= "<tr align=center><td><font color=#50A21E>You recently requested a same day courier service quote at asapcourierfl.com.  Place an order for your<br>1st courier delivery within the next 7 days and get $5 off with the coupon code AC100X.<br><br>If you place an order online; place the code in the reference field on the order form and $5.00 will be<br>deducted from the order before final charges.</font></td></tr>";
+                $mailBody .= "<tr><td><table width='100%' bgcolor=#0A8C3B><tr align=center><td><font color=#FFFFFF>ASAP Courier Service | (800) 446-7477 | 941 SW 21st Terrace | Fort Lauderdale, FL| 33312</font></td valign=right><td></td></tr></table></td></tr>";
+                $mailBody .= "<tr><td>If you would like to unsubscribe and stop receiving these emails <a href=mailto:lisa@a1express.com?subject=Unsubscribe%20to%20ASAP%20QuickQuotes>click here</a></td></tr>";
+                $mailBody .= "</td></tr></table></body></html>";
+
+                $headers .= 'From: ASAP Courier Service <lisa@a1express.com>' . "\r\n";
+
+                $r = mail($email, "ASAPCourierService QuickQuote", $mailBody, $headers);
+            }
 
         }
         ?>

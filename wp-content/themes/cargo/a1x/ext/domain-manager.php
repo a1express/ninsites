@@ -6,6 +6,7 @@ class DomainManager {
     const DOMAIN_EXPRESS_WAY_COURIER = "expresswaycourier.com";
     const DOMAIN_ASAP_COURIER = "asapcourierfl.com";
     const DOMAIN_DEV_COURIER = "dev.boxonaplane.com";
+    const DOMAIN_MM_COURIER = "dev.marylandmessenger.com";
 
     const QQ_MANH_USERNAME = "remote";
     const QQ_MANH_PASSWORD = "remotequote";
@@ -31,6 +32,11 @@ class DomainManager {
     const QQ_DEV_PASSWORD = "remotequote";
     const QQ_DEV_WEBSITE = "a1express";
     const QQ_DEV_CUSTOMER = "A1XQOUTE";
+
+    const QQ_MM_USERNAME = "remote";
+    const QQ_MM_PASSWORD = "remotequote";
+    const QQ_MM_WEBSITE = "a1express";
+    const QQ_MM_CUSTOMER = "A1XQOUTE";
 
     public static function IsManhattanCourierServiceDomain()
     {
@@ -67,6 +73,13 @@ class DomainManager {
         return $domain == self::DOMAIN_DEV_COURIER || strpos( $domain, self::DOMAIN_DEV_COURIER ) !== false;
     }
 
+    public static function IsMMCourierDomain()
+    {
+        $domain = self::GetCurrentDomain();
+
+        return $domain == self::DOMAIN_MM_COURIER || strpos( $domain, self::DOMAIN_MM_COURIER ) !== false;
+    }
+
     public static function IsLocalhostDomain()
     {
         $domain = self::GetCurrentDomain();
@@ -80,7 +93,7 @@ class DomainManager {
         return isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '';
     }
 
-    public static function GetVariable($manhattanVariable, $proficientVariable, $expressVariable, $asapVariable, $devVariable, $localhostVariable, $defaultVariable = '')
+    public static function GetVariable($manhattanVariable, $proficientVariable, $expressVariable, $asapVariable, $devVariable, $mmVariable, $localhostVariable, $defaultVariable = '')
     {
         $variable = $defaultVariable;
 
@@ -94,6 +107,8 @@ class DomainManager {
             $variable = $asapVariable;
         else if ( self::IsDEVCourierDomain() )
             $variable = $devVariable;
+        else if ( self::IsMMCourierDomain() )
+            $variable = $mmVariable;
         else if ( self::IsLocalhostDomain() )
             $variable = $localhostVariable;
 
