@@ -364,7 +364,8 @@ else if ( DomainManager::IsMMCourierDomain() )
                                 DomainManager::QQ_EXPR_USERNAME,
                                 DomainManager::QQ_ASAP_USERNAME,
                                 DomainManager::QQ_DEV_USERNAME,
-                                DomainManager::QQ_MANH_USERNAME
+				DomainManager::QQ_MM_USERNAME,
+				DomainManager::QQ_MANH_USERNAME
                             ),
                             DomainManager::GetVariable(
                                 DomainManager::QQ_MANH_PASSWORD,
@@ -372,7 +373,8 @@ else if ( DomainManager::IsMMCourierDomain() )
                                 DomainManager::QQ_EXPR_PASSWORD,
                                 DomainManager::QQ_ASAP_PASSWORD,
                                 DomainManager::QQ_DEV_PASSWORD,
-                                DomainManager::QQ_MANH_PASSWORD
+                                DomainManager::QQ_MM_PASSWORD,
+				DomainManager::QQ_MANH_PASSWORD
                             ),
                             DomainManager::GetVariable(
                                 DomainManager::QQ_MANH_WEBSITE,
@@ -380,7 +382,8 @@ else if ( DomainManager::IsMMCourierDomain() )
                                 DomainManager::QQ_EXPR_WEBSITE,
                                 DomainManager::QQ_ASAP_WEBSITE,
                                 DomainManager::QQ_DEV_WEBSITE,
-                                DomainManager::QQ_MANH_WEBSITE
+                                DomainManager::QQ_MM_WEBSITE,
+				DomainManager::QQ_MANH_WEBSITE
                             )
                         );
 
@@ -436,7 +439,8 @@ else if ( DomainManager::IsMMCourierDomain() )
                                 DomainManager::QQ_EXPR_WEBSITE,
                                 DomainManager::QQ_ASAP_WEBSITE,
                                 DomainManager::QQ_DEV_WEBSITE,
-                                DomainManager::QQ_MANH_WEBSITE
+                                DomainManager::QQ_MM_WEBSITE,
+				DomainManager::QQ_MANH_WEBSITE
                             ),
                             $weight,
                             $pieces,
@@ -447,7 +451,8 @@ else if ( DomainManager::IsMMCourierDomain() )
                                 DomainManager::QQ_EXPR_CUSTOMER,
                                 DomainManager::QQ_ASAP_CUSTOMER,
                                 DomainManager::QQ_DEV_CUSTOMER,
-                                DomainManager::QQ_MANH_CUSTOMER
+                                DomainManager::QQ_MM_CUSTOMER,
+				DomainManager::QQ_MANH_CUSTOMER
                             ),
                             $origin,
                             $date,
