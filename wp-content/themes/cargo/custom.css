@@ -152,6 +152,13 @@ body.page-layout-tracking .btContent .col-sm-6 td.green { font-size: 30px; font-
         display: block;
         font-weight: bold;
     }
+
+    #qq-holder form .submit-buttons .submit-button,
+    #qq-holder form .submit-buttons .submit-button1 {
+        display: block;
+        width: 100%;
+        margin: 0px 0px 10px;
+    }
 }
 
 .how-it-works {
