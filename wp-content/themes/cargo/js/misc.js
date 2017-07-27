@@ -188,28 +188,25 @@ window.onunload = function(){};
 	 	
 		// delay click to allow on page leave screen
 
-		/*
-		$( document ).on( 'click', 'a:not(.lightbox)', function() {
-			var href = $( this ).attr( 'href' );
-			if ( href !== undefined ) {
-				if ( location.href.split('#')[0] != href.split('#')[0] && ! href.startsWith( '#' ) ) {
-					
-					if ( $( this ).attr( 'target' ) != '_blank' && ! href.endsWith( '#respond' ) ) {
-						if ( $( '#btPreloader' ).length ) {
-							$( '#btPreloader' ).removeClass( 'removePreloader' );
-							setTimeout( function() { window.location = href }, 1500 );
-							return false;
-						}
-					}
-					
-				} else if ( href != "#" ) {
-					scrollPageToId( href );
-					return false;
-				}
-			}
-			
-		});
-		*/
+		// $( document ).on( 'click', 'a:not(.lightbox)', function() {
+		// 	var href = $( this ).attr( 'href' );
+		// 	if ( href !== undefined ) {
+		// 		if ( location.href.split('#')[0] != href.split('#')[0] && ! href.startsWith( '#' ) ) {
+		//
+		// 			if ( $( this ).attr( 'target' ) != '_blank' && ! href.endsWith( '#respond' ) ) {
+		// 				if ( $( '#btPreloader' ).length ) {
+		// 					$( '#btPreloader' ).removeClass( 'removePreloader' );
+		// 					setTimeout( function() { window.location = href }, 1500 );
+		// 					return false;
+		// 				}
+		// 			}
+		//
+		// 		} else if ( href != "#" ) {
+		// 			scrollPageToId( href );
+		// 			return false;
+		// 		}
+		// 	}
+		// });
 
 		// Vertical alignment fix
 
