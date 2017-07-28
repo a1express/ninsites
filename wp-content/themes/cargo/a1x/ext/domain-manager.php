@@ -6,7 +6,7 @@ class DomainManager {
     const DOMAIN_EXPRESS_WAY_COURIER = "expresswaycourier.com";
     const DOMAIN_ASAP_COURIER = "asapcourierfl.com";
     const DOMAIN_DEV_COURIER = "dev.boxonaplane.com";
-    const DOMAIN_MM_COURIER = "dev.marylandmessenger.com";
+    const DOMAIN_MM_COURIER = "dev.boxonabus.com";
 
     const QQ_MANH_USERNAME = "remote";
     const QQ_MANH_PASSWORD = "remotequote";
