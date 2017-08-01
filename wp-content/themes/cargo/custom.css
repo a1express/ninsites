@@ -245,8 +245,9 @@ body.page-layout-tracking .btContent .col-sm-6 td.green { font-size: 30px; font-
     background: #c0f1f6;
     border: 2px solid #16ddf1;
     line-height: 1.5;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
+#qq-holder .no-results-box p { margin-bottom: 10px; }
 #qq-holder .no-results-box p:last-child { margin-bottom: 0; }
 #qq-holder form .formfield { margin-bottom: 30px; }
 #qq-holder form .formfield:after {
