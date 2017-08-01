@@ -6757,10 +6757,6 @@ to {
     width: 100%;
     height: auto;
     }
-body.single-post .btMediaBox img {
-    max-width: 100%;
-    width: auto;
-}
 .btMediaBox .aspectVideo {
     visibility: hidden;
     }

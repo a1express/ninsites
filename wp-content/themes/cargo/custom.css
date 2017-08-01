@@ -1,3 +1,8 @@
+body.single-post .btMediaBox img {
+    max-width: 100%;
+    width: auto;
+}
+
 #seo-bar {
     background: #2a868f;
     color: #fff;
