@@ -17,6 +17,8 @@ class QuickQuote {
             get_template_part( "a1x/templates/quick-quote" );
             $quickquote = ob_get_clean();
 
+            $quickquote = str_replace( '<div id="qq-holder" class="gutter">', '<div id="qq-holder" class="in-page gutter">', $quickquote );
+
             $target = '<div class="slided mediumSliderHeight';
 
             return str_replace($target, $quickquote . $target, $content );
