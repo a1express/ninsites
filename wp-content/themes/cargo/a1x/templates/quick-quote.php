@@ -301,7 +301,7 @@
                 Solve360::Call("http://www.webicise.com/Solve360/ASAP/QuickQuote/Solve360ContactSave.php", $params);
 
                 $mailBody = "<HTML><head></head><body><table width=800>";
-                $mailBody .= "<tr><td style="text-align: center;"><a href="https://asapcourierfl.com/" style="text-decoration:none;" title="ASAP Courier"><br><img src="https://asapcourierfl.com/email/ASAP_banner.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;" width="700" height="70" title="Peachtree Petals" alt="ASAP Courier"></a></td></tr>";
+                 $mailBody .= "<tr><td valign=top><img src='http://www.asapcourierfl.com.com/wp-content/themes/cargo/img/asap_Logo.png' alt='asapcourierfl.com.com'></td></tr>";
                 $mailBody .= "<tr><td><table width='100%'><tr align=center><td valign=top><a href='https://asapcourierfl.com/quick-quote/' title='Quick Quote'>QUICK QUOTE</a> | <a href='https://asapcourierfl.com/new-account/' title='Order Now'>ORDER NOW</a> | <a href='https://asapcourierfl.com/company/' title='About us'>ABOUT US</a> | <a href='https://asapcourierfl.com/services/' title='Services'>SERVICES</a></td></tr></table></td></tr>";
                 $mailBody .= "<tr align=center><td valign=top><font color=#50A21E size=8>Save Time & Gas</font></td></tr>";
                 $mailBody .= "<tr align=center><td valign=top><a href='https://asapcourierfl.com/new-account/' title='Order Now'><img src='https://asapcourierfl.com/wp-content/themes/cargo/img/asap_Special.png' border=0 alt='Order Now and get $5.00 off'></a></td></tr>";
