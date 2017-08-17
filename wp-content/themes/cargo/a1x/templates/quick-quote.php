@@ -468,18 +468,20 @@ else if ( DomainManager::IsMMCourierDomain() )
 
                     <?php if ( isset($orders) ): ?>
                         <?php if ( count( $orders ) == 0 ): ?>
-                            <p>Service is not available via the web for the criteria you have entered. If you have questions, please call our office at (800) 469-0929.</p>
-                            <p>
-                                <strong>Potential Problems</strong><br/>
-                                <strong>Origin Zip Code</strong><br/>
-                                No QuickQuote service available from origin zip code. We provide service for over 100 of the largest Metropolitan Areas throughout the US.
-                            </p>
-                            <p>
-                                <strong>Time of Service</strong><br/>
-                                We currently do not accept internet orders with Evening ready times (between 6:30 PM to 7:30 AM) and Weekends (Saturday and Sundays).
-                                <strong>Orders may be placed after hours with ready times Monday-Friday 7:30 AM to 6:00 PM.</strong>
-                                Orders with after hour ready times may be placed with our office over the phone during regular business hours.
-                            </p>
+                            <div class="no-results-box">
+                                <p>Service is not available via the web for the criteria you have entered. If you have questions, please call our office at (800) 469-0929.</p>
+                                <p>
+                                    <strong>Potential Problems</strong><br/>
+                                    <strong>Origin Zip Code</strong><br/>
+                                    No QuickQuote service available from origin zip code. We provide service for over 100 of the largest Metropolitan Areas throughout the US.
+                                </p>
+                                <p>
+                                    <strong>Time of Service</strong><br/>
+                                    We currently do not accept internet orders with Evening ready times (between 6:30 PM to 7:30 AM) and Weekends (Saturday and Sundays).
+                                    <strong>Orders may be placed after hours with ready times Monday-Friday 7:30 AM to 6:00 PM.</strong>
+                                    Orders with after hour ready times may be placed with our office over the phone during regular business hours.
+                                </p>
+                            </div>
                         <?php else: ?>
                             <table class="qq-results">
                                 <tr>

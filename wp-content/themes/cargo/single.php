@@ -26,7 +26,7 @@ if ( have_posts() ) {
 
 		if ( has_post_thumbnail() ) {
 			$post_thumbnail_id = get_post_thumbnail_id( get_the_ID() );
-			$img = wp_get_attachment_image_src( $post_thumbnail_id, 'large' );
+			$img = wp_get_attachment_image_src( $post_thumbnail_id, 'bt_grid_21' );
 			$thumb_img_slider = wp_get_attachment_image_src( $post_thumbnail_id, 'full' );
 			$thumb_img_slider = $thumb_img_slider[0];
 			if ( $img != '' ) {
@@ -37,7 +37,7 @@ if ( have_posts() ) {
 		if ( $post_format == 'image' ) {
 		
 			foreach ( $images as $img ) {
-				$img = wp_get_attachment_image_src( $img['ID'], 'large' );
+				$img = wp_get_attachment_image_src( $img['ID'], 'bt_grid_21' );
 				$media_html = bt_get_media_html( 'image', array( $permalink, $img[0] ) );
 				break;
 			}
