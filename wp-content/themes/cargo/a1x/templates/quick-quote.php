@@ -298,26 +298,143 @@
                 $r = mail($email, "ExpresswayCourierService QuickQuote", $mailBody, $headers);
             }
 
- else if ( DomainManager::IsASAPCourierDomain() )
+            else if ( DomainManager::IsASAPCourierDomain() )
             {
                 Solve360::Call("http://www.webicise.com/Solve360/ASAP/QuickQuote/Solve360ContactSave.php", $params);
 
-               $mailBody = "<HTML><head></head><body><table width=800>";
-                $mailBody .= "<tr><td valign=top><img src='http://asapcourierfl.com/wp-content/themes/cargo/img/asap_Logo.png' alt='asapcourierfl.com'></td></tr>";
-                $mailBody .= "<tr><td><table width='100%'><tr align=center><td valign=top><a href='https://www.asapcourierfl.com/quick-quote/' title='Quick Quote'>QUICK QUOTE</a> | <a href='https://www.asapcourierfl.com/new-account/' title='Order Now'>ORDER NOW</a> | <a href='https://www.asapcourierfl.com/services/' title='Services'>SERVICES</a></td></tr></table></td></tr>";
-                $mailBody .= "<tr align=center><td valign=top><font color=#50A21E size=8>Save Time & Gas</font></td></tr>";
-                $mailBody .= "<tr align=center><td valign=top><a href='https://www.asapcourierfl.com/new-account/' title='Order Now'><img src='https://www.asapcourierfl.com/wp-content/themes/cargo/img/asap_Special.png' border=0 alt='Order Now and get $5.00 off'></a></td></tr>";
-                $mailBody .= "<tr align=center><td><font color=#50A21E>You recently requested a same day courier service quote at asapcourierfl.com.  Place an order for your<br>1st courier delivery within the next 7 days and get $5 off with the coupon code AC100X.<br><br>If you place an order online; place the code in the reference field on the order form and $5.00 will be<br>deducted from the order before final charges.</font></td></tr>";
-                $mailBody .= "<tr><td><table width='100%' bgcolor=#0A8C3B><tr align=center><td><font color=#FFFFFF>ASAP Courier Logistic| 800.446.7477 | 941 SW 21st Terrace | Fort Lauderdale, FL | 33312 </font></td valign=right><td></td></tr></table></td></tr>";
-                $mailBody .= "<tr><td>If you would like to unsubscribe and stop receiving these emails <a href=mailto:lisa@a1express.com?subject=Unsubscribe%20to%20ASAP%20QuickQuotes>click here</a></td></tr>";
-                $mailBody .= "</td></tr></table></body></html>";
+//               $mailBody = "<HTML><head></head><body><table width=800>";
+//                $mailBody .= "<tr><td valign=top><img src='http://asapcourierfl.com/wp-content/themes/cargo/img/asap_Logo.png' alt='asapcourierfl.com'></td></tr>";
+//                $mailBody .= "<tr><td><table width='100%'><tr align=center><td valign=top><a href='https://www.asapcourierfl.com/quick-quote/' title='Quick Quote'>QUICK QUOTE</a> | <a href='https://www.asapcourierfl.com/new-account/' title='Order Now'>ORDER NOW</a> | <a href='https://www.asapcourierfl.com/services/' title='Services'>SERVICES</a></td></tr></table></td></tr>";
+//                $mailBody .= "<tr align=center><td valign=top><font color=#50A21E size=8>Save Time & Gas</font></td></tr>";
+//                $mailBody .= "<tr align=center><td valign=top><a href='https://www.asapcourierfl.com/new-account/' title='Order Now'><img src='https://www.asapcourierfl.com/wp-content/themes/cargo/img/asap_Special.png' border=0 alt='Order Now and get $5.00 off'></a></td></tr>";
+//                $mailBody .= "<tr align=center><td><font color=#50A21E>You recently requested a same day courier service quote at asapcourierfl.com.  Place an order for your<br>1st courier delivery within the next 7 days and get $5 off with the coupon code AC100X.<br><br>If you place an order online; place the code in the reference field on the order form and $5.00 will be<br>deducted from the order before final charges.</font></td></tr>";
+//                $mailBody .= "<tr><td><table width='100%' bgcolor=#0A8C3B><tr align=center><td><font color=#FFFFFF>ASAP Courier Logistic| 800.446.7477 | 941 SW 21st Terrace | Fort Lauderdale, FL | 33312 </font></td valign=right><td></td></tr></table></td></tr>";
+//                $mailBody .= "<tr><td>If you would like to unsubscribe and stop receiving these emails <a href=mailto:lisa@a1express.com?subject=Unsubscribe%20to%20ASAP%20QuickQuotes>click here</a></td></tr>";
+//                $mailBody .= "</td></tr></table></body></html>";
+
+                $mailBody = '
+                    <HTML><head><title>Save Time & Gas with $5 off</title></head>
+                    <body leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0"><table width="700" cellpadding="0" cellspacing="0" align="center">
+                        <tbody>
+                            <tr>
+                                <td width="700" align="center" valign="top">
+                                <table style="margin-left: 0px;" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;">
+                                            <a href="https://asapcourierfl.com/" style="text-decoration:none;" title="ASAP Courier">
+                                            <br>
+                                            <img src="https://asapcourierfl.com/email/ASAP_banner.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;" width="700" height="70" title="Peachtree Petals" alt="ASAP Courier">
+                                            </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="700" height="15"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            <table style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc;" height="32" width="700">
+                                                <tbody>
+                                                    <tr>
+                                                            <td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 14px;" width="90">
+                                                            <a href="https://asapcourierfl.com/quick-quote/" style="text-decoration:none; color: black;" title="Quick Quotes">
+                                                            Quick Quotes
+                                                            </a>
+                                                            </td>
+                                                            <td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 0;" width="90">
+                                                            <a href="https://asapcourierfl.com/services/" style="text-decoration:none; color: black;" title="Services">
+                                                            Services
+                                                            </a>
+                                                            </td>
+                                                            <td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 0;" width="100">
+                                                            <a href="https://asapcourierfl.com/company/" style="text-decoration:none; color: black;" title="About Us">
+                                                            About Us
+                                                            </a>
+                                                            </td>
+                                                            <td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding-top: 3px;" width="70">
+                                                            <a href="https://asapcourierfl.com/ship-now/" style="text-decoration:none; color: black;" title="Ship Now">
+                                                            Ship Now
+                                                            </a>
+                                                            </td>
+                                                            <td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 18px;" width="90">
+                                                            <a href="https://asapcourierfl.com/company/contact/" style="text-decoration:none; color: black;" title="Contact Us">
+                                                            Contact Us
+                                                            </a>
+                                                            </td>
+                                                        </tr>
+                                                </tbody>
+                                            </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <table style="margin-left: 0px;" border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td cellpadding="0" cellspacing="0" colspan="2">
+                                                            <a title="Get $5 off" href="https://asapcourierfl.com/new-account/">
+                                                                <img alt="Get $5 off" src="https://asapcourierfl.com/email/5off.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td cellpadding="0" cellspacing="0" >
+                                                            <a title="Rush Courier & On Demand" href="https://asapcourierfl.com/services/on-demand/">
+                                                                <img alt="Rush Courier & On Demand" src="https://asapcourierfl.com/email/rush.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+                                                            </a>
+                                                        </td>
+                                                        <td cellpadding="0" cellspacing="0"  >
+                                                            <a title="Warehousing" href="https://asapcourierfl.com/services/warehousing/">
+                                                                <img alt="Warehousing" src="https://asapcourierfl.com/email/warehousing.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td cellpadding="0" cellspacing="0" >
+                                                            <a title="Last Mile Home Delivery" href="https://asapcourierfl.com/services/last-mile-home-delivery/">
+                                                                <img alt="Last Mile Home Delivery" src="https://asapcourierfl.com/email/lastmile.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+                                                            </a>
+                                                        </td>
+                                                        <td cellpadding="0" cellspacing="0"  >
+                                                            <a title="PRESCHEDULED ROUTED DELIVERY" href="https://asapcourierfl.com/services/routes/">
+                                                                <img alt="PRESCHEDULED ROUTED DELIVERY" src="https://asapcourierfl.com/email/prescheduled.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                    
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        
+                                            <td width="233">
+                                            
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;font-family: Helvetica;font-size:11px;padding-top: 28px;">
+                                <p>You recently requested a same day courier service quote at asapcourierfl.com. Place an order for your
+                    1st courier delivery within the next 7 days and get $5 off with the coupon code AC100X.</p>
+                    
+                    <p>If you place an order online; place the code in the reference field on the order form and $5.00 will be
+                    deducted from the order before final charges. * Offer Expires in 30 days</p>
+                    
+                                </td>
+                            </tr>
+                    <tr><td height="10"></td></tr>
+                            <tr>
+                    <td align="center" bgcolor="#fe0000"><font color="#FFFFFF" face="Arial" size="2">ASAP Courier Service | (800) 446-7477 | 941 SW 21st Terrace | Fort Lauderdale, FL | 33312</font></td>
+                    </tr>
+                            
+                            
+                        </tbody>
+                    </table>
+                ';
 
                 $headers .= 'From: ASAP Courier Service <lisa@a1express.com>' . "\r\n";
 
                 $r = mail($email, "ASAPCourierService QuickQuote", $mailBody, $headers);
             }
 
-else if ( DomainManager::IsMMCourierDomain() )
+            else if ( DomainManager::IsMMCourierDomain() )
             {
                 Solve360::Call("http://www.webicise.com/Solve360/MM/QuickQuote/Solve360ContactSave.php", $params);
 
