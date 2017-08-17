@@ -1,3 +1,5 @@
+<?php $hasResults = false; ?>
+
 <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyD_YJPIOkLsYI2cDhnVwdMI1l6uHuvdd1k"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
@@ -463,6 +465,8 @@ else if ( DomainManager::IsMMCourierDomain() )
 
                         $parser = CallSoap($xml_post_string);
                         $orders = isset($parser->SOAPBody->mQuoteOrderResponse->Order) ? $parser->SOAPBody->mQuoteOrderResponse->Order : array();
+
+                        $hasResults = true;
                     }
                     ?>
 
@@ -735,8 +739,8 @@ else if ( DomainManager::IsMMCourierDomain() )
 
                         <div class="submit-buttons">
                             <button class="submit-button1">Get Quote</button>
-                            <button class="submit-button" onclick="location.href='/ship-now/'" type="button">Ship Now</button>
-                            <button class="submit-button" onclick="location.href='/new-account/'" type="button">Create an Account</button>
+                            <button class="submit-button <?php echo $hasResults ? '' : 'initially-hidden'; ?>" onclick="location.href='/ship-now/'" type="button">Ship Now</button>
+                            <button class="submit-button <?php echo $hasResults ? '' : 'initially-hidden'; ?>" onclick="location.href='/new-account/'" type="button">Create an Account</button>
                         </div>
                     </form>
                 </div>

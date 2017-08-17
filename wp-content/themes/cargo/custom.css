@@ -127,6 +127,8 @@ body.page-layout-tracking .btContent .col-sm-6 td.green { font-size: 30px; font-
 
 .qq-results .mobile-label { display: none; }
 
+#qq-holder form .submit-buttons .initially-hidden { display: none !important; }
+
 @media screen and (max-width: 767px) {
     .banner-qq label, .banner-qq input, .banner-qq button {
         display: block;
