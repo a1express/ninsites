@@ -318,7 +318,7 @@
 										</a>
 										</td>
 										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 0;" width="100">
-										<a href="https://expresswaycourier.com/company/" style="text-decoration:none; color: black;" title="About Us">
+										<a href="https://expresswaycourier.com/about-us/" style="text-decoration:none; color: black;" title="About Us">
 										About Us
 										</a>
 										</td>
