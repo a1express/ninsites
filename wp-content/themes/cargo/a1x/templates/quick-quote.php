@@ -389,11 +389,13 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
 
 			</td>
 		</tr>
-<tr><td height="10"></td></tr>
+<tr>
+			<td style="text-align: center;font-family: Helvetica;font-size:11px;padding-top: 28px;">If you would like to unsubscribe and stop receiving these emails <a href="mailto:lisa@a1express.com?subject=unsubscribe%20to%20ASAP%20Quick%20Quotes" style="color:rgb(17,85,204);">click here</a></td>
+		</tr> 
+<tr><td height="10"></td></tr> 
 		<tr>
 <td align="center" bgcolor="#fe0000"><font color="#FFFFFF" face="Arial" size="2">ExpressWay Courier Service | (800) 955-1755 | 36 Mill Plain Road, Suite 407 | Danbury, CT | 06811</font></td>
-</tr>
-		
+</tr>		
 		
 	</tbody>
 </table>
@@ -525,11 +527,14 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                     
                                 </td>
                             </tr>
-                    <tr><td height="10"></td></tr>
-                            <tr>
+                    <tr>
+			<td style="text-align: center;font-family: Helvetica;font-size:11px;padding-top: 28px;">If you would like to unsubscribe and stop receiving these emails <a href="mailto:lisa@a1express.com?subject=unsubscribe%20to%20ASAP%20Quick%20Quotes" style="color:rgb(17,85,204);">click here</a></td>
+		</tr> 
+<tr><td height="10"></td></tr> 
+		<tr>
                     <td align="center" bgcolor="#fe0000"><font color="#FFFFFF" face="Arial" size="2">ASAP Courier Service | (800) 446-7477 | 941 SW 21st Terrace | Fort Lauderdale, FL | 33312</font></td>
                     </tr>
-                            
+                          
                             
                         </tbody>
                     </table>
