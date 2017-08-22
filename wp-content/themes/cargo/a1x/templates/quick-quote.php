@@ -247,15 +247,124 @@
             {
                 Solve360::Call("http://www.webicise.com/Solve360/Manhattan/QuickQuote/Solve360ContactSave.php", $params);
 
-                $mailBody = "<HTML><head></head><body><table width=800>";
-                $mailBody .= "<tr><td valign=top><img src='https://www.manhattancourierservice.com/wp-content/themes/cargo/img/Manhattan_Courier_Logo.png' alt='manhattancourierservice.com'></td></tr>";
-                $mailBody .= "<tr><td><table width='100%'><tr align=center><td valign=top><a href='https://www.manhattancourierservice.com/quick-quote/' title='Quick Quote'>QUICK QUOTE</a> | <a href='https://www.manhattancourierservice.com/new-account/' title='Order Now'>ORDER NOW</a> | <a href='https://www.manhattancourierservice.com/services/' title='Services'>SERVICES</a></td></tr></table></td></tr>";
-                $mailBody .= "<tr align=center><td valign=top><font color=#50A21E size=8>Save Time & Gas</font></td></tr>";
-                $mailBody .= "<tr align=center><td valign=top><a href='https://www.manhattancourierservice.com/new-account/' title='Order Now'><img src='https://www.manhattancourierservice.com/wp-content/themes/cargo/img/Manhattan_Special.png' border=0 alt='Order Now and get $5.00 off'></a></td></tr>";
-                $mailBody .= "<tr align=center><td><font color=#50A21E>You recently requested a same day courier service quote at manhattancourierservice.com.  Place an order for your<br>1st courier delivery within the next 7 days and get $5 off with the coupon code MCS100X.<br><br>If you place an order online; place the code in the reference field on the order form and $5.00 will be<br>deducted from the order before final charges.</font></td></tr>";
-                $mailBody .= "<tr><td><table width='100%' bgcolor=#0A8C3B><tr align=center><td><font color=#FFFFFF>Manhattan Courier Service | (800) 469-0929 | 153 West 27th St | New York, NY | 10001</font></td valign=right><td></td></tr></table></td></tr>";
-                $mailBody .= "<tr><td>If you would like to unsubscribe and stop receiving these emails <a href=mailto:lisa@a1express.com?subject=Unsubscribe%20to%20Manhattan%20QuickQuotes>click here</a></td></tr>";
-                $mailBody .= "</td></tr></table></body></html>";
+                $mailBody = '
+<HTML><head><title>Save Time & Gas with $5 off</title></head>
+<body leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0"><table width="700" cellpadding="0" cellspacing="0" align="center">
+	<tbody>
+		<tr>
+			<td width="700" align="center" valign="top">
+			<table style="margin-left: 0px;" border="0" cellspacing="0" cellpadding="0">
+				<tbody>
+					<tr>
+						<td style="text-align: center;">
+						<a href="https://www.manhattancourierservice.com/" style="text-decoration:none;" title="Manhattan Courier">
+						<br>
+						<img src="https://a1express.com/email/manhattan_banner.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;" width="700" height="70" title="Manhattan Courier" alt="Manhattan Courier">
+						</a>
+						</td>
+					</tr>
+					<tr>
+						<td width="700" height="15"></td>
+					</tr>
+					<tr>
+						<td>
+						<table style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc;" height="32" width="700">
+							<tbody>
+								<tr>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 14px;" width="90">
+										<a href="https://www.manhattancourierservice.com/quick-quote/" style="text-decoration:none; color: black;" title="Quick Quotes">
+										Quick Quotes
+										</a>
+										</td>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 0;" width="90">
+										<a href="https://www.manhattancourierservice.com/services/" style="text-decoration:none; color: black;" title="Services">
+										Services
+										</a>
+										</td>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 0;" width="100">
+										<a href="https://www.manhattancourierservice.com/company/" style="text-decoration:none; color: black;" title="About Us">
+										About Us
+										</a>
+										</td>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding-top: 3px;" width="70">
+										<a href="https://www.manhattancourierservice.com/ship-now/" style="text-decoration:none; color: black;" title="Ship Now">
+										Ship Now
+										</a>
+										</td>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 18px;" width="90">
+										<a href="https://www.manhattancourierservice.com/company/contact/" style="text-decoration:none; color: black;" title="Contact Us">
+										Contact Us
+										</a>
+										</td>
+									</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<table style="margin-left: 0px;" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td cellpadding="0" cellspacing="0" colspan="2">
+										<a title="Get $5 off" href="https://www.manhattancourierservice.com/new-account/">
+											<img alt="Get $5 off" src="https://a1express.com/email/5off.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td cellpadding="0" cellspacing="0" >
+								 		<a title="Rush Courier & On Demand" href="https://www.manhattancourierservice.com/services/on-demand/">
+									 		<img alt="Rush Courier & On Demand" src="https://a1express.com/email/rush.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		</a>
+									</td>
+									<td cellpadding="0" cellspacing="0"  >
+								 		<a title="Warehousing" href="https://www.manhattancourierservice.com/services/warehousing/">
+									 		<img alt="Warehousing" src="https://a1express.com/email/warehousing.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		</a>
+									</td>
+								</tr>
+								<tr>
+									<td cellpadding="0" cellspacing="0" >
+								 		<a title="Last Mile Home Delivery" href="https://www.manhattancourierservice.com/services/last-mile-home-delivery/">
+									 		<img alt="Last Mile Home Delivery" src="https://a1express.com/email/lastmile.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		</a>
+									</td>
+									<td cellpadding="0" cellspacing="0"  >
+								 		<a title="PRESCHEDULED ROUTED DELIVERY" href="https://www.manhattancourierservice.com/services/routes/">
+									 		<img alt="PRESCHEDULED ROUTED DELIVERY" src="https://a1express.com/email/prescheduled.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		</a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					
+						<td width="233">
+						
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align: center;font-family: Helvetica;font-size:11px;padding-top: 28px;">
+			<p>You recently requested a same day courier service quote at manhattancourierservice.com. Place an order for your
+1st courier delivery within the next 7 days and get $5 off with the coupon code MC100X.</p>
+
+<p>If you place an order online; place the code in the reference field on the order form and $5.00 will be
+deducted from the order before final charges. * Offer Expires in 30 days</p>
+
+			</td>
+		</tr>
+<tr>
+			<td style="text-align: center;font-family: Helvetica;font-size:11px;padding-top: 28px;">If you would like to unsubscribe and stop receiving these emails <a href="mailto:lisa@a1express.com?subject=unsubscribe%20to%20Manhattan%20Quick%20Quotes" style="color:rgb(17,85,204);">click here</a></td>
+		</tr> 
+<tr><td height="10"></td></tr> 
+		<tr>
+<td align="center" bgcolor="#fe0000"><font color="#FFFFFF" face="Arial" size="2">Manhattan Courier Service | (800) 469-0929 | 3153 West 27th St. | New York, NY | 10001</font></td>
+</tr>
+		
+		
+	</tbody>
+</table>
+';
 
                 $headers .= 'From: Manhattan Courier Service <lisa@a1express.com>' . "\r\n";
 
@@ -265,15 +374,125 @@
             {
                 Solve360::Call("http://www.webicise.com/Solve360/Proficient/QuickQuote/Solve360ContactSave.php", $params);
 
-                $mailBody = "<HTML><head></head><body><table width=800>";
-                $mailBody .= "<tr><td valign=top><img src='https://www.proficientlogistic.com/wp-content/themes/cargo/img/Proficient_Logistic_Logo.png' alt='proficientlogistic.com'></td></tr>";
-                $mailBody .= "<tr><td><table width='100%'><tr align=center><td valign=top><a href='https://www.proficientlogistic.com/quick-quote/' title='Quick Quote'>QUICK QUOTE</a> | <a href='https://www.proficientlogistic.com/new-account/' title='Order Now'>ORDER NOW</a> | <a href='https://www.proficientlogistic.com/services/' title='Services'>SERVICES</a></td></tr></table></td></tr>";
-                $mailBody .= "<tr align=center><td valign=top><font color=#50A21E size=8>Save Time & Gas</font></td></tr>";
-                $mailBody .= "<tr align=center><td valign=top><a href='https://www.proficientlogistic.com/new-account/' title='Order Now'><img src='https://www.proficientlogistic.com/wp-content/themes/cargo/img/Proficient_Special.png' border=0 alt='Order Now and get $5.00 off'></a></td></tr>";
-                $mailBody .= "<tr align=center><td><font color=#50A21E>You recently requested a same day courier service quote at proficientlogistic.com.  Place an order for your<br>1st courier delivery within the next 7 days and get $5 off with the coupon code PL100X.<br><br>If you place an order online; place the code in the reference field on the order form and $5.00 will be<br>deducted from the order before final charges.</font></td></tr>";
-                $mailBody .= "<tr><td><table width='100%' bgcolor=#0A8C3B><tr align=center><td><font color=#FFFFFF>Proficient Logistic| (859) 300-3880 | 351 United Court | Lexington KY | 40509 </font></td valign=right><td></td></tr></table></td></tr>";
-                $mailBody .= "<tr><td>If you would like to unsubscribe and stop receiving these emails <a href=mailto:lisa@a1express.com?subject=Unsubscribe%20to%20Proficient%20QuickQuotes>click here</a></td></tr>";
-                $mailBody .= "</td></tr></table></body></html>";
+                $mailBody = '
+<HTML><head><title>Save Time & Gas with $5 off</title></head>
+<body leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0"><table width="700" cellpadding="0" cellspacing="0" align="center">
+	<tbody>
+		<tr>
+			<td width="700" align="center" valign="top">
+			<table style="margin-left: 0px;" border="0" cellspacing="0" cellpadding="0">
+				<tbody>
+					<tr>
+						<td style="text-align: center;">
+						<a href="https://www.proficientlogistic.com/" style="text-decoration:none;" title="Proficient Logistic">
+						<br>
+						<img src="https://www.proficientlogistic.com/email/proficient_banner.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;" width="700" height="70" title="Proficient Logistic" alt="Proficient Logistic">
+						</a>
+						</td>
+					</tr>
+					<tr>
+						<td width="700" height="15"></td>
+					</tr>
+					<tr>
+						<td>
+						<table style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc;" height="32" width="700">
+							<tbody>
+								<tr>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 14px;" width="90">
+										<a href="https://www.proficientlogistic.com/quick-quote/" style="text-decoration:none; color: black;" title="Quick Quotes">
+										Quick Quotes
+										</a>
+										</td>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 0;" width="90">
+										<a href="https://www.proficientlogistic.com/services/" style="text-decoration:none; color: black;" title="Services">
+										Services
+										</a>
+										</td>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 0;" width="100">
+										<a href="https://www.proficientlogistic.com/new-account/" style="text-decoration:none; color: black;" title="New Account">
+										New Account
+										</a>
+										</td>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding-top: 3px;" width="70">
+										<a href="https://www.proficientlogistic.com/ship-now/" style="text-decoration:none; color: black;" title="Ship Now">
+										Ship Now
+										</a>
+										</td>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 18px;" width="90">
+										<a href="https://www.proficientlogistic.com/company/contact/" style="text-decoration:none; color: black;" title="Contact Us">
+										Contact Us
+										</a>
+										</td>
+									</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<table style="margin-left: 0px;" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td cellpadding="0" cellspacing="0" colspan="2">
+										<a title="Get $5 off" href="https://www.proficientlogistic.com/new-account/">
+											<img alt="Get $5 off" src="https://www.proficientlogistic.com/email/5off.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td cellpadding="0" cellspacing="0" >
+								 		<a title="Rush Courier & On Demand" href="https://www.proficientlogistic.com/services/rush-courier-on-demand/">
+									 		<img alt="Rush Courier & On Demand" src="https://www.proficientlogistic.com/email/rush.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		</a>
+									</td>
+									<td cellpadding="0" cellspacing="0"  >
+								 		<a title="Warehousing" href="https://www.proficientlogistic.com/services/warehousing/">
+									 		<img alt="Warehousing" src="https://www.proficientlogistic.com/email/warehousing.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		</a>
+									</td>
+								</tr>
+								<tr>
+									<td cellpadding="0" cellspacing="0" >
+								 		<a title="Last Mile Home Delivery" href="https://www.proficientlogistic.com/services/last-mile-home-delivery/">
+									 		<img alt="Last Mile Home Delivery" src="https://www.proficientlogistic.com/email/lastmile.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		</a>
+									</td>
+									<td cellpadding="0" cellspacing="0"  >
+								 		<a title="PRESCHEDULED ROUTED DELIVERY" href="https://www.proficientlogistic.com/services/routes/">
+									 		<img alt="PRESCHEDULED ROUTED DELIVERY" src="https://www.proficientlogistic.com/email/prescheduled.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		</a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					
+						<td width="233">
+						
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align: center;font-family: Helvetica;font-size:11px;padding-top: 28px;">
+			<p>You recently requested a same day courier service quote at proficientlogistic.com. Place an order for your
+1st courier delivery within the next 7 days and get $5 off with the coupon code PC100X.</p>
+
+<p>If you place an order online; place the code in the reference field on the order form and $5.00 will be
+deducted from the order before final charges. * Offer Expires in 30 days</p>
+
+			</td>
+		</tr>
+<tr>
+			<td style="text-align: center;font-family: Helvetica;font-size:11px;padding-top: 28px;">If you would like to unsubscribe and stop receiving these emails <a href="mailto:lisa@a1express.com?subject=unsubscribe%20to%20Proficient%20Quick%20Quotes" style="color:rgb(17,85,204);">click here</a></td>
+		</tr> 
+<tr><td height="10"></td></tr> 
+		<tr>
+<td align="center" bgcolor="#fe0000"><font color="#FFFFFF" face="Arial" size="2">Proficient Logistic | (859) 300-3880 | 351 United Court 
+| Lexington KY | 40509</font></td>
+</tr>
+		
+		
+	</tbody>
+</table>
+';
 
                 $headers .= 'From: Proficient Logistic <lisa@a1express.com>' . "\r\n";
 
@@ -390,7 +609,7 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
 			</td>
 		</tr>
 <tr>
-			<td style="text-align: center;font-family: Helvetica;font-size:11px;padding-top: 28px;">If you would like to unsubscribe and stop receiving these emails <a href="mailto:lisa@a1express.com?subject=unsubscribe%20to%20ASAP%20Quick%20Quotes" style="color:rgb(17,85,204);">click here</a></td>
+			<td style="text-align: center;font-family: Helvetica;font-size:11px;padding-top: 28px;">If you would like to unsubscribe and stop receiving these emails <a href="mailto:lisa@a1express.com?subject=unsubscribe%20to%20Express%20Quick%20Quotes" style="color:rgb(17,85,204);">click here</a></td>
 		</tr> 
 <tr><td height="10"></td></tr> 
 		<tr>
@@ -410,16 +629,6 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
             {
                 Solve360::Call("http://www.webicise.com/Solve360/ASAP/QuickQuote/Solve360ContactSave.php", $params);
 
-//               $mailBody = "<HTML><head></head><body><table width=800>";
-//                $mailBody .= "<tr><td valign=top><img src='http://asapcourierfl.com/wp-content/themes/cargo/img/asap_Logo.png' alt='asapcourierfl.com'></td></tr>";
-//                $mailBody .= "<tr><td><table width='100%'><tr align=center><td valign=top><a href='https://www.asapcourierfl.com/quick-quote/' title='Quick Quote'>QUICK QUOTE</a> | <a href='https://www.asapcourierfl.com/new-account/' title='Order Now'>ORDER NOW</a> | <a href='https://www.asapcourierfl.com/services/' title='Services'>SERVICES</a></td></tr></table></td></tr>";
-//                $mailBody .= "<tr align=center><td valign=top><font color=#50A21E size=8>Save Time & Gas</font></td></tr>";
-//                $mailBody .= "<tr align=center><td valign=top><a href='https://www.asapcourierfl.com/new-account/' title='Order Now'><img src='https://www.asapcourierfl.com/wp-content/themes/cargo/img/asap_Special.png' border=0 alt='Order Now and get $5.00 off'></a></td></tr>";
-//                $mailBody .= "<tr align=center><td><font color=#50A21E>You recently requested a same day courier service quote at asapcourierfl.com.  Place an order for your<br>1st courier delivery within the next 7 days and get $5 off with the coupon code AC100X.<br><br>If you place an order online; place the code in the reference field on the order form and $5.00 will be<br>deducted from the order before final charges.</font></td></tr>";
-//                $mailBody .= "<tr><td><table width='100%' bgcolor=#0A8C3B><tr align=center><td><font color=#FFFFFF>ASAP Courier Logistic| 800.446.7477 | 941 SW 21st Terrace | Fort Lauderdale, FL | 33312 </font></td valign=right><td></td></tr></table></td></tr>";
-//                $mailBody .= "<tr><td>If you would like to unsubscribe and stop receiving these emails <a href=mailto:lisa@a1express.com?subject=Unsubscribe%20to%20ASAP%20QuickQuotes>click here</a></td></tr>";
-//                $mailBody .= "</td></tr></table></body></html>";
-
                 $mailBody = '
                     <HTML><head><title>Save Time & Gas with $5 off</title></head>
                     <body leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0"><table width="700" cellpadding="0" cellspacing="0" align="center">
@@ -432,7 +641,7 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                                             <td style="text-align: center;">
                                             <a href="https://asapcourierfl.com/" style="text-decoration:none;" title="ASAP Courier">
                                             <br>
-                                            <img src="https://asapcourierfl.com/email/ASAP_banner.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;" width="700" height="70" title="Peachtree Petals" alt="ASAP Courier">
+                                            <img src="https://asapcourierfl.com/email/ASAP_banner.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;" width="700" height="70" title="ASAP Courier" alt="ASAP Courier">
                                             </a>
                                             </td>
                                         </tr>
@@ -549,15 +758,124 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
             {
                 Solve360::Call("http://www.webicise.com/Solve360/MM/QuickQuote/Solve360ContactSave.php", $params);
 
-                $mailBody = "<HTML><head></head><body><table width=800>";
-                $mailBody .= "<tr><td valign=top><img src='http://marylandmessenger.com/wp-content/themes/cargo/img/mm_header.png' alt='marylandmessenger.com'></td></tr>";
-                $mailBody .= "<tr><td><table width='100%'><tr align=center><td valign=top><a href='http://marylandmessenger.com/quick-quote/' title='Quick Quote'>QUICK QUOTE</a> | <a href='http://marylandmessenger.com/new-account/' title='Order Now'>ORDER NOW</a> | <a href='http://marylandmessenger.com/company/' title='About us'>ABOUT US</a> | <a href='http://marylandmessenger.com/services/' title='Services'>SERVICES</a></td></tr></table></td></tr>";
-                $mailBody .= "<tr align=center><td valign=top><font color=#50A21E size=8>Save Time & Gas</font></td></tr>";
-                $mailBody .= "<tr align=center><td valign=top><a href='http://marylandmessenger.com/new-account/' title='Order Now'><img src='http://marylandmessenger.com/wp-content/themes/cargo/img/MM_Middle.png' border=0 alt='Order Now and get $5.00 off'></a></td></tr>";
-                $mailBody .= "<tr align=center><td><font color=#50A21E>You recently requested a same day courier service quote at marylandmessenger.com.  Place an order for your<br>1st courier delivery within the next 7 days and get $5 off with the coupon code MM100X.<br><br>If you place an order online; place the code in the reference field on the order form and $5.00 will be<br>deducted from the order before final charges.</font></td></tr>";
-                $mailBody .= "<tr><td><table width='100%' bgcolor=#0A8C3B><tr align=center><td><font color=#FFFFFF>Maryland Messenger | (800) 624-7665 | 3922 Vero Road Suite J | Baltimore, Maryland | 21227</font></td valign=right><td></td></tr></table></td></tr>";
-                $mailBody .= "<tr><td>If you would like to unsubscribe and stop receiving these emails <a href=mailto:lisa@a1express.com?subject=Unsubscribe%20to%20MM%20QuickQuotes>click here</a></td></tr>";
-                $mailBody .= "</td></tr></table></body></html>";
+                $mailBody = '
+<HTML><head><title>Save Time & Gas with $5 off</title></head>
+<body leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0"><table width="700" cellpadding="0" cellspacing="0" align="center">
+	<tbody>
+		<tr>
+			<td width="700" align="center" valign="top">
+			<table style="margin-left: 0px;" border="0" cellspacing="0" cellpadding="0">
+				<tbody>
+					<tr>
+						<td style="text-align: center;">
+						<a href="https://www.marylandmessenger.com/" style="text-decoration:none;" title="Maryland Messenger">
+						<br>
+						<img src="https://www.marylandmessenger.com/email/maryland_banner.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;" width="700" height="70" title="Maryland Messenger" alt="Maryland Messenger">
+						</a>
+						</td>
+					</tr>
+					<tr>
+						<td width="700" height="15"></td>
+					</tr>
+					<tr>
+						<td>
+						<table style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc;" height="32" width="700">
+							<tbody>
+								<tr>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 14px;" width="90">
+										<a href="https://www.marylandmessenger.com/quick-quote/" style="text-decoration:none; color: black;" title="Quick Quotes">
+										Quick Quotes
+										</a>
+										</td>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 0;" width="90">
+										<a href="https://www.marylandmessenger.com/services/" style="text-decoration:none; color: black;" title="Services">
+										Services
+										</a>
+										</td>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 0;" width="100">
+										<a href="https://www.marylandmessenger.com/new-account/" style="text-decoration:none; color: black;" title="New Account">
+										New Account
+										</a>
+										</td>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding-top: 3px;" width="70">
+										<a href="https://www.marylandmessenger.com/ship-now/" style="text-decoration:none; color: black;" title="Ship Now">
+										Ship Now
+										</a>
+										</td>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 18px;" width="90">
+										<a href="https://www.marylandmessenger.com/company/contact/" style="text-decoration:none; color: black;" title="Contact Us">
+										Contact Us
+										</a>
+										</td>
+									</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<table style="margin-left: 0px;" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td cellpadding="0" cellspacing="0" colspan="2">
+										<a title="Get $5 off" href="https://www.marylandmessenger.com/new-account/">
+											<img alt="Get $5 off" src="https://www.marylandmessenger.com/email/5off.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td cellpadding="0" cellspacing="0" >
+								 		<a title="Rush Courier & On Demand" href="https://www.marylandmessenger.com/services/on-demand/">
+									 		<img alt="Rush Courier & On Demand" src="https://www.marylandmessenger.com/email/rush.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		</a>
+									</td>
+									<td cellpadding="0" cellspacing="0"  >
+								 		<a title="Warehousing" href="https://www.marylandmessenger.com/services/warehousing/">
+									 		<img alt="Warehousing" src="https://www.marylandmessenger.com/email/warehousing.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		</a>
+									</td>
+								</tr>
+								<tr>
+									<td cellpadding="0" cellspacing="0" >
+								 		<a title="Last Mile Home Delivery" href="https://www.marylandmessenger.com/services/last-mile-home-delivery/">
+									 		<img alt="Last Mile Home Delivery" src="https://www.marylandmessenger.com/email/lastmile.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		</a>
+									</td>
+									<td cellpadding="0" cellspacing="0"  >
+								 		<a title="PRESCHEDULED ROUTED DELIVERY" href="https://www.marylandmessenger.com/services/routes/">
+									 		<img alt="PRESCHEDULED ROUTED DELIVERY" src="https://www.marylandmessenger.com/email/prescheduled.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		</a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					
+						<td width="233">
+						
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align: center;font-family: Helvetica;font-size:11px;padding-top: 28px;">
+			<p>You recently requested a same day courier service quote at marylandmessenger.com. Place an order for your
+1st courier delivery within the next 7 days and get $5 off with the coupon code MM100X.</p>
+
+<p>If you place an order online; place the code in the reference field on the order form and $5.00 will be
+deducted from the order before final charges. * Offer Expires in 30 days</p>
+
+			</td>
+		</tr>
+<tr>
+			<td style="text-align: center;font-family: Helvetica;font-size:11px;padding-top: 28px;">If you would like to unsubscribe and stop receiving these emails <a href="mailto:lisa@a1express.com?subject=unsubscribe%20to%20Maryland%20Quick%20Quotes" style="color:rgb(17,85,204);">click here</a></td>
+		</tr> 
+<tr><td height="10"></td></tr> 
+		<tr>
+<td align="center" bgcolor="#fe0000"><font color="#FFFFFF" face="Arial" size="2">Maryland Messenger | (410) 837-5550  | 3922 Vero Road, Suite D |Baltimore, MD | 21227</font></td>
+</tr>
+		
+		
+	</tbody>
+</table>
+';
 
                 $headers .= 'From: Maryland Messenger Courier Service <lisa@a1express.com>' . "\r\n";
 
