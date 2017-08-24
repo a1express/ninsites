@@ -8,9 +8,10 @@ class QuickQuote {
                 ( ( DomainManager::IsManhattanCourierServiceDomain() || DomainManager::IsLocalhostDomain() ) && ( $pageId == 76 || $pageId == 1765 ) )
                 || ( DomainManager::IsProficientLogisticDomain() && ( $pageId == 2399 || $pageId == 2344 ) )
                 || ( DomainManager::IsExpressWayCourierDomain() && ( $pageId == 1682 || $pageId == 1711 ) )
-		        || ( DomainManager::IsASAPCourierDomain() && ( $pageId == 1683 || $pageId == 1711 || $pageId == 1936 || $pageId == 1940) )
-		        || ( DomainManager::IsDEVCourierDomain() && ( $pageId == 1683 || $pageId == 1711 ) )
+		|| ( DomainManager::IsASAPCourierDomain() && ( $pageId == 1683 || $pageId == 1711 || $pageId == 1936 || $pageId == 1940) )
+		|| ( DomainManager::IsDEVCourierDomain() && ( $pageId == 1683 || $pageId == 1711 ) )
                 || ( DomainManager::IsMMCourierDomain() && ( $pageId == 1684 || $pageId == 1698 ) )
+                || ( DomainManager::IsNYCourierDomain() && ( $pageId == 1684 || $pageId == 1698 ) )
             )
         {
             ob_start();

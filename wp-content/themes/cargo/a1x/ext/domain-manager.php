@@ -7,6 +7,7 @@ class DomainManager {
     const DOMAIN_ASAP_COURIER = "asapcourierfl.com";
     const DOMAIN_DEV_COURIER = "dev.boxonaplane.com";
     const DOMAIN_MM_COURIER = "marylandmessenger.com";
+    const DOMAIN_NY_COURIER = "newyorkcourierservice.com";
 
     const QQ_MANH_USERNAME = "remote";
     const QQ_MANH_PASSWORD = "remotequote";
@@ -37,6 +38,11 @@ class DomainManager {
     const QQ_MM_PASSWORD = "remotequote";
     const QQ_MM_WEBSITE = "a1express";
     const QQ_MM_CUSTOMER = "A1XQOUTE";
+
+    const QQ_NY_USERNAME = "remote";
+    const QQ_NY_PASSWORD = "remotequote";
+    const QQ_NY_WEBSITE = "a1express";
+    const QQ_NY_CUSTOMER = "A1XQOUTE";
 
     public static function IsManhattanCourierServiceDomain()
     {
@@ -80,6 +86,13 @@ class DomainManager {
         return $domain == self::DOMAIN_MM_COURIER || strpos( $domain, self::DOMAIN_MM_COURIER ) !== false;
     }
 
+    public static function IsNYCourierDomain()
+    {
+        $domain = self::GetCurrentDomain();
+
+        return $domain == self::DOMAIN_NY_COURIER || strpos( $domain, self::DOMAIN_NY_COURIER ) !== false;
+    }
+
     public static function IsLocalhostDomain()
     {
         $domain = self::GetCurrentDomain();
@@ -93,7 +106,7 @@ class DomainManager {
         return isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '';
     }
 
-    public static function GetVariable($manhattanVariable, $proficientVariable, $expressVariable, $asapVariable, $devVariable, $mmVariable, $localhostVariable, $defaultVariable = '')
+    public static function GetVariable($manhattanVariable, $proficientVariable, $expressVariable, $asapVariable, $devVariable, $mmVariable, $nyVariable, $localhostVariable, $defaultVariable = '')
     {
         $variable = $defaultVariable;
 
@@ -109,6 +122,8 @@ class DomainManager {
             $variable = $devVariable;
         else if ( self::IsMMCourierDomain() )
             $variable = $mmVariable;
+        else if ( self::IsNYCourierDomain() )
+            $variable = $nyVariable;
         else if ( self::IsLocalhostDomain() )
             $variable = $localhostVariable;
 
