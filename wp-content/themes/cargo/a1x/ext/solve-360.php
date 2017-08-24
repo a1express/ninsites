@@ -16,8 +16,6 @@ class Solve360 {
                 $url = 'http://www.webicise.com/Solve360/DEV/Calculator/Solve360ContactSave.php';
             else if (DomainManager::IsMMCourierDomain())
                 $url = 'http://www.webicise.com/Solve360/MM/Calculator/Solve360ContactSave.php';
-            else if (DomainManager::IsNYCourierDomain())
-                $url = 'http://www.webicise.com/Solve360/NYC/Calculator/Solve360ContactSave.php';
             $data = array(
                 'company' => '',
                 'firstname' => '',
