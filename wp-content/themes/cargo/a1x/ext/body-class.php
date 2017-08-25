@@ -17,7 +17,7 @@ class BodyClass {
             $classes[] = 'page-layout-login';
 
         // Site specific class
-        $classes[] = str_replace( array( 'http://', 'https://', '.com', 'www.', 'dev.' ), '', get_bloginfo('siteurl') ) . '-site';
+        $classes[] = str_replace( array( 'http://', 'https://', '.com', 'www.', 'dev.', ':800' ), '', get_bloginfo('siteurl') ) . '-site';
 
         return $classes;
     }

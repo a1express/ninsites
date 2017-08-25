@@ -19,11 +19,11 @@
 					var imageRow = $(this);
 
 					imageRow.empty();
-					imageRow.append( 
+					imageRow.append(
 						$("<form/>", { "action": "/quick-quote", "class": "banner-qq" })
 							.append( $("<label/>", { "text": "enter your pick-up zip code" }) )
 							.append( $("<input/>", { "type": "text", "name": "origin" }) )
-							.append( $( "<button/>", { "text": "Get Quote", "class": "submit-button" } ) ) 
+							.append( $( "<button/>", { "text": "Get Quote", "class": "submit-button" } ) )
 					);
 
 					imageRow.find("form input").on("focus", function(){
@@ -114,3 +114,10 @@
 		<div class="btContentHolder">
 			<div class="btContent">
 			<?php bt_header_headline() ?>
+
+			<?php if (is_front_page() && (DomainManager::IsLocalhostDomain() || DomainManager::IsDEVCourierDomain())): ?>
+				<div id="qq-holder" class="on-banner">
+					<?php $GLOBALS['qq_redirect_url'] = home_url('/quick-quote'); ?>
+					<?php get_template_part( 'a1x/templates/quick-quote-form' ); ?>
+				</div>
+			<?php endif; ?>
