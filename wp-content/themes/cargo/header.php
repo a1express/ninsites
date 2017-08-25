@@ -59,6 +59,7 @@
 
 <?php echo bt_preloader_html(); ?>
 
+
 <div class="btPageWrap" id="top">
 	
     <header class="mainHeader btClear">
