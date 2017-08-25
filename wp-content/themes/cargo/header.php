@@ -49,6 +49,10 @@
 					{
 						$(this).addClass('btn-style');
 					}
+					else if ( $.trim( $(this).text() ).toLowerCase() == 'quick quote' || $.trim( $(this).text() ).toLowerCase() == 'get quote' )
+					{
+						$(this).addClass('btn-style btn-style-blue');
+					}
 				});
 			});
 		})( jQuery );
