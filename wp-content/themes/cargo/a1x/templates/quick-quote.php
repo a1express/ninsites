@@ -14,6 +14,7 @@
                 '26.1103601,-80.1733113',
                 '40.7590402,-74.0394423',
                 '39.261032,-76.676993',
+                '40.7590402,-74.0394423',
                 '40.7590402,-74.0394423'
             );
         ?>
@@ -334,7 +335,8 @@
 									 		<img alt="PRESCHEDULED ROUTED DELIVERY" src="https://a1express.com/email/prescheduled.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
 								 		</a>
 									</td>
-								</tr>
+								</tr>
+
 							</table>
 						</td>
 					</tr>
@@ -363,7 +365,8 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
 		
 		
 	</tbody>
-</table>
+</table>
+
 ';
 
                 $headers .= 'From: Manhattan Courier Service <lisa@a1express.com>' . "\r\n";
@@ -461,7 +464,8 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
 									 		<img alt="PRESCHEDULED ROUTED DELIVERY" src="https://www.proficientlogistic.com/email/prescheduled.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
 								 		</a>
 									</td>
-								</tr>
+								</tr>
+
 							</table>
 						</td>
 					</tr>
@@ -491,7 +495,8 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
 		
 		
 	</tbody>
-</table>
+</table>
+
 ';
 
                 $headers .= 'From: Proficient Logistic <lisa@a1express.com>' . "\r\n";
@@ -589,7 +594,8 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
 									 		<img alt="PRESCHEDULED ROUTED DELIVERY" src="https://expresswaycourier.com/email/prescheduled.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
 								 		</a>
 									</td>
-								</tr>
+								</tr>
+
 							</table>
 						</td>
 					</tr>
@@ -617,7 +623,8 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
 </tr>		
 		
 	</tbody>
-</table>
+</table>
+
 ';
 
                 $headers .= 'From: Expressway Courier Service <lisa@a1express.com>' . "\r\n";
@@ -845,7 +852,8 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
 									 		<img alt="PRESCHEDULED ROUTED DELIVERY" src="https://www.marylandmessenger.com/email/prescheduled.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
 								 		</a>
 									</td>
-								</tr>
+								</tr>
+
 							</table>
 						</td>
 					</tr>
@@ -874,17 +882,15 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
 		
 		
 	</tbody>
-</table>
+</table>
+
 ';
 
                 $headers .= 'From: Maryland Messenger Courier Service <lisa@a1express.com>' . "\r\n";
 
                 $r = mail($email, "MMCourierService QuickQuote", $mailBody, $headers);
             }
-
-        }
-
-else if ( DomainManager::IsNYCourierDomain() )
+            else if ( DomainManager::IsNYCourierDomain() )
             {
                 Solve360::Call("http://www.webicise.com/Solve360/NYC/QuickQuote/Solve360ContactSave.php", $params);
 
@@ -975,7 +981,8 @@ else if ( DomainManager::IsNYCourierDomain() )
 									 		<img alt="PRESCHEDULED ROUTED DELIVERY" src="https://www.marylandmessenger.com/email/prescheduled.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
 								 		</a>
 									</td>
-								</tr>
+								</tr>
+
 							</table>
 						</td>
 					</tr>
@@ -1004,7 +1011,8 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
 		
 		
 	</tbody>
-</table>
+</table>
+
 ';
 
                 $headers .= 'From: New York Courier Service <lisa@a1express.com>' . "\r\n";
@@ -1042,8 +1050,9 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                                 DomainManager::QQ_EXPR_USERNAME,
                                 DomainManager::QQ_ASAP_USERNAME,
                                 DomainManager::QQ_DEV_USERNAME,
-				DomainManager::QQ_MM_USERNAME,
-				DomainManager::QQ_MANH_USERNAME
+                                DomainManager::QQ_MM_USERNAME,
+                                DomainManager::QQ_NY_USERNAME,
+                                DomainManager::QQ_MANH_USERNAME
                             ),
                             DomainManager::GetVariable(
                                 DomainManager::QQ_MANH_PASSWORD,
@@ -1052,7 +1061,8 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                                 DomainManager::QQ_ASAP_PASSWORD,
                                 DomainManager::QQ_DEV_PASSWORD,
                                 DomainManager::QQ_MM_PASSWORD,
-				DomainManager::QQ_MANH_PASSWORD
+                                DomainManager::QQ_NY_PASSWORD,
+				                DomainManager::QQ_MANH_PASSWORD
                             ),
                             DomainManager::GetVariable(
                                 DomainManager::QQ_MANH_WEBSITE,
@@ -1061,7 +1071,8 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                                 DomainManager::QQ_ASAP_WEBSITE,
                                 DomainManager::QQ_DEV_WEBSITE,
                                 DomainManager::QQ_MM_WEBSITE,
-				DomainManager::QQ_MANH_WEBSITE
+                                DomainManager::QQ_NY_WEBSITE,
+				                DomainManager::QQ_MANH_WEBSITE
                             )
                         );
 
@@ -1118,7 +1129,8 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                                 DomainManager::QQ_ASAP_WEBSITE,
                                 DomainManager::QQ_DEV_WEBSITE,
                                 DomainManager::QQ_MM_WEBSITE,
-				DomainManager::QQ_MANH_WEBSITE
+                                DomainManager::QQ_NY_WEBSITE,
+				                DomainManager::QQ_MANH_WEBSITE
                             ),
                             $weight,
                             $pieces,
@@ -1130,7 +1142,8 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                                 DomainManager::QQ_ASAP_CUSTOMER,
                                 DomainManager::QQ_DEV_CUSTOMER,
                                 DomainManager::QQ_MM_CUSTOMER,
-				DomainManager::QQ_MANH_CUSTOMER
+                                DomainManager::QQ_NY_CUSTOMER,
+                                DomainManager::QQ_MANH_CUSTOMER
                             ),
                             $origin,
                             $date,
