@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<?php echo('<br/><br/><br/>arrived here?'); var_dump(get_queried_object_id() == DomainManager::GetVariable(1943, 2410, 1716, 1731, 1731, 1654, 1714, 1950)); die(); ?>
 <?php if ( get_queried_object_id() == DomainManager::GetVariable(1943, 2410, 1716, 1731, 1731, 1654, 1714, 1950) ): ?>
 	<?php get_template_part( 'a1x/templates/quick-quote' ); ?>
 <?php endif; ?>
