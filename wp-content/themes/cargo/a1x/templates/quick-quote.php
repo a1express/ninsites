@@ -1365,7 +1365,7 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
             <div class="rowItemContent">
                 <div class="rowItem col-md-6">
                     <h3>GET AN INSTANT COURIER QUOTE</h3>
-                    <?php get_template_part( 'a1x/templates/quick-quote' ); ?>
+                    <?php get_template_part( 'a1x/templates/quick-quote-form' ); ?>
                 </div>
             </div>
 
