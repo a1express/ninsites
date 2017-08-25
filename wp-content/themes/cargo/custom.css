@@ -67,10 +67,15 @@ body.page-layout-tracking .btContent .col-sm-6 { width: 600px; max-width: 100%; 
 body.page-layout-tracking .btContent .col-sm-6 td.green { font-size: 30px; font-weight: 500; font-family: Cabin; text-transform: uppercase; }
 /* End tracking pages */
 
+.banner-qq {
+    background: rgba(0,0,0,0.3);
+    padding: 10px;
+}
 .banner-qq label {
     display: inline-block;
     vertical-align: middle;
     margin: 0px 5px;
+    font-size: 15px;
 }
 .banner-qq input {
     display: inline-block;
@@ -80,14 +85,15 @@ body.page-layout-tracking .btContent .col-sm-6 td.green { font-size: 30px; font-
     margin: 0px 5px;
     color: #333 !important;
     padding: 0px;
-    height: 35px;
+    height: 50px;
 }
 .banner-qq .submit-button {
     -webkit-appearance: none;
     text-transform: uppercase;
     font-weight: 700;
-    padding: 5px 20px;
+    padding: 15px 20px;
     cursor: pointer;
+    line-height: 20px;
     color: #fff;
     background: #272bf7;
     border-radius: 2px;
