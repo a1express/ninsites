@@ -267,6 +267,8 @@ body.home:not(.btMenuVerticalLeft):not(.btMenuVerticalRight) header div.menuPort
 }
 #qq-holder.on-banner .formfield { margin-bottom: 10px; }
 
+#qq-holder.on-home { padding-bottom: 50px; }
+
 body.localhost-site #slider .header,
 body.boxonaplane-site #slider .header {
     text-align: right;
