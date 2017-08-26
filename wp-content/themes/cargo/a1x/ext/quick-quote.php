@@ -32,6 +32,8 @@ class QuickQuote
 
     public static function OnNyHomepageBottom($content)
     {
+        var_dump(is_front_page() && DomainManager::IsNYCourierDomain()); die();
+
         if ( is_front_page() && DomainManager::IsNYCourierDomain() )
         {
             ob_start();
