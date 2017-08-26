@@ -32,9 +32,6 @@ class QuickQuote
 
     public static function OnNyHomepageBottom($content)
     {
-        var_dump(is_front_page() && DomainManager::IsNYCourierDomain());
-        die();
-
         if ( is_front_page() && DomainManager::IsNYCourierDomain() )
         {
             ob_start();
@@ -43,9 +40,8 @@ class QuickQuote
             get_template_part( 'a1x/templates/quick-quote-form' );
 
             $quickquote = ob_get_clean();
-            $quickquote = str_replace( '<h2><span class="headline">Use our Quick Quote Tool</span></h2>', $quickquote );
 
-            $target = '<div class="slided mediumSliderHeight';
+            $target = '<h2><span class="headline">Use our Quick Quote Tool</span></h2>';
 
             return str_replace($target, $target . $quickquote, $content);
         }
