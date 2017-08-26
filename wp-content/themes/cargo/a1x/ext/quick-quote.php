@@ -1,7 +1,9 @@
 <?php
 
-class QuickQuote {
-    public static function Init($content) {
+class QuickQuote
+{
+    public static function Init($content)
+    {
         $pageId = get_queried_object_id();
 
         if  (
@@ -27,6 +29,27 @@ class QuickQuote {
 
         return $content;
     }
+
+    public static function OnNyHomepageBottom($content)
+    {
+        if ( is_front_page() && DomainManager::IsNYCourierDomain() )
+        {
+            ob_start();
+
+            $GLOBALS['qq_redirect_url'] = home_url('/quick-quote');
+            get_template_part( 'a1x/templates/quick-quote-form' );
+
+            $quickquote = ob_get_clean();
+            $quickquote = str_replace( '<h2><span class="headline">Use our Quick Quote Tool</span></h2>', $quickquote );
+
+            $target = '<div class="slided mediumSliderHeight';
+
+            return str_replace($target, $target . $quickquote, $content);
+        }
+
+        return $content;
+    }
 }
 
 add_filter( 'the_content', [ 'QuickQuote', 'Init' ], 100000 );
+add_filter( 'the_content', [ 'QuickQuote', 'OnNyHomepageBottom' ], 100000 );
