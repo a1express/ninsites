@@ -52,4 +52,4 @@ class QuickQuote
 }
 
 add_filter( 'the_content', [ 'QuickQuote', 'Init' ], 100000 );
-add_filter( 'the_content', [ 'QuickQuote', 'OnNyHomepageBottom' ], 100000 );
+add_filter( 'the_content', [ 'QuickQuote', 'OnNyHomepageBottom' ], 100001 );
