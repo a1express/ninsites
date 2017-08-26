@@ -15,6 +15,7 @@
                 '40.7590402,-74.0394423',
                 '39.261032,-76.676993',
                 '40.7590402,-74.0394423',
+                '40.7590402,-74.0394423',
                 '40.7590402,-74.0394423'
             );
         ?>
@@ -1052,6 +1053,7 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                                 DomainManager::QQ_DEV_USERNAME,
                                 DomainManager::QQ_MM_USERNAME,
                                 DomainManager::QQ_NY_USERNAME,
+                                DomainManager::QQ_SD_USERNAME,
                                 DomainManager::QQ_MANH_USERNAME
                             ),
                             DomainManager::GetVariable(
@@ -1062,6 +1064,7 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                                 DomainManager::QQ_DEV_PASSWORD,
                                 DomainManager::QQ_MM_PASSWORD,
                                 DomainManager::QQ_NY_PASSWORD,
+                                DomainManager::QQ_SD_PASSWORD,
 				                DomainManager::QQ_MANH_PASSWORD
                             ),
                             DomainManager::GetVariable(
@@ -1072,6 +1075,7 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                                 DomainManager::QQ_DEV_WEBSITE,
                                 DomainManager::QQ_MM_WEBSITE,
                                 DomainManager::QQ_NY_WEBSITE,
+                                DomainManager::QQ_SD_WEBSITE,
 				                DomainManager::QQ_MANH_WEBSITE
                             )
                         );
@@ -1130,6 +1134,7 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                                 DomainManager::QQ_DEV_WEBSITE,
                                 DomainManager::QQ_MM_WEBSITE,
                                 DomainManager::QQ_NY_WEBSITE,
+                                DomainManager::QQ_SD_WEBSITE,
 				                DomainManager::QQ_MANH_WEBSITE
                             ),
                             $weight,
@@ -1143,6 +1148,7 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                                 DomainManager::QQ_DEV_CUSTOMER,
                                 DomainManager::QQ_MM_CUSTOMER,
                                 DomainManager::QQ_NY_CUSTOMER,
+                                DomainManager::QQ_SD_CUSTOMER,
                                 DomainManager::QQ_MANH_CUSTOMER
                             ),
                             $origin,
