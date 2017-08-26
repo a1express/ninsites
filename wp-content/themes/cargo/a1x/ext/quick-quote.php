@@ -40,6 +40,7 @@ class QuickQuote
             get_template_part( 'a1x/templates/quick-quote-form' );
 
             $quickquote = ob_get_clean();
+            $quickquote = '<div id="qq-holder" class="on-home">' . $quickquote . '</div>';
 
             $target = '<h2><span class="headline">Use our Quick Quote Tool</span></h2>';
 
