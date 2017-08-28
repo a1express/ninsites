@@ -134,7 +134,7 @@ body.page-layout-tracking .btContent .col-sm-6 td.green { font-size: 30px; font-
 
 .qq-results .mobile-label { display: none; }
 
-#qq-holder form .submit-buttons .initially-hidden { display: none !important; }
+.qq-holder form .submit-buttons .initially-hidden { display: none !important; }
 
 @media screen and (max-width: 767px) {
     .banner-qq label, .banner-qq input, .banner-qq button {
@@ -167,8 +167,8 @@ body.page-layout-tracking .btContent .col-sm-6 td.green { font-size: 30px; font-
         font-weight: bold;
     }
 
-    #qq-holder form .submit-buttons .submit-button,
-    #qq-holder form .submit-buttons .submit-button1 {
+    .qq-holder form .submit-buttons .submit-button,
+    .qq-holder form .submit-buttons .submit-button1 {
         display: block;
         width: 100%;
         margin: 0px 0px 10px;
@@ -248,11 +248,11 @@ body.page-layout-tracking .btContent .col-sm-6 td.green { font-size: 30px; font-
 }
 
 /* Quick Quote */
-#qq-holder { padding: 50px 0px 250px; }
+.qq-holder { padding: 50px 0px 250px; }
 
 body.home:not(.btMenuVerticalLeft):not(.btMenuVerticalRight) header div.menuPort nav ul li { margin-right: 20px; }
 
-#qq-holder.on-banner {
+.qq-holder.on-banner {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -262,12 +262,11 @@ body.home:not(.btMenuVerticalLeft):not(.btMenuVerticalRight) header div.menuPort
     margin-left: -590px;
     top: 170px;
     z-index: 2000;
-    transform: scale(0.9, 0.9);
     box-shadow: 0 0 8px #555;
 }
-#qq-holder.on-banner .formfield { margin-bottom: 10px; }
+.qq-holder.on-banner .formfield { margin-bottom: 10px; }
 
-#qq-holder.on-home { padding-bottom: 50px; }
+.qq-holder.on-home { padding-bottom: 50px; }
 
 body.localhost-site #slider .header,
 body.boxonaplane-site #slider .header {
@@ -277,7 +276,7 @@ body.boxonaplane-site #slider .header {
 }
 body.localhost-site #slider .header h1,
 body.boxonaplane-site #slider .header h1 {
-    font-size: 70px;
+    font-size: 60px;
     min-height: 200px;
     line-height: 1;
 }
@@ -286,34 +285,34 @@ body.boxonaplane-site #slider .header.dash:after { margin: 0 0 0 auto; }
 body.localhost-site #slider .banner-qq,
 body.boxonaplane-site #slider .banner-qq { display: none; }
 
-#qq-holder.in-page { padding-bottom: 50px; }
-#qq-holder .no-results-box {
+.qq-holder.in-page { padding-bottom: 50px; }
+.qq-holder .no-results-box {
     padding: 10px;
     background: #c0f1f6;
     border: 2px solid #16ddf1;
     line-height: 1.5;
     margin-bottom: 20px;
 }
-#qq-holder .no-results-box p { margin-bottom: 10px; }
-#qq-holder .no-results-box p:last-child { margin-bottom: 0; }
-#qq-holder form .formfield { margin-bottom: 30px; }
-#qq-holder form .formfield:after {
+.qq-holder .no-results-box p { margin-bottom: 10px; }
+.qq-holder .no-results-box p:last-child { margin-bottom: 0; }
+.qq-holder form .formfield { margin-bottom: 30px; }
+.qq-holder form .formfield:after {
     content: "";
     display: table;
     clear: both;
 }
-#qq-holder form .formfield .rows2 {
+.qq-holder form .formfield .rows2 {
     float: left;
     width: 48%;
 }
-#qq-holder form .formfield .rows2:last-child { float: right; }
-#qq-holder form .formfield .rows3 {
+.qq-holder form .formfield .rows2:last-child { float: right; }
+.qq-holder form .formfield .rows3 {
     float: left;
     margin-right: 2%;
     width: 32%;
 }
-#qq-holder form .formfield .rows3:last-child { margin-right: 0px; }
-#qq-holder form .submit-button {
+.qq-holder form .formfield .rows3:last-child { margin-right: 0px; }
+.qq-holder form .submit-button {
     -webkit-appearance: none;
     text-transform: uppercase;
     font-weight: 700;
@@ -327,7 +326,7 @@ body.boxonaplane-site #slider .banner-qq { display: none; }
     margin-bottom: 5px;
 }
 
-#qq-holder form .submit-button1 {
+.qq-holder form .submit-button1 {
     border: 0px none;
     -webkit-appearance: none;
     text-transform: uppercase;
@@ -340,18 +339,52 @@ body.boxonaplane-site #slider .banner-qq { display: none; }
     border: 1px solid transparent;
     transition: all 300ms linear;
 }
-#qq-holder form .submit-button:hover {
+.qq-holder form .submit-button:hover {
     color: #272bf7;
     background: #fff;
     border: 1px solid #aaa;
     box-shadow: 0px 0px 5px #ccc;
 }
 
-#qq-holder form .submit-button1:hover {
+.qq-holder form .submit-button1:hover {
     color: #da251d;
     background: #fff;
     border: 1px solid #aaa;
     box-shadow: 0px 0px 5px #ccc;
+}
+
+@media screen and (max-width: 1399px) {
+    .qq-holder.on-banner { margin-left: -540px; }
+}
+@media screen and (max-width: 1299px) {
+    .qq-holder.on-banner { margin-left: -450px; }
+    body.localhost-site #slider .header,
+    body.boxonaplane-site #slider .header { width: 50%; }
+}
+@media screen and (max-width: 1099px) {
+    .qq-holder.on-banner {
+        margin-left: -400px;
+        width: 330px;
+    }
+}
+@media screen and (max-width: 999px) {
+    .qq-holder.on-banner { margin-left: -350px; }
+}
+@media screen and (max-width: 899px) {
+    .qq-holder.on-banner {
+        margin-left: 0;
+        left: 100px;
+        right: 100px;
+        width: auto;
+    }
+    body.localhost-site #slider .header,
+    body.boxonaplane-site #slider .header { opacity: 0 }
+}
+@media screen and (max-width: 767px) {
+    .qq-holder.on-banner {
+        left: 10px;
+        right: 10px;
+    }
 }
 
 .box-options {

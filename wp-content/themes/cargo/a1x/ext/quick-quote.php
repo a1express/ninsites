@@ -20,7 +20,7 @@ class QuickQuote
             get_template_part( "a1x/templates/quick-quote" );
             $quickquote = ob_get_clean();
 
-            $quickquote = str_replace( '<div id="qq-holder" class="gutter">', '<div id="qq-holder" class="in-page gutter">', $quickquote );
+            $quickquote = str_replace( '<div class="qq-holder gutter">', '<div class="qq-holder in-page gutter">', $quickquote );
 
             $target = '<div class="slided mediumSliderHeight';
 
@@ -40,7 +40,7 @@ class QuickQuote
             get_template_part( 'a1x/templates/quick-quote-form' );
 
             $quickquote = ob_get_clean();
-            $quickquote = '<div id="qq-holder" class="on-home">' . $quickquote . '</div>';
+            $quickquote = '<div class="qq-holder on-home">' . $quickquote . '</div>';
 
             $target = '<h2><span class="headline">Use our Quick Quote Tool</span></h2>';
 
