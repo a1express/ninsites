@@ -759,7 +759,8 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
 									 		<img alt="PRESCHEDULED ROUTED DELIVERY" src="http://newyorkcourierservice.com/email/prescheduled.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
 								 		</a>
 									</td>
-								</tr>
+								</tr>
+
 							</table>
 						</td>
 					</tr>
@@ -788,7 +789,8 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
 		
 		
 	</tbody>
-</table>
+</table>
+
 
 ';
 
@@ -830,6 +832,7 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                                 DomainManager::QQ_MM_USERNAME,
                                 DomainManager::QQ_NY_USERNAME,
                                 DomainManager::QQ_SD_USERNAME,
+                                DomainManager::QQ_SOS_USERNAME,
                                 DomainManager::QQ_MANH_USERNAME
                             ),
                             DomainManager::GetVariable(
@@ -841,6 +844,7 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                                 DomainManager::QQ_MM_PASSWORD,
                                 DomainManager::QQ_NY_PASSWORD,
                                 DomainManager::QQ_SD_PASSWORD,
+                                DomainManager::QQ_SOS_PASSWORD,
 				                DomainManager::QQ_MANH_PASSWORD
                             ),
                             DomainManager::GetVariable(
@@ -852,6 +856,7 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                                 DomainManager::QQ_MM_WEBSITE,
                                 DomainManager::QQ_NY_WEBSITE,
                                 DomainManager::QQ_SD_WEBSITE,
+                                DomainManager::QQ_SOS_WEBSITE,
 				                DomainManager::QQ_MANH_WEBSITE
                             )
                         );
@@ -911,6 +916,7 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                                 DomainManager::QQ_MM_WEBSITE,
                                 DomainManager::QQ_NY_WEBSITE,
                                 DomainManager::QQ_SD_WEBSITE,
+                                DomainManager::QQ_SOS_WEBSITE,
 				                DomainManager::QQ_MANH_WEBSITE
                             ),
                             $weight,
@@ -925,6 +931,7 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                                 DomainManager::QQ_MM_CUSTOMER,
                                 DomainManager::QQ_NY_CUSTOMER,
                                 DomainManager::QQ_SD_CUSTOMER,
+                                DomainManager::QQ_SOS_CUSTOMER,
                                 DomainManager::QQ_MANH_CUSTOMER
                             ),
                             $origin,
