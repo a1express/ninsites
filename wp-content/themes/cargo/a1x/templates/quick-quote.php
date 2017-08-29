@@ -794,12 +794,141 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
 
 ';
 
-                $headers .= 'From: New York Courier Service <lisa@a1express.com>' . "\r\n";
+                $headers .= 'From: NYC Courier Service <lisa@a1express.com>' . "\r\n";
 
                 $r = mail($email, "NYCCourierService QuickQuote", $mailBody, $headers);
             }
 
+            else if ( DomainManager::IsSOSCourierDomain() )
+            {
+                Solve360::Call("http://www.webicise.com/Solve360/SOS/QuickQuote/Solve360ContactSave.php", $params);
+
+                $mailBody = '
+<HTML><head><title>Save Time & Gas with $5 off</title></head>
+<body leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0"><table width="700" cellpadding="0" cellspacing="0" align="center">
+	<tbody>
+		<tr>
+			<td width="700" align="center" valign="top">
+			<table style="margin-left: 0px;" border="0" cellspacing="0" cellpadding="0">
+				<tbody>
+					<tr>
+						<td style="text-align: center;">
+						<a href="http://soslogisticsus.com/" style="text-decoration:none;" title="SOS Logistics">
+						<br>
+						<img src="http://soslogisticsus.com/email/sos_banner.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;" width="700" height="70" title="SOS Logistics" alt="SOS Logistics">
+						</a>
+						</td>
+					</tr>
+					<tr>
+						<td width="700" height="15"></td>
+					</tr>
+					<tr>
+						<td>
+						<table style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc;" height="32" width="700">
+							<tbody>
+								<tr>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 14px;" width="90">
+										<a href="http://soslogisticsus.com/quick-quote/" style="text-decoration:none; color: black;" title="Quick Quotes">
+										Quick Quotes
+										</a>
+										</td>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 0;" width="90">
+										<a href="http://soslogisticsus.com/services/" style="text-decoration:none; color: black;" title="Services">
+										Services
+										</a>
+										</td>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 0;" width="100">
+										<a href="http://soslogisticsus.com/new-account/" style="text-decoration:none; color: black;" title="New Account">
+										New Account
+										</a>
+										</td>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding-top: 3px;" width="70">
+										<a href="http://soslogisticsus.com/ship-now/" style="text-decoration:none; color: black;" title="Ship Now">
+										Ship Now
+										</a>
+										</td>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 18px;" width="90">
+										<a href="http://soslogisticsus.com/contact/" style="text-decoration:none; color: black;" title="Contact Us">
+										Contact Us
+										</a>
+										</td>
+									</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<table style="margin-left: 0px;" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td cellpadding="0" cellspacing="0" colspan="2">
+										<a title="Get $5 off" href="http://soslogisticsus.com/new-account/">
+											<img alt="Get $5 off" src="http://soslogisticsus.com/email/5off.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td cellpadding="0" cellspacing="0" >
+								 		<a title="Rush Courier & On Demand" href="http://soslogisticsus.com/services/on-demand/">
+									 		<img alt="Rush Courier & On Demand" src="http://soslogisticsus.com/email/rush.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		</a>
+									</td>
+									<td cellpadding="0" cellspacing="0"  >
+								 		<a title="Warehousing" href="http://soslogisticsus.com/services/warehousing/">
+									 		<img alt="Warehousing" src="http://soslogisticsus.com/email/warehousing.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		</a>
+									</td>
+								</tr>
+								<tr>
+									<td cellpadding="0" cellspacing="0" >
+								 		<a title="Last Mile Home Delivery" href="http://soslogisticsus.com/services/last-mile-home-delivery/">
+									 		<img alt="Last Mile Home Delivery" src="http://soslogisticsus.com/email/lastmile.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		</a>
+									</td>
+									<td cellpadding="0" cellspacing="0"  >
+								 		<a title="PRESCHEDULED ROUTED DELIVERY" href="http://soslogisticsus.com/services/routes/">
+									 		<img alt="PRESCHEDULED ROUTED DELIVERY" src="http://soslogisticsus.com/email/prescheduled.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		</a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					
+						<td width="233">
+						
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align: center;font-family: Helvetica;font-size:11px;padding-top: 28px;">
+			<p>You recently requested a same day courier service quote at soslogisticsus.com. Place an order for your
+1st courier delivery within the next 7 days and get $5 off with the coupon code SOS100X.</p>
+
+<p>If you place an order online; place the code in the reference field on the order form and $5.00 will be
+deducted from the order before final charges. * Offer Expires in 30 days</p>
+
+			</td>
+		</tr>
+<tr>
+			<td style="text-align: center;font-family: Helvetica;font-size:11px;padding-top: 28px;">If you would like to unsubscribe and stop receiving these emails <a href="mailto:lisa@a1express.com?subject=unsubscribe%20to%20SOS%20Quick%20Quotes" style="color:rgb(17,85,204);">click here</a></td>
+		</tr> 
+<tr><td height="10"></td></tr> 
+		<tr>
+<td align="center" bgcolor="#fe0000"><font color="#FFFFFF" face="Arial" size="2">SOS Logistics | (800) 507-7137   | 99 Jericho Tpke | Jericho NY | 11753</font></td>
+</tr>
+		
+		
+	</tbody>
+</table>
+';
+
+                $headers .= 'From: SOS Logistics <lisa@a1express.com>' . "\r\n";
+
+                $r = mail($email, "SOSCourierService QuickQuote", $mailBody, $headers);
+            }
+
         }
+
         ?>
 
         <div class="boldRow">
