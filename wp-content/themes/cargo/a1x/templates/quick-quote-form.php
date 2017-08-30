@@ -1,4 +1,4 @@
-<?php global $qq_redirect_url, $qq_scripts_loaded; ?>
+<?php global $qq_redirect_url, $qq_scripts_loaded, $has_results; ?>
 
 <?php if (!$qq_scripts_loaded): ?>
     <?php $GLOBALS['qq_scripts_loaded'] = true; ?>
@@ -90,8 +90,8 @@
 
     <div class="submit-buttons">
         <button class="submit-button1">Get Quote</button>
-        <button class="submit-button <?php echo isset($hasResults) && $hasResults ? '' : 'initially-hidden'; ?>" onclick="location.href='/ship-now/'" type="button">Ship Now</button>
-        <button class="submit-button <?php echo isset($hasResults) && $hasResults ? '' : 'initially-hidden'; ?>" onclick="location.href='/new-account/'" type="button">Create an Account</button>
+        <button class="submit-button <?php echo $has_results != null && $has_results ? '' : 'initially-hidden'; ?>" onclick="location.href='/ship-now/'" type="button">Ship Now</button>
+        <button class="submit-button <?php echo $has_results != null && $has_results ? '' : 'initially-hidden'; ?>" onclick="location.href='/new-account/'" type="button">Create an Account</button>
     </div>
 </form>
 

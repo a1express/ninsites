@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php if ( get_queried_object_id() == DomainManager::GetVariable(1943, 2410, 1716, 1731, 1731, 1654, 1714, 1714, 1673, 1673) ): ?>
+<?php if ( get_queried_object_id() == DomainManager::GetVariable(1943, 2410, 1716, 1731, 1731, 1654, 1714, 1714, 1673, 1943) ): ?>
 	<?php get_template_part( 'a1x/templates/quick-quote' ); ?>
 <?php endif; ?>
 

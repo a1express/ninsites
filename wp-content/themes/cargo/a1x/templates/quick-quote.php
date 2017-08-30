@@ -890,7 +890,8 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
 									 		<img alt="PRESCHEDULED ROUTED DELIVERY" src="http://soslogisticsus.com/email/prescheduled.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
 								 		</a>
 									</td>
-								</tr>
+								</tr>
+
 							</table>
 						</td>
 					</tr>
@@ -919,7 +920,8 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
 		
 		
 	</tbody>
-</table>
+</table>
+
 ';
 
                 $headers .= 'From: SOS Logistics <lisa@a1express.com>' . "\r\n";
@@ -1074,6 +1076,7 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                         $orders = isset($parser->SOAPBody->mQuoteOrderResponse->Order) ? $parser->SOAPBody->mQuoteOrderResponse->Order : array();
 
                         $hasResults = true;
+                        $GLOBALS['has_results'] = true;
                     }
                     ?>
 
