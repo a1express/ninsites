@@ -10,7 +10,6 @@ class DomainManager {
     const DOMAIN_NY_COURIER = "newyorkcourierservice.com";
     const DOMAIN_SD_COURIER = "sdsgl.com";
     const DOMAIN_SOS_COURIER = "soslogisticsus.com";
-    const DOMAIN_NIN_COURIER = "nindelivers.com";
 
     const QQ_MANH_USERNAME = "remote";
     const QQ_MANH_PASSWORD = "remotequote";
@@ -56,12 +55,6 @@ class DomainManager {
     const QQ_SOS_PASSWORD = "remotequote";
     const QQ_SOS_WEBSITE = "a1express";
     const QQ_SOS_CUSTOMER = "A1XQOUTE";
-
-    const QQ_NIN_USERNAME = "remote";
-    const QQ_NIN_PASSWORD = "remotequote";
-    const QQ_NIN_WEBSITE = "a1express";
-    const QQ_NIN_CUSTOMER = "A1XQOUTE";
-
 
     public static function IsManhattanCourierServiceDomain()
     {
@@ -126,13 +119,6 @@ class DomainManager {
         return $domain == self::DOMAIN_SOS_COURIER || strpos( $domain, self::DOMAIN_SOS_COURIER ) !== false;
     }
 
-    public static function IsNINCourierDomain()
-    {
-        $domain = self::GetCurrentDomain();
-
-        return $domain == self::DOMAIN_NIN_COURIER || strpos( $domain, self::DOMAIN_NIN_COURIER ) !== false;
-    }
-
     public static function IsLocalhostDomain()
     {
         $domain = self::GetCurrentDomain();
@@ -146,7 +132,7 @@ class DomainManager {
         return isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '';
     }
 
-    public static function GetVariable($manhattanVariable, $proficientVariable, $expressVariable, $asapVariable, $devVariable, $mmVariable, $nyVariable, $sdVariable, $sosVariable, $ninVariable, $localhostVariable, $defaultVariable = '')
+    public static function GetVariable($manhattanVariable, $proficientVariable, $expressVariable, $asapVariable, $devVariable, $mmVariable, $nyVariable, $sdVariable, $sosVariable, $localhostVariable, $defaultVariable = '')
     {
         $variable = $defaultVariable;
 
@@ -168,8 +154,6 @@ class DomainManager {
             $variable = $sdVariable;
         else if ( self::IsSosCourierDomain() )
             $variable = $sosVariable;
-        else if ( self::IsNINCourierDomain() )
-            $variable = $ninVariable;
         else if ( self::IsLocalhostDomain() )
             $variable = $localhostVariable;
 

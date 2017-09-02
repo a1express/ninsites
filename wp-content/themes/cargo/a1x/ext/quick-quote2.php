@@ -14,6 +14,8 @@ class QuickQuote
 		        || ( DomainManager::IsDEVCourierDomain() && ( $pageId == 1683 || $pageId == 1711 ) )
                 || ( DomainManager::IsMMCourierDomain() && ( $pageId == 1684 || $pageId == 1698 ) )
                 || ( DomainManager::IsNYCourierDomain() && ( $pageId == 1753 || $pageId == 1765 ) )
+		|| ( DomainManager::IsSosCourierDomain() && ( $pageId == 1610 || $pageId == 1667 ) )
+		|| ( DomainManager::IsNINCourierDomain() && ( $pageId == 1683 || $pageId == 1711 ) )
             )
         {
             ob_start();
