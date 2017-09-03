@@ -964,7 +964,7 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                                 DomainManager::QQ_NY_USERNAME,
                                 DomainManager::QQ_SD_USERNAME,
                                 DomainManager::QQ_SOS_USERNAME,
-				DomainManager::QQ_NIN_USERNAME
+				DomainManager::QQ_MANH_USERNAME
                             ),
                             DomainManager::GetVariable(
                                 DomainManager::QQ_MANH_PASSWORD,
@@ -976,7 +976,7 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                                 DomainManager::QQ_NY_PASSWORD,
                                 DomainManager::QQ_SD_PASSWORD,
                                 DomainManager::QQ_SOS_PASSWORD,
-				DomainManager::QQ_NIN_PASSWORD
+				DomainManager::QQ_MANH_PASSWORD
                             ),
                             DomainManager::GetVariable(
                                 DomainManager::QQ_MANH_WEBSITE,
@@ -988,7 +988,7 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                                 DomainManager::QQ_NY_WEBSITE,
                                 DomainManager::QQ_SD_WEBSITE,
                                 DomainManager::QQ_SOS_WEBSITE,
-				DomainManager::QQ_NIN_WEBSITE
+				DomainManager::QQ_MANH_WEBSITE
                             )
                         );
 
@@ -1048,7 +1048,7 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                                 DomainManager::QQ_NY_WEBSITE,
                                 DomainManager::QQ_SD_WEBSITE,
                                 DomainManager::QQ_SOS_WEBSITE,
-				DomainManager::QQ_NIN_WEBSITE
+				DomainManager::QQ_MANH_WEBSITE
                             ),
                             $weight,
                             $pieces,
@@ -1062,7 +1062,8 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                                 DomainManager::QQ_MM_CUSTOMER,
                                 DomainManager::QQ_NY_CUSTOMER,
                                 DomainManager::QQ_SD_CUSTOMER,
-                                DomainManager::QQ_SOS_CUSTOMER
+                                DomainManager::QQ_SOS_CUSTOMER,
+				DomainManager::QQ_MANH_CUSTOMER
                             ),
                             $origin,
                             $date,
