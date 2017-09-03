@@ -10,7 +10,7 @@ class DomainManager {
     const DOMAIN_NY_COURIER = "newyorkcourierservice.com";
     const DOMAIN_SD_COURIER = "sdsgl.com";
     const DOMAIN_SOS_COURIER = "soslogisticsus.com";
-    const DOMAIN_SOS_COURIER = "nindelivers.com";
+    const DOMAIN_NIN_COURIER = "nindelivers.com";
 
     const QQ_MANH_USERNAME = "remote";
     const QQ_MANH_PASSWORD = "remotequote";
