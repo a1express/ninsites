@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
+	<script type="text/javascript">
+		var ninVersion = 'v5';
+	</script>
 
 	<?php
 	
