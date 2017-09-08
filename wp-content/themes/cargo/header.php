@@ -15,23 +15,18 @@
 	<script type="text/javascript">
 		(function($) {
 			$(document).ready(function(){
-				$("#slider .btIconImageRow").each(function(){
-					var imageRow = $(this);
+				var sliderImageRow = $("#slider .btIconImageRow");
+				var sliderQqForm = $("<form/>", { "action": "/quick-quote", "class": "banner-qq" })
+									.append( $("<label/>", { "text": "enter your pick-up zip code" }) )
+									.append( $("<input/>", { "type": "text", "name": "origin" }).on("focus", function(){
+										$('.slick-slider').slick('slickPause');
+									}) )
+									.append( $( "<button/>", { "text": "Get Quote", "class": "submit-button" } ) );
 
-					imageRow.empty();
-					imageRow.append(
-						$("<form/>", { "action": "/quick-quote", "class": "banner-qq" })
-							.append( $("<label/>", { "text": "enter your pick-up zip code" }) )
-							.append( $("<input/>", { "type": "text", "name": "origin" }) )
-							.append( $( "<button/>", { "text": "Get Quote", "class": "submit-button" } ) )
-					);
-
-					imageRow.find("form input").on("focus", function(){
-						jQuery('.slick-slider').slick('slickPause');
-					});
-
-					imageRow.addClass("active");
-				});
+				if ( sliderImageRow.length > 0 )
+					sliderImageRow.empty().append(sliderQqForm).addClass("active");
+				else
+					$("#slider .btSlidePane").eq(0).append( $("<div/>", { "class": "btIconImageRow active" }).append( sliderQqForm ) );
 
 				$("input.btContactAddress").attr('placeholder', 'Company');
 
