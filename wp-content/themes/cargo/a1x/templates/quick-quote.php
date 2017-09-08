@@ -1282,6 +1282,13 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
             </div>
         </div>
 
+        <?php if ($hasResults && isset($orders) && count( $orders ) > 0): ?>
+            <div class="submit-buttons" style="margin-bottom: 20px;">
+                <button class="submit-button" onclick="location.href='/ship-now/'" type="button">Ship Now</button>
+                <button class="submit-button" onclick="location.href='/new-account/'" type="button">Create an Account</button>
+            </div>
+        <?php endif; ?>
+
         <div class="boldRow">
             <div class="rowItemContent">
                 <div class="rowItem col-md-6">
