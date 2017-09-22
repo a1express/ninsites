@@ -38,6 +38,7 @@ body.single-post .btMediaBox img {
     color: #fff;
     border-radius: 5px;
 }
+body:not(.btMenuVerticalLeft):not(.btMenuVerticalRight) .menuPort>nav>ul>li { margin-right: 25px; }
 .menuPort nav > ul > li > a.btn-style.btn-style-blue { background: #0014f7; }
 
 /* Iframe pages */
