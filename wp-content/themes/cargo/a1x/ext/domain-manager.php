@@ -11,6 +11,7 @@ class DomainManager {
     const DOMAIN_SD_COURIER = "sdsgl.com";
     const DOMAIN_SOS_COURIER = "soslogisticsus.com";
     const DOMAIN_NIN_COURIER = "nindelivers.com";
+    const DOMAIN_DEV2_COURIER = "dev.boxonabus.com";
 
     const QQ_MANH_USERNAME = "remote";
     const QQ_MANH_PASSWORD = "remotequote";
@@ -62,6 +63,11 @@ class DomainManager {
     const QQ_NIN_WEBSITE = "a1express";
     const QQ_NIN_CUSTOMER = "A1XQOUTE";
 
+    const QQ_DEV2_USERNAME = "remote";
+    const QQ_DEV2_PASSWORD = "remotequote";
+    const QQ_DEV2_WEBSITE = "a1express";
+    const QQ_DEV2_CUSTOMER = "A1XQOUTE";
+
     public static function IsManhattanCourierServiceDomain()
     {
         $domain = self::GetCurrentDomain();
@@ -95,6 +101,13 @@ class DomainManager {
         $domain = self::GetCurrentDomain();
 
         return $domain == self::DOMAIN_DEV_COURIER || strpos( $domain, self::DOMAIN_DEV_COURIER ) !== false;
+    }
+
+    public static function IsDEV2CourierDomain()
+    {
+        $domain = self::GetCurrentDomain();
+
+        return $domain == self::DOMAIN_DEV2_COURIER || strpos( $domain, self::DOMAIN_DEV2_COURIER ) !== false;
     }
 
     public static function IsMMCourierDomain()
@@ -145,7 +158,7 @@ class DomainManager {
         return isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '';
     }
 
-    public static function GetVariable($manhattanVariable, $proficientVariable, $expressVariable, $asapVariable, $devVariable, $mmVariable, $nyVariable, $sdVariable, $sosVariable, $ninVariable, $localhostVariable, $defaultVariable = '')
+    public static function GetVariable($manhattanVariable, $proficientVariable, $expressVariable, $asapVariable, $devVariable, $dev2Variable, $mmVariable, $nyVariable, $sdVariable, $sosVariable, $ninVariable, $localhostVariable, $defaultVariable = '')
     {
         $variable = $defaultVariable;
 
@@ -159,6 +172,8 @@ class DomainManager {
             $variable = $asapVariable;
         else if ( self::IsDEVCourierDomain() )
             $variable = $devVariable;
+        else if ( self::IsDEV2CourierDomain() )
+            $variable = $dev2Variable;
         else if ( self::IsMMCourierDomain() )
             $variable = $mmVariable;
         else if ( self::IsNYCourierDomain() )
