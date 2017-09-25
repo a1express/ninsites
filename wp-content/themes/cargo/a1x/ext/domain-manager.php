@@ -16,7 +16,7 @@ class DomainManager {
     const QQ_MANH_USERNAME = "remote";
     const QQ_MANH_PASSWORD = "remotequote";
     const QQ_MANH_WEBSITE = "a1express";
-    const QQ_MANH_CUSTOMER = "A1XQOUTE";
+    const QQ_MANH_CUSTOMER = "A1XQUOTE";
 
     const QQ_PROF_USERNAME = "anonproficient";
     const QQ_PROF_PASSWORD = "anon";
@@ -31,17 +31,17 @@ class DomainManager {
     const QQ_ASAP_USERNAME = "remote";
     const QQ_ASAP_PASSWORD = "remotequote";
     const QQ_ASAP_WEBSITE = "a1express";
-    const QQ_ASAP_CUSTOMER = "A1XQOUTE";
+    const QQ_ASAP_CUSTOMER = "A1XQUOTE";
 
     const QQ_DEV_USERNAME = "remote";
     const QQ_DEV_PASSWORD = "remotequote";
     const QQ_DEV_WEBSITE = "a1express";
-    const QQ_DEV_CUSTOMER = "A1XQOUTE";
+    const QQ_DEV_CUSTOMER = "A1XQUOTE";
 
     const QQ_MM_USERNAME = "remote";
     const QQ_MM_PASSWORD = "remotequote";
     const QQ_MM_WEBSITE = "a1express";
-    const QQ_MM_CUSTOMER = "A1XQOUTE";
+    const QQ_MM_CUSTOMER = "A1XQUOTE";
 
     const QQ_NY_USERNAME = "remote";
     const QQ_NY_PASSWORD = "remotequote";
@@ -51,22 +51,22 @@ class DomainManager {
     const QQ_SD_USERNAME = "remote";
     const QQ_SD_PASSWORD = "remotequote";
     const QQ_SD_WEBSITE = "a1express";
-    const QQ_SD_CUSTOMER = "A1XQOUTE";
+    const QQ_SD_CUSTOMER = "A1XQUOTE";
 
     const QQ_SOS_USERNAME = "remote";
     const QQ_SOS_PASSWORD = "remotequote";
     const QQ_SOS_WEBSITE = "a1express";
-    const QQ_SOS_CUSTOMER = "A1XQOUTE";
+    const QQ_SOS_CUSTOMER = "A1XQUOTE";
 
     const QQ_NIN_USERNAME = "remote";
     const QQ_NIN_PASSWORD = "remotequote";
     const QQ_NIN_WEBSITE = "a1express";
-    const QQ_NIN_CUSTOMER = "A1XQOUTE";
+    const QQ_NIN_CUSTOMER = "A1XQUOTE";
 
     const QQ_DEV2_USERNAME = "remote";
     const QQ_DEV2_PASSWORD = "remotequote";
     const QQ_DEV2_WEBSITE = "a1express";
-    const QQ_DEV2_CUSTOMER = "A1XQOUTE";
+    const QQ_DEV2_CUSTOMER = "A1XQUOTE";
 
     public static function IsManhattanCourierServiceDomain()
     {
