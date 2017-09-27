@@ -220,7 +220,7 @@ if ( ! class_exists( 'CargoTheme' ) ) {
 			wp_enqueue_script( 'bt_buggyfill_hacks_js', get_template_directory_uri() . '/js/viewport-units-buggyfill.hacks.js', array( 'jquery' ), '', false );
 			wp_enqueue_script( 'bt_magnific_popup', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js', array( 'jquery' ), '', false );
 			wp_enqueue_script( 'bt_slick_js', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), '', false );
-			wp_enqueue_script( 'bt_select_js', get_template_directory_uri() . '/js/fancySelect.js', array( 'jquery' ), '', false );
+			wp_enqueue_script( 'bt_select_js', get_template_directory_uri() . '/js/fancySelect.js', array( 'jquery' ), '2', false );
 			wp_enqueue_script( 'bt_misc_js', get_template_directory_uri() . '/js/misc.js', array( 'jquery' ), time(), false );
 			wp_enqueue_script( 'bt_header_js', get_template_directory_uri() . '/js/header.misc.js', array( 'jquery' ), '', false ); 
 			wp_enqueue_script( 'bt_dirhover_js', get_template_directory_uri() . '/js/dir.hover.js', array( 'jquery' ), '', false ); 

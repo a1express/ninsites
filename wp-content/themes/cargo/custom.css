@@ -701,3 +701,45 @@ body.boxonaplane-site #slider .banner-qq { display: none; }
 
 .btPreloader { display: none !important; }
 .btPreloader.forceShowing { display: block !important; }
+
+/* Measurement Conversion */
+.measurement-conversion {
+    margin: 0px auto;
+    float: none;
+}
+.measurement-conversion .top-part { margin-bottom: 40px; }
+.measurement-conversion .inline-form { margin: 5px 0 15px; }
+.measurement-conversion .inline-form:last-child { margin-bottom: 0; }
+.measurement-conversion .inline-form > * {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+.measurement-conversion .inline-form > button {
+    height: 30px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.measurement-conversion .inline-form > input {
+    height: 30px;
+    width: 100px;
+}
+.measurement-conversion .bottom-part input { height: 30px; }
+.measurement-conversion .big-selectors {
+    overflow: hidden;
+    margin: 20px 0 10px;
+}
+.measurement-conversion .big-selectors .one-half {
+    float: left;
+    width: 50%;
+}
+.measurement-conversion .big-selectors-button { margin-bottom: 20px; }
+.measurement-conversion .big-selectors-button button { padding: 5px 10px; }
+
+@media screen and (max-width: 767px) {
+    .measurement-conversion .inline-form > button {
+        display: block;
+        margin: 10px auto;
+    }
+}
+/* End Measurement Conversion */

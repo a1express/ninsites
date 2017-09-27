@@ -25,7 +25,7 @@
     return this.each(function() {
       var copyOptionsToList, disabled, options, sel, trigger, updateTriggerText, wrapper;
       sel = $(this);
-      if (sel.hasClass('fancified') || sel[0].tagName !== 'SELECT') {
+      if (sel.hasClass('not-fancyable') || sel.hasClass('fancified') || sel[0].tagName !== 'SELECT') {
         return;
       }
       sel.addClass('fancified');
