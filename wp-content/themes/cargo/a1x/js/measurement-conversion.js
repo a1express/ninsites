@@ -83,9 +83,7 @@ A1xApp.controller("MeasurementConversionController", ['$scope', function($scope)
         v1 = parseFloat(v1);
         if (isNaN(v1)) v1 = 1;
         v1 = Math.abs(v1);
-
-        $scope.form2.source = v1;
-
+        
         FromVal = $scope.parities[ $scope.form2.from ];
         ToVal = $scope.parities[ $scope.form2.to ];
         FromName = $scope.form2.from;
