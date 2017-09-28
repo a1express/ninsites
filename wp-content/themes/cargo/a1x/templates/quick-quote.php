@@ -165,9 +165,9 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
 				<tbody>
 					<tr>
 						<td style="text-align: center;">
-						<a href="https://www.proficientlogistic.com/" style="text-decoration:none;" title="Proficient Logistic">
+						<a href="https://www.lexingtonlogistics.com/" style="text-decoration:none;" title="Lexington Logistics">
 						<br>
-						<img src="https://www.proficientlogistic.com/email/proficient_banner.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;" width="700" height="70" title="Proficient Logistic" alt="Proficient Logistic">
+						<img src="https://www.lexingtonlogistics.com/email/proficient_banner.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;" width="700" height="70" title="Lexington Logistics" alt="Proficient Logistic">
 						</a>
 						</td>
 					</tr>
@@ -180,27 +180,27 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
 							<tbody>
 								<tr>
 										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 14px;" width="90">
-										<a href="https://www.proficientlogistic.com/quick-quote/" style="text-decoration:none; color: black;" title="Quick Quotes">
+										<a href="https://www.lexingtonlogistics.com/quick-quote/" style="text-decoration:none; color: black;" title="Quick Quotes">
 										Quick Quotes
 										</a>
 										</td>
 										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 0;" width="90">
-										<a href="https://www.proficientlogistic.com/services/" style="text-decoration:none; color: black;" title="Services">
+										<a href="https://www.lexingtonlogistics.com/services/" style="text-decoration:none; color: black;" title="Services">
 										Services
 										</a>
 										</td>
 										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 0;" width="100">
-										<a href="https://www.proficientlogistic.com/new-account/" style="text-decoration:none; color: black;" title="New Account">
+										<a href="https://www.lexingtonlogistics.com/new-account/" style="text-decoration:none; color: black;" title="New Account">
 										New Account
 										</a>
 										</td>
 										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding-top: 3px;" width="70">
-										<a href="https://www.proficientlogistic.com/ship-now/" style="text-decoration:none; color: black;" title="Ship Now">
+										<a href="https://www.lexingtonlogistics.com/ship-now/" style="text-decoration:none; color: black;" title="Ship Now">
 										Ship Now
 										</a>
 										</td>
 										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 18px;" width="90">
-										<a href="https://www.proficientlogistic.com/company/contact/" style="text-decoration:none; color: black;" title="Contact Us">
+										<a href="https://www.lexingtonlogistics.com/company/contact/" style="text-decoration:none; color: black;" title="Contact Us">
 										Contact Us
 										</a>
 										</td>
@@ -214,32 +214,32 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
 							<table style="margin-left: 0px;" border="0" cellspacing="0" cellpadding="0">
 								<tr>
 									<td cellpadding="0" cellspacing="0" colspan="2">
-										<a title="Get $5 off" href="https://www.proficientlogistic.com/new-account/">
-											<img alt="Get $5 off" src="https://www.proficientlogistic.com/email/5off.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+										<a title="Get $5 off" href="https://www.lexingtonlogistics.com/new-account/">
+											<img alt="Get $5 off" src="https://www.lexingtonlogistics.com/email/5off.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
 										</a>
 									</td>
 								</tr>
 								<tr>
 									<td cellpadding="0" cellspacing="0" >
-								 		<a title="Rush Courier & On Demand" href="https://www.proficientlogistic.com/services/rush-courier-on-demand/">
-									 		<img alt="Rush Courier & On Demand" src="https://www.proficientlogistic.com/email/rush.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		<a title="Rush Courier & On Demand" href="https://www.lexingtonlogistics.com/services/rush-courier-on-demand/">
+									 		<img alt="Rush Courier & On Demand" src="https://www.lexingtonlogistics.com/email/rush.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
 								 		</a>
 									</td>
 									<td cellpadding="0" cellspacing="0"  >
-								 		<a title="Warehousing" href="https://www.proficientlogistic.com/services/warehousing/">
-									 		<img alt="Warehousing" src="https://www.proficientlogistic.com/email/warehousing.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		<a title="Warehousing" href="https://www.lexingtonlogistics.com/services/warehousing/">
+									 		<img alt="Warehousing" src="https://www.lexingtonlogistics.com/email/warehousing.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
 								 		</a>
 									</td>
 								</tr>
 								<tr>
 									<td cellpadding="0" cellspacing="0" >
-								 		<a title="Last Mile Home Delivery" href="https://www.proficientlogistic.com/services/last-mile-home-delivery/">
-									 		<img alt="Last Mile Home Delivery" src="https://www.proficientlogistic.com/email/lastmile.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		<a title="Last Mile Home Delivery" href="https://www.lexingtonlogistics.com/services/last-mile-home-delivery/">
+									 		<img alt="Last Mile Home Delivery" src="https://www.lexingtonlogistics.com/email/lastmile.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
 								 		</a>
 									</td>
 									<td cellpadding="0" cellspacing="0"  >
-								 		<a title="PRESCHEDULED ROUTED DELIVERY" href="https://www.proficientlogistic.com/services/routes/">
-									 		<img alt="PRESCHEDULED ROUTED DELIVERY" src="https://www.proficientlogistic.com/email/prescheduled.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		<a title="PRESCHEDULED ROUTED DELIVERY" href="https://www.lexingtonlogistics.com/services/routes/">
+									 		<img alt="PRESCHEDULED ROUTED DELIVERY" src="https://www.lexingtonlogistics.com/email/prescheduled.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
 								 		</a>
 									</td>
 								</tr>
@@ -254,7 +254,7 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
 		</tr>
 		<tr>
 			<td style="text-align: center;font-family: Helvetica;font-size:11px;padding-top: 28px;">
-			<p>You recently requested a same day courier service quote at proficientlogistic.com. Place an order for your
+			<p>You recently requested a same day courier service quote at lexingtonlogistics.com. Place an order for your
 1st courier delivery within the next 7 days and get $5 off with the coupon code PC100X.</p>
 
 <p>If you place an order online; place the code in the reference field on the order form and $5.00 will be
@@ -263,11 +263,11 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
 			</td>
 		</tr>
 <tr>
-			<td style="text-align: center;font-family: Helvetica;font-size:11px;padding-top: 28px;">If you would like to unsubscribe and stop receiving these emails <a href="mailto:lisa@a1express.com?subject=unsubscribe%20to%20Proficient%20Quick%20Quotes" style="color:rgb(17,85,204);">click here</a></td>
+			<td style="text-align: center;font-family: Helvetica;font-size:11px;padding-top: 28px;">If you would like to unsubscribe and stop receiving these emails <a href="mailto:lisa@a1express.com?subject=unsubscribe%20to%20Lexington%20Quick%20Quotes" style="color:rgb(17,85,204);">click here</a></td>
 		</tr> 
 <tr><td height="10"></td></tr> 
 		<tr>
-<td align="center" bgcolor="#fe0000"><font color="#FFFFFF" face="Arial" size="2">Proficient Logistic | (859) 300-3880 | 351 United Court 
+<td align="center" bgcolor="#fe0000"><font color="#FFFFFF" face="Arial" size="2">Lexington Logistics | (859) 300-3880 | 351 United Court 
 | Lexington KY | 40509</font></td>
 </tr>
 		
@@ -277,9 +277,9 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
 
 ';
 
-                $headers .= 'From: Proficient Logistic <lisa@a1express.com>' . "\r\n";
+                $headers .= 'From: Lexington Logistics <lisa@a1express.com>' . "\r\n";
 
-                $r = mail($email, "ProficientLogistic QuickQuote", $mailBody, $headers);
+                $r = mail($email, "LexingtonLogistics QuickQuote", $mailBody, $headers);
             }
             else if ( DomainManager::IsExpressWayCourierDomain() )
             {
