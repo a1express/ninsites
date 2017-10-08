@@ -743,3 +743,30 @@ body.home:not(.btMenuVerticalLeft):not(.btMenuVerticalRight) header div.menuPort
     }
 }
 /* End Measurement Conversion */
+
+/* WEX Forms */
+.go-form .formfield { margin-bottom: 12px; }
+.go-form button {
+    /*height: 30px;*/
+    border-radius: 5px;
+    border: 0px none;
+    font-size: 15px;
+    padding: 0px 20px;
+    cursor: pointer;
+}
+.go-form .error { color: #ff0000; }
+
+.general-layout { overflow: hidden; }
+.general-layout figure { margin: 0; }
+.general-layout figure img { max-width: 100%; }
+.general-layout .general-column {
+    float: left;
+    width: 48%;
+}
+.general-layout .general-column:last-child { float: right; }
+
+@media only screen and (max-width: 500px) {
+    .general-layout .general-column { float: none !important; width: auto; margin-bottom: 20px; }
+}
+/* End WEX Forms */
+
