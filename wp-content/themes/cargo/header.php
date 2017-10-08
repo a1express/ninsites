@@ -55,6 +55,12 @@
 			});
 		})( jQuery );
 	</script>
+
+	<?php if ( DomainManager::IsASAPCourierDomain() ): ?>
+		<!-- GA code for ASAP Courier goes here -->
+	<?php elseif ( DomainManager::IsExpressWayCourierDomain() ): ?>
+		<!-- GA code for ExpressWay Courier goes here -->
+	<?php endif; ?>
 </head>
 
 <body <?php body_class( bt_get_body_class() ); ?> id="btBody">
