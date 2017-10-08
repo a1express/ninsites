@@ -40,8 +40,8 @@
 						<h3>Download Our Free Filing Guidelines</h3>
 						<br/><br/>
 						<figure>
-							<a href="http://washingtonexpress.com/services/documents/Working Filing Guidelines.pdf" target="_blank">
-								<img src="http://washingtonexpress.com//img/Filing_Guidelines_thumbnail.jpg" alt="Premerger filing tip sheet" />
+							<a href="<?php echo get_template_directory_uri(); ?>/a1x/img/working-filing-guidelines.pdf" target="_blank">
+								<img src="<?php echo get_template_directory_uri(); ?>/a1x/img/filing_guidelines_thumbnail.jpg" alt="Premerger filing tip sheet" />
 							</a>
 						</figure>
 					</div>

@@ -10,6 +10,7 @@ include "a1x/ext/solve-360.php";
 include "a1x/ext/tracking-page.php";
 include "a1x/ext/login-page.php";
 include "a1x/ext/body-class.php";
+include "a1x/ext/office-moving-checklist.php";
 
 if ( ! class_exists( 'CargoTheme' ) ) {
 	

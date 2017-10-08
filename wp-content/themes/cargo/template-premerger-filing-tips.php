@@ -41,7 +41,7 @@
 						<br/><br/>
 						<figure>
 							<a href="http://cdn2.hubspot.net/hubfs/1637747/Pre-Merger_filing_tips.pdf?__hssc=157008996.1.1501235536800&__hstc=157008996.48a628dc96fffac3905f7394b245d790.1498659579922.1501159301902.1501235536800.11&__hsfp=3718830781&hsCtaTracking=04014398-edac-4678-a2b8-2b0588785422%7C9e6607e1-2258-4f1b-a731-ec64c05c8bdc" target="_blank">
-								<img src="http://washingtonexpress.com/img/Pre-Merger_filing_thumnail.jpg" alt="Premerger filing tip sheet" />
+								<img src="<?php echo get_template_directory_uri(); ?>/a1x/img/pre-merger_filing_thumnail.jpg" alt="Premerger filing tip sheet" />
 							</a>
 						</figure>
 					</div>
