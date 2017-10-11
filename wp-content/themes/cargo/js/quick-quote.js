@@ -3,47 +3,91 @@
         $(".qq-holder").each(function(){
             var qq = $(this);
             var form = qq.find("form");
-            var picker = form.find(".datepicker").datepicker();
+            var picker = form.find(".datepicker").datepicker(); 
 
             form.on("submit", function(e) {
                 var form = $(this);
-                var origin = form.find('.input-origin');
-                var destination = form.find('.input-destination');
 
-                if ( $.trim( origin.val() ) == '' )
+                console.log(form.hasClass('wex'));
+
+                if ( form.hasClass('wex') )
                 {
-                    alert('Please enter the origin ZIP');
-                    return false;
+                    if ( $.trim( form.find('input[name=FromAddress2]').val() ) == '' )
+                    {
+                        alert('Please enter the origin address');
+                        return false;
+                    }
+
+                    if ( $.trim( form.find('input[name=FromZIP2]').val() ) == '' )
+                    {
+                        alert('Please enter the origin ZIP');
+                        return false;
+                    }
+
+                    if ( $.trim( form.find('input[name=ToAddress2]').val() ) == '' )
+                    {
+                        alert('Please enter the destination address');
+                        return false;
+                    }
+
+                    if ( $.trim( form.find('input[name=ToZIP2]').val() ) == '' )
+                    {
+                        alert('Please enter the destination ZIP');
+                        return false;
+                    }
+
+                    if ( $.trim( form.find('input[name=fpieces]').val() ) == '' || isNaN( $.trim( form.find('input[name=fpieces]').val() ) ) )
+                    {
+                        alert('Please enter the pieces #');
+                        return false;
+                    }
+
+                    if ( $.trim( form.find('input[name=fweight]').val() ) == '' || isNaN( $.trim( form.find('input[name=fweight]').val() ) ) )
+                    {
+                        alert('Please enter the weight');
+                        return false;
+                    }
                 }
-
-                if ( $.trim( destination.val() ) == '' )
+                else
                 {
-                    alert('Please enter the destination ZIP');
-                    return false;
-                }
+                    var origin = form.find('.input-origin');
+                    var destination = form.find('.input-destination');
 
-                if ( $.trim( form.find('input[name=pieces]').val() ) == '' || isNaN( $.trim( form.find('input[name=pieces]').val() ) ) )
-                {
-                    alert('Please enter the pieces #');
-                    return false;
-                }
+                    if ( $.trim( origin.val() ) == '' )
+                    {
+                        alert('Please enter the origin ZIP');
+                        return false;
+                    }
 
-                if ( $.trim( form.find('input[name=weight]').val() ) == '' || isNaN( $.trim( form.find('input[name=weight]').val() ) ) )
-                {
-                    alert('Please enter the weight');
-                    return false;
-                }
+                    if ( $.trim( destination.val() ) == '' )
+                    {
+                        alert('Please enter the destination ZIP');
+                        return false;
+                    }
 
-                if ( $.trim( form.find('input[name=date]').val() ) == '' )
-                {
-                    alert('Please select the date');
-                    return false;
-                }
+                    if ( $.trim( form.find('input[name=pieces]').val() ) == '' || isNaN( $.trim( form.find('input[name=pieces]').val() ) ) )
+                    {
+                        alert('Please enter the pieces #');
+                        return false;
+                    }
 
-                if ( $.trim( form.find('input[name=track2]').val() ) == '' )
-                {
-                    alert('Please enter the time');
-                    return false;
+                    if ( $.trim( form.find('input[name=weight]').val() ) == '' || isNaN( $.trim( form.find('input[name=weight]').val() ) ) )
+                    {
+                        alert('Please enter the weight');
+                        return false;
+                    }
+
+                    if ( $.trim( form.find('input[name=date]').val() ) == '' )
+                    {
+                        alert('Please select the date');
+                        return false;
+                    }
+
+                    if ( $.trim( form.find('input[name=track2]').val() ) == '' )
+                    {
+                        alert('Please enter the time');
+                        return false;
+                    }
                 }
 
                 $('#btPreloader').removeClass("removePreloader").addClass("forceShowing");
