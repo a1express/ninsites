@@ -52,7 +52,9 @@
 					<div class="general-column">
 						<?php if ($success): ?>
 							<span></span>
-							<h3>Thank you, please click on the document image to the left to access our Filing Guidelines.</h3>
+							<p>Thank you, please click on the document image to the left to access our Filing Guidelines, or: </p>
+
+							<a href="<?php echo get_template_directory_uri() . '/pdf/working-filing-guidelines.pdf'; ?>" style="display: inline-block; background: #333; color: #fff; border-radius: 5px; padding: 10px 40px;" target="_blank">Download Filing Guidelines</a>
 						<?php else: ?>
 							<h3 style="margin: 30px 0px 20px; font-size: 20px; border: 0;">Complete the below to download our filing guidelines</h3>
 
