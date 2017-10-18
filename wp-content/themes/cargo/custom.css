@@ -3,6 +3,11 @@ body.single-post .btMediaBox img {
     width: auto;
 }
 
+select.no-fancy { 
+    height: 40px; 
+    border-radius: 0;
+}
+
 #seo-bar {
     background: #2a868f;
     color: #fff;

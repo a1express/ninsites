@@ -7,8 +7,47 @@
         <div class="boldCell">
             <div class="boldCellInner">
 
+                <?php
+                    $email = isset($_POST['email']) ? trim($_POST['email']) : '';
+                    $phone = isset($_POST['Daytime-Phone']) ? trim($_POST['Daytime-Phone']) : '';
+
+                    $post = !empty($_POST);
+                    $error = $post && ( filter_var($email, FILTER_VALIDATE_EMAIL) === false || $phone == '' );
+                    $success = false;
+
+                    if ( $post && !$error )
+                    {
+                        $p = $_POST;
+                        $eml = "";
+                        
+                        if ( isset($p['Hearing-Time']) )
+                        {
+                            $p['Hearing-Time'] = implode("_", $p['Hearing-Time']);
+                        }
+
+                        foreach ( $p as $k => $v )
+                        {
+                            $eml = $eml . ucwords(str_replace(array("-", "_"), " ", $k)) . ": " . $v . "\n";
+                        }
+
+                        $to = "info@washingtonexpress.com";
+                        $subject = "Linestanding Form message";
+
+                        $headers = "From: noreply@washingtonexpress.com";
+                        $success = mail($to, $subject, $txt, $headers);
+                    }
+                ?>
+
                 <h3><?php the_title(); ?></h3>
                 <p>You can submit the form to initiate your linestanding order request or you can call and speak to one of our line standing experts at 301-210-3500.</p>
+
+                <?php if ( $error ): ?>
+                    <p style="color: red;">Please provide valid information.</p>
+                <?php endif; ?>
+
+                <?php if ($success): ?>
+                    <p style="color: green;">Thanks for your message.</p>
+                <?php endif; ?>
 
                 <form action="" class="go-form" method="post">
 
@@ -102,7 +141,7 @@
                             <label for="fscf_field3_10">Hearing Day:<span>*</span></label>
                         </div>
                         <div>
-                            <input type="text" id="fscf_field3_10" name="Hearing-DayDateTime" value="mm/dd/yyyy" size="15">
+                            <input type="text" id="fscf_field3_10" name="Hearing-DayDateTime" size="15" />
                         </div>
                     </div>
 
@@ -111,8 +150,7 @@
                             <label for="fscf_field3_15">Hearing Time:</label>
                         </div>
                         <div style="display: inline-block; vertical-align: middle; width: 100px;">
-                            <select id="fscf_field3_15" name="Hearing-Time[h]">
-                                <option value="">&nbsp;</option>
+                            <select id="fscf_field3_15" name="Hearing-Time[h]" class="no-fancy">
                                 <option value="01">01</option>
                                 <option value="02">02</option>
                                 <option value="03">03</option>
@@ -129,7 +167,7 @@
                         </div>
                         <div style="display: inline-block; vertical-align: middle;">:</div>
                         <div style="display: inline-block; vertical-align: middle; width: 100px;">
-                            <select id="fscf_field3_15m" name="Hearing-Time[m]">
+                            <select id="fscf_field3_15m" name="Hearing-Time[m]" class="no-fancy">
                                 <option value="00">00</option>
                                 <option value="15">15</option>
                                 <option value="30">30</option>
@@ -137,8 +175,7 @@
                             </select>
                         </div>
                         <div style="display: inline-block; vertical-align: middle; width: 100px;">
-                            <select id="fscf_field3_15ap" name="Hearing-Time[ap]">
-                                <option value="">&nbsp;</option>
+                            <select id="fscf_field3_15ap" name="Hearing-Time[ap]" class="no-fancy">
                                 <option value="AM">AM</option>
                                 <option value="PM">PM</option>
                             </select>
@@ -150,16 +187,16 @@
                             <label for="fscf_field3_21">Location:<span>*</span></label>
                         </div>
                         <div>
-                            <select id="fscf_field3_21" name="Location[]">
-                                <option value="1">Senate – Hart</option>
-                                <option value="2">Senate – Dirksen</option>
-                                <option value="3">Senate – Russel</option>
-                                <option value="4">House – Rayburn</option>
-                                <option value="5">House – Longworth</option>
-                                <option value="6">House – Cannon</option>
-                                <option value="7">US Capitol</option>
-                                <option value="8">Supreme Court</option>
-                                <option value="9">Other – Please note below</option>
+                            <select id="fscf_field3_21" name="Location" class="no-fancy">
+                                <option>Senate – Hart</option>
+                                <option>Senate – Dirksen</option>
+                                <option>Senate – Russel</option>
+                                <option>House – Rayburn</option>
+                                <option>House – Longworth</option>
+                                <option>House – Cannon</option>
+                                <option>US Capitol</option>
+                                <option>Supreme Court</option>
+                                <option>Other – Please note below</option>
                             </select>
                         </div>
                     </div>
@@ -187,15 +224,15 @@
                             <label for="fscf_field3_19">When should we arrive:<span>*</span></label>
                         </div>
                         <div>
-                            <select id="fscf_field3_19" name="When-should-we-Arrive[]">
-                                <option value="1">Please put us at the front of the line</option>
-                                <option value="2">9 hours in advance</option>
-                                <option value="3">8 hours in advance</option>
-                                <option value="4">7 hours in advance</option>
-                                <option value="5">6 hours in advance</option>
-                                <option value="6">5 hours in advance</option>
-                                <option value="7">4 hours in advance</option>
-                                <option value="8">3 hours in advance</option>
+                            <select id="fscf_field3_19" name="When-should-we-Arrive" class="no-fancy">
+                                <option>Please put us at the front of the line</option>
+                                <option>9 hours in advance</option>
+                                <option>8 hours in advance</option>
+                                <option>7 hours in advance</option>
+                                <option>6 hours in advance</option>
+                                <option>5 hours in advance</option>
+                                <option>4 hours in advance</option>
+                                <option>3 hours in advance</option>
                             </select>
                         </div>
                     </div>
@@ -210,7 +247,7 @@
                     </div>
 
                     <div id="fscf_submit_div3">
-                        <input type="submit" id="fscf_submit3" value="Request Service" />
+                        <input type="submit" id="fscf_submit3" value="Request Service" style="cursor: pointer;" />
                     </div>
 
                 </form>

@@ -210,7 +210,7 @@
 								<div class="general-column">
 									<div class="formfield">
 										<label>Moving From State</label>
-										<select name="origin_state" class="full-width">
+										<select name="origin_state" class="full-width no-fancy">
 											<?php foreach($us_states as $us_state): ?>
 												<option value="<?php echo $us_state; ?>"><?php echo $us_state; ?></option>
 											<?php endforeach; ?>
@@ -244,7 +244,7 @@
 								<div class="general-column">
 									<div class="formfield">
 										<label>Moving To State/Region</label>
-										<select name="destination_state" class="full-width">
+										<select name="destination_state" class="full-width no-fancy">
 											<?php foreach($us_states as $us_state): ?>
 												<option value="<?php echo $us_state; ?>"><?php echo $us_state; ?></option>
 											<?php endforeach; ?>

@@ -32,7 +32,7 @@ window.onunload = function(){};
 		
 		bt_video_resize();
 		
-		$( 'select' ).not( '.btDropdown' ).fancySelect();
+		$( 'select' ).not( '.btDropdown' ).not( '.no-fancy' ).fancySelect();
 
 		if ( $( '.btGhost' ).length > 0 ) {
 			$( 'body' ).addClass( 'btHasGhost' );

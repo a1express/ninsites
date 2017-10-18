@@ -2,6 +2,7 @@
 
 <?php
 $error = '';
+$success = false;
 
 if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 {
@@ -44,8 +45,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
         $message .= 'Experience: ' . trim($_POST['experience']);
 
         $r = mail($to, $subject, $message, $headers);
-        header('Location: /about/workthanks.asp');
-        exit();
+        $success = true;
     }
 }
 ?>
@@ -58,6 +58,10 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 
                 <h3>Online Courier Application</h3>
                 <div>
+                    <?php if ($success): ?>
+                        <p style="color: green;">Thanks for your message.</p>
+                    <?php endif; ?>
+
                     <p>Please fill out the application below. </p>
 
                     <?php if ( $error != '' ): ?>
