@@ -40,9 +40,13 @@
 						<h3>Download Our Free Filing Guidelines</h3>
 						<br/><br/>
 						<figure>
-							<a href="<?php echo get_template_directory_uri(); ?>/a1x/img/working-filing-guidelines.pdf" target="_blank">
+							<?php if ($success): ?>
+								<a href="<?php echo get_template_directory_uri() . '/pdf/working-filing-guidelines.pdf'; ?>" target="_blank">
+									<img src="<?php echo get_template_directory_uri(); ?>/a1x/img/filing_guidelines_thumbnail.jpg" alt="Premerger filing tip sheet" />
+								</a>
+							<?php else: ?>
 								<img src="<?php echo get_template_directory_uri(); ?>/a1x/img/filing_guidelines_thumbnail.jpg" alt="Premerger filing tip sheet" />
-							</a>
+							<?php endif; ?>
 						</figure>
 					</div>
 					<div class="general-column">
@@ -78,7 +82,7 @@
 								</div>
 								<div class="formfield">
 									<label>Filing Frequency*</label>
-									<select name="filling_frequency">
+									<select name="filling_frequency" class="no-fancy">
 										<option value="">Please Select -</option>
 										<option value="Less than once a month">Less than once a month</option>
 										<option value="Once a week">Once a week</option>

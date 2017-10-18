@@ -40,6 +40,8 @@
 
             <?php if ($success): ?>
                 <p>Thank you for your message!</p>
+
+                <a href="<?php echo get_template_directory_uri() . '/pdf/moving-checklist.pdf'; ?>" style="display: inline-block; background: #333; color: #fff; border-radius: 5px; padding: 10px 40px;" target="_blank">Download Moving Checklist</a>
             <?php else: ?>
 
                 <div class="formfield">

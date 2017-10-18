@@ -40,9 +40,13 @@
 						<h3>Download our free Premerger filing tip sheet</h3>
 						<br/><br/>
 						<figure>
-							<a href="http://cdn2.hubspot.net/hubfs/1637747/Pre-Merger_filing_tips.pdf?__hssc=157008996.1.1501235536800&__hstc=157008996.48a628dc96fffac3905f7394b245d790.1498659579922.1501159301902.1501235536800.11&__hsfp=3718830781&hsCtaTracking=04014398-edac-4678-a2b8-2b0588785422%7C9e6607e1-2258-4f1b-a731-ec64c05c8bdc" target="_blank">
+							<?php if ($success): ?>
+								<a href="<?php echo get_template_directory_uri() . '/pdf/premerger-filing-tips.pdf'; ?>" target="_blank">
+									<img src="<?php echo get_template_directory_uri(); ?>/a1x/img/pre-merger_filing_thumnail.jpg" alt="Premerger filing tip sheet" />
+								</a>
+							<?php else: ?>
 								<img src="<?php echo get_template_directory_uri(); ?>/a1x/img/pre-merger_filing_thumnail.jpg" alt="Premerger filing tip sheet" />
-							</a>
+							<?php endif; ?>
 						</figure>
 					</div>
 					<div class="general-column">
@@ -88,7 +92,7 @@
 								</div>
 								<div class="formfield">
 									<label>Filing Frequency*</label>
-									<select name="filling_frequency">
+									<select name="filling_frequency" class="no-fancy">
 										<option value="">Please Select -</option>
 										<option value="Less than once a month">Less than once a month</option>
 										<option value="Once a week">Once a week</option>
