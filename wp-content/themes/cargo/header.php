@@ -56,8 +56,17 @@
 		})( jQuery );
 	</script>
 
-	<?php if ( DomainManager::IsASAPCourierDomain() ): ?>
-		<!-- GA code for ASAP Courier goes here -->
+	<?php if ( DomainManager::IsNYCourierDomain() ): ?>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97865280-8"></script>
+                <script>
+                   window.dataLayer = window.dataLayer || [];
+                   function gtag(){dataLayer.push(arguments);}
+                   gtag('js', new Date());
+
+                   gtag('config', 'UA-97865280-8');
+                </script>
+
 	<?php elseif ( DomainManager::IsExpressWayCourierDomain() ): ?>
 		<!-- GA code for ExpressWay Courier goes here -->
 	<?php endif; ?>
