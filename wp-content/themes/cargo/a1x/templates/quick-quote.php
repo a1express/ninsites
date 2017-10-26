@@ -14,6 +14,20 @@
         $email = isset($_POST['email']) && trim($_POST['email']) != '' ? $_POST['email'] : '';
         $foptin = 'no';
 
+        if ( !empty($_POST) )
+        {
+        	if ( 	trim($_POST['origin']) == '30301' &&
+        			trim($_POST['destination']) == '30303' &&
+        			trim($_POST['date']) == '' &&
+        			trim($_POST['weight']) == '1' &&
+        			trim($_POST['pieces']) == '1' &&
+        			trim($_POST['jumpMenu2']) == '4'
+    			)
+        	{
+        		exit('<h4>The current quote criteria are blocked because of security reasons. Please contact us by phone or email for further details.</h4>');
+        	}
+        }
+
         if ( $email != '' )
         {
             $params = "?origin=" . $origin . "&destination=" . $destination . "&pieces=" . $pieces . "&weight=" . $weight . "&date=" . $date . "&track2=" . $time . "&jumpMenu=" . $ampm . "&email=" . $email . "&jumpMenu2=" . $vehicle . "&optin=" . $foptin;
