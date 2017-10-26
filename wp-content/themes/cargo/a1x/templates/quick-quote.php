@@ -14,6 +14,8 @@
         $email = isset($_POST['email']) && trim($_POST['email']) != '' ? $_POST['email'] : '';
         $foptin = 'no';
 
+        $isSpam = false;
+
         if ( !empty($_POST) )
         {
         	if ( 	trim($_POST['origin']) == '30301' &&
@@ -24,11 +26,11 @@
         			DomainManager::IsNYCourierDomain()
     			)
         	{
-        		exit('<h4>The current quote criteria are blocked because of security reasons. Please contact us by phone or email for further details.</h4>');
+        		$isSpam = true;
         	}
         }
 
-        if ( $email != '' )
+        if ( $email != '' && !$isSpam )
         {
             $params = "?origin=" . $origin . "&destination=" . $destination . "&pieces=" . $pieces . "&weight=" . $weight . "&date=" . $date . "&track2=" . $time . "&jumpMenu=" . $ampm . "&email=" . $email . "&jumpMenu2=" . $vehicle . "&optin=" . $foptin;
 
