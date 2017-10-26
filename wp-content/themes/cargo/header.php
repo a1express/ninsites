@@ -67,8 +67,28 @@
                    gtag('config', 'UA-97865280-8');
                 </script>
 
-	<?php elseif ( DomainManager::IsExpressWayCourierDomain() ): ?>
-		<!-- GA code for ExpressWay Courier goes here -->
+	<?php elseif ( DomainManager::IsProficientLogisticDomain() ): ?>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97865280-9"></script>
+                <script>
+                   window.dataLayer = window.dataLayer || [];
+                   function gtag(){dataLayer.push(arguments);}
+                   gtag('js', new Date());
+
+                   gtag('config', 'UA-97865280-9');
+                </script>
+
+	<?php elseif ( DomainManager::IsNinCourierDomain() ): ?>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97865280-10"></script>
+                <script>
+                   window.dataLayer = window.dataLayer || [];
+                   function gtag(){dataLayer.push(arguments);}
+                   gtag('js', new Date());
+
+                   gtag('config', 'UA-97865280-10');
+                 </script>
+
 	<?php endif; ?>
 </head>
 
