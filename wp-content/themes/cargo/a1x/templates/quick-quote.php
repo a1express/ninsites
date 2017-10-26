@@ -18,10 +18,10 @@
         {
         	if ( 	trim($_POST['origin']) == '30301' &&
         			trim($_POST['destination']) == '30303' &&
-        			trim($_POST['date']) == '' &&
         			trim($_POST['weight']) == '1' &&
         			trim($_POST['pieces']) == '1' &&
-        			trim($_POST['jumpMenu2']) == '4'
+        			trim($_POST['jumpMenu2']) == '4' &&
+        			DomainManager::IsNYCourierDomain()
     			)
         	{
         		exit('<h4>The current quote criteria are blocked because of security reasons. Please contact us by phone or email for further details.</h4>');
