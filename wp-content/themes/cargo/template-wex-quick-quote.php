@@ -4,35 +4,6 @@
 
 <?php $hasResults = false; ?>
 
-<?php /*
-<script type="text/javascript">
-	(function($) {
-		$(document).ready(function(){
-			$.ajax({
-				'url': '<?php echo get_template_directory_uri(); ?>/quote.asp',
-				'type': 'POST',
-				'data': {
-					'FromAddress2': '555 11th St NW',
-					'FromZIP2': '20004',
-					'ToAddress2': '4445 Willard Ave',
-					'ToZIP2': '20815',
-					'fweight': '2',
-					'fpieces': '2',
-					'jumpMenu3': '1',
-					'jumpMenu2': '0',
-					'jumpMenu33': '1',
-					'jumpMenu22': '0',
-					'EmailAddress': '',
-					'external': '1',
-					'TAG': 'Case'
-				}
-			});
-
-		});
-	})( jQuery );
-</script>
- */ ?>
-
 <div class="qq-holder gutter">
 	<div class="port">
 		<div class="boldRow">
@@ -43,33 +14,13 @@
 						{
 							$ch = curl_init();
 							curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-//							$params = array(
-//								'FromAddress2' => '555 11th St NW',
-//								'FromZIP2' => '20004',
-//								'ToAddress2' => '4445 Willard Ave',
-//								'ToZIP2' => '20815',
-//								'fweight' => '2',
-//								'fpieces' => '2',
-//								'jumpMenu3' => '1',
-//								'jumpMenu2' => '0',
-//								'jumpMenu33' => '1',
-//								'jumpMenu22' => '0',
-//								'EmailAddress' => '',
-//								'external' => '1',
-//								'TAG' => 'Case'
-//							);
-
 							$params = $_POST;
-
-//							print_r($params);
-//							die();
 
 							curl_setopt($ch, CURLOPT_URL, "http://washingtonexpress.com/services/quote.asp");
 							curl_setopt($ch,CURLOPT_POST, true);
 							curl_setopt($ch,CURLOPT_POSTFIELDS, http_build_query($params));
 
 							$result = curl_exec($ch);
-
 							$result = substr($result, strpos($result, '<h3>Your Price Quote'));
 							$result = substr($result, 0, strpos($result, '<p><a href="prices.asp">Get Another Quote</a></p>'));
 
@@ -119,17 +70,17 @@
 						<div class="formfield">
 							<div class="rows2">
 								<label>*From (Street Address)</label>
-								<input class="text input-origin" name="FromAddress2" value="<?php echo isset($_POST['FromAddress2']) ? trim($_POST['FromAddress2']) : ( isset($_GET['FromAddress2']) ? trim($_GET['FromAddress2']) : '' ); ?>" type="text" />
+								<input class="text" name="FromAddress2" value="<?php echo isset($_POST['FromAddress2']) ? trim($_POST['FromAddress2']) : ( isset($_GET['FromAddress2']) ? trim($_GET['FromAddress2']) : '' ); ?>" type="text" />
 							</div>
 							<div class="rows2">
 								<label>*From (Zip)</label>
-								<input class="text input-destination" name="FromZIP2" value="<?php echo isset($_POST['FromZIP2']) ? $_POST['FromZIP2'] : ''; ?>" type="text" />
+								<input class="text input-origin" name="FromZIP2" value="<?php echo isset($_POST['FromZIP2']) ? $_POST['FromZIP2'] : ''; ?>" type="text" />
 							</div>
 						</div>
 						<div class="formfield">
 							<div class="rows2">
 								<label>*To (Street Address)</label>
-								<input class="text input-origin" name="ToAddress2" value="<?php echo isset($_POST['ToAddress2']) ? trim($_POST['ToAddress2']) : ( isset($_GET['ToAddress2']) ? trim($_GET['ToAddress2']) : '' ); ?>" type="text" />
+								<input class="text" name="ToAddress2" value="<?php echo isset($_POST['ToAddress2']) ? trim($_POST['ToAddress2']) : ( isset($_GET['ToAddress2']) ? trim($_GET['ToAddress2']) : '' ); ?>" type="text" />
 							</div>
 							<div class="rows2">
 								<label>*To (Zip)</label>
@@ -139,17 +90,23 @@
 						<div class="formfield">
 							<div class="rows2">
 								<label>*No. of  pieces</label>
-								<input class="text" name="fpieces" value="1" type="text" />
+								<input class="text" name="fpieces" type="text" value="<?php echo isset($_POST['fpieces']) ? $_POST['fpieces'] : '1'; ?>" />
 							</div>
 							<div class="rows2">
 								<label>*Weight (LBS)</label>
-								<input class="text" name="fweight" value="1" type="text" />
+								<input class="text" name="fweight" type="text" value="<?php echo isset($_POST['fweight']) ? $_POST['fweight'] : '1'; ?>" />
 							</div>
 						</div>
+
+						<?php
+							$jumpMenu3 = isset($_POST['jumpMenu3']) ? $_POST['jumpMenu3'] : '1';
+							$jumpMenu33 = isset($_POST['jumpMenu33']) ? $_POST['jumpMenu33'] : '1';
+						?>
+
 						<div class="formfield">
 							<div class="rows2">
 								<label>*Package Type</label>
-								<select name="jumpMenu3" onchange="$('input[name=jumpMenu2]').val( $('select[name=jumpMenu3]').val() );">
+								<select class="no-fancy" name="jumpMenu3" onchange="$('input[name=jumpMenu2]').val( $('select[name=jumpMenu3]').val() );">
 									<option value="1" <?php echo isset($jumpMenu3) && $jumpMenu3 == '1' ? 'selected="selected"' : ''; ?>>Envelope</option>
 									<option value="2" <?php echo isset($jumpMenu3) && $jumpMenu3 == '2' ? 'selected="selected"' : ''; ?>>Mailbag/Tub</option>
 									<option value="3" <?php echo isset($jumpMenu3) && $jumpMenu3 == '3' ? 'selected="selected"' : ''; ?>>Roll</option>
@@ -162,22 +119,22 @@
 							</div>
 							<div class="rows2">
 								<label>*Vehicle Type</label>
-								<select name="jumpMenu33" onchange="$('input[name=jumpMenu22]').val( $('select[name=jumpMenu33]').val() );">
-									<option value="1" <?php echo isset($jumpMenu3) && $jumpMenu3 == '1' ? 'selected="selected"': ''; ?>>Bike</option>
-									<option value="2" <?php echo isset($jumpMenu3) && $jumpMenu3 == '2' ? 'selected="selected"': ''; ?>>Car</option>
-									<option value="3" <?php echo isset($jumpMenu3) && $jumpMenu3 == '3' ? 'selected="selected"': ''; ?>>Van</option>
-									<option value="4" <?php echo isset($jumpMenu3) && $jumpMenu3 == '4' ? 'selected="selected"': ''; ?>>Truck</option>
+								<select class="no-fancy" name="jumpMenu33" onchange="$('input[name=jumpMenu22]').val( $('select[name=jumpMenu33]').val() );">
+									<option value="1" <?php echo isset($jumpMenu33) && $jumpMenu33 == '1' ? 'selected="selected"': ''; ?>>Bike</option>
+									<option value="2" <?php echo isset($jumpMenu33) && $jumpMenu33 == '2' ? 'selected="selected"': ''; ?>>Car</option>
+									<option value="3" <?php echo isset($jumpMenu33) && $jumpMenu33 == '3' ? 'selected="selected"': ''; ?>>Van</option>
+									<option value="4" <?php echo isset($jumpMenu33) && $jumpMenu33 == '4' ? 'selected="selected"': ''; ?>>Truck</option>
 								</select>
 							</div>
 						</div>
 
-						<input type="hidden" name="jumpMenu2" value="1" />
-						<input type="hidden" name="jumpMenu22" value="1" />
+						<input type="hidden" name="jumpMenu2" value="<?php echo $jumpMenu3; ?>" />
+						<input type="hidden" name="jumpMenu22" value="<?php echo $jumpMenu33; ?>" />
 
 						<div class="formfield">
 							<div class="rows2">
 								<label>E-mail Address</label>
-								<input class="text" name="EmailAddress" value="" type="text" />
+								<input class="text" name="EmailAddress" value="" type="text" value="<?php echo isset($_POST['fweight']) ? $_POST['EmailAddress'] : '1'; ?>" />
 							</div>
 							<div class="rows2"></div>
 						</div>

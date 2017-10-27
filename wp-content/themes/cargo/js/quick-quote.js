@@ -8,8 +8,6 @@
             form.on("submit", function(e) {
                 var form = $(this);
 
-                console.log(form.hasClass('wex'));
-
                 if ( form.hasClass('wex') )
                 {
                     if ( $.trim( form.find('input[name=FromAddress2]').val() ) == '' )
@@ -198,7 +196,7 @@
             geocoder = new google.maps.Geocoder();
 
             var myOptions = {
-                zoom:11,
+                zoom: 11,
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
                 center: defaultOrigin
             };
@@ -224,8 +222,8 @@
             var end = $('.input-destination').val();
 
             var request = {
-                origin:start,
-                destination:end,
+                origin: start,
+                destination: end,
                 travelMode: google.maps.TravelMode.DRIVING
             };
 
