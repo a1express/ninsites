@@ -68,6 +68,8 @@ class Solve360 {
     public static function Call($url, $params) {
         $solve360Url = $url . $params;
 
+        echo $solve360Url; die();
+
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $solve360Url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
