@@ -3,7 +3,7 @@
     <?php $GLOBALS['qq_scripts_loaded'] = true; ?>
     <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyD_YJPIOkLsYI2cDhnVwdMI1l6uHuvdd1k"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/quick-quote.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/quick-quote.js?t=<?php echo time(); ?>"></script>
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
 
     <script type="text/javascript">

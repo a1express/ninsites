@@ -192,6 +192,7 @@
 
         function initialize()
         {
+            console.log('init?');
             directionsDisplay = new google.maps.DirectionsRenderer();
             geocoder = new google.maps.Geocoder();
 
