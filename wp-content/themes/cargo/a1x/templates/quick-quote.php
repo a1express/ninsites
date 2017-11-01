@@ -1148,33 +1148,36 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                             )
                         );
 
-                        function CallSoap($xml_post_string)
+                        if ( !function_exists('CallSoap') )
                         {
-                            $soapUrl = "https://a1express.e-courier.com/a1express/software/xml/xml.asp";
-                            $headers = array(
-                                "Content-type: text/xml;charset=\"utf-8\"",
-                                "Accept: text/xml",
-                                "Cache-Control: no-cache",
-                                "Pragma: no-cache",
-                                "Content-length: ".strlen($xml_post_string),
-                            );
+                        	function CallSoap($xml_post_string)
+	                        {
+	                            $soapUrl = "https://a1express.e-courier.com/a1express/software/xml/xml.asp";
+	                            $headers = array(
+	                                "Content-type: text/xml;charset=\"utf-8\"",
+	                                "Accept: text/xml",
+	                                "Cache-Control: no-cache",
+	                                "Pragma: no-cache",
+	                                "Content-length: ".strlen($xml_post_string),
+	                            );
 
-                            $ch = curl_init();
-                            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-                            curl_setopt($ch, CURLOPT_URL, $soapUrl);
-                            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                            curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-                            curl_setopt($ch, CURLOPT_POST, true);
-                            curl_setopt($ch, CURLOPT_POSTFIELDS, $xml_post_string);
-                            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+	                            $ch = curl_init();
+	                            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+	                            curl_setopt($ch, CURLOPT_URL, $soapUrl);
+	                            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	                            curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+	                            curl_setopt($ch, CURLOPT_POST, true);
+	                            curl_setopt($ch, CURLOPT_POSTFIELDS, $xml_post_string);
+	                            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
-                            $response = curl_exec($ch);
-                            curl_close($ch);
+	                            $response = curl_exec($ch);
+	                            curl_close($ch);
 
-                            $response = str_replace(":", "", $response);
-                            $parser = simplexml_load_string($response);
+	                            $response = str_replace(":", "", $response);
+	                            $parser = simplexml_load_string($response);
 
-                            return $parser;
+	                            return $parser;
+	                        }
                         }
 
                         $parser = CallSoap($xml_post_string);
