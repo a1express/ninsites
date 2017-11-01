@@ -233,7 +233,7 @@ if ( have_posts() ) {
 			
 			echo '<div class="port">';
 
-				if ( $media_html != '' ) {
+				if ( $media_html != '' && false ) {
 					echo '<div class="boldCell"><div class="boldRow bottomSmallSpaced">';
 						echo '<div class="rowItem col-sm-12 btTextCenter btGridGap5">' . $media_html . '</div><!-- /rowItem -->';
 					echo '</div></div><!-- /boldRow / boldCell -->';
