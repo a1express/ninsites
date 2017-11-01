@@ -19,6 +19,7 @@ class QuickQuote
             )
         {
             ob_start();
+            $GLOBALS['force_loading_scripts'] = true;
             get_template_part( "a1x/templates/quick-quote" );
             $quickquote = ob_get_clean();
 
