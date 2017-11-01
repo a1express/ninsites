@@ -1,6 +1,9 @@
 <?php
 
-define( 'WP_POST_REVISIONS', 10 );
+if !defined('WP_POST_REVISIONS')
+{
+	define( 'WP_POST_REVISIONS', 10 );		
+}
 
 require_once "a1x/ext/domain-manager.php";
 include "a1x/ext/seo-bar.php";
