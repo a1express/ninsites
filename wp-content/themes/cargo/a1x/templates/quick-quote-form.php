@@ -1,5 +1,5 @@
 <?php global $qq_redirect_url, $qq_scripts_loaded, $has_results; ?>
-
+<?php var_dump($qq_scripts_loaded); die(); ?>
 <?php if (!$qq_scripts_loaded): ?>
     <?php $GLOBALS['qq_scripts_loaded'] = true; ?>
     <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyD_YJPIOkLsYI2cDhnVwdMI1l6uHuvdd1k"></script>
