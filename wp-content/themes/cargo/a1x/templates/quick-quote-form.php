@@ -5,7 +5,7 @@
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/quick-quote.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
-
+    <?php die('aaa?'); ?>
     <script type="text/javascript">
         var defaultOrigin = new google.maps.LatLng(
             <?php
@@ -21,7 +21,7 @@
                 '40.7590402,-74.0394423',
                 '40.7590402,-74.0394423',
                 '40.7590402,-74.0394423',
-		'40.749897,-73.905756'
+		          '40.749897,-73.905756'
             );
             ?>
         );
