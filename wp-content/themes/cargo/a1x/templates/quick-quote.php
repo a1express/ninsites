@@ -1084,12 +1084,15 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
             <div class="rowItemContent">
                 <div class="rowItem col-md-12">
                     <?php
-                    function parseTime($time)
+                    if ( !function_exists('parseTime') )
                     {
-                        $pieces = explode(" ", $time);
-                        $pieces[1] = $pieces[1][0] . $pieces[1][1] . ":" . $pieces[1][2] . $pieces[1][3];
+                    	function parseTime($time)
+	                    {
+	                        $pieces = explode(" ", $time);
+	                        $pieces[1] = $pieces[1][0] . $pieces[1][1] . ":" . $pieces[1][2] . $pieces[1][3];
 
-                        return $pieces[0] . " " . $pieces[1];
+	                        return $pieces[0] . " " . $pieces[1];
+	                    }
                     }
 
                     if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
