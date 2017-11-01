@@ -1,6 +1,5 @@
 <?php global $qq_redirect_url, $qq_scripts_loaded, $has_results; ?>
 <?php if (!$qq_scripts_loaded): ?>
-    <?php die('inside?'); ?>
     <?php $GLOBALS['qq_scripts_loaded'] = true; ?>
     <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyD_YJPIOkLsYI2cDhnVwdMI1l6uHuvdd1k"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
