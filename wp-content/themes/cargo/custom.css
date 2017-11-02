@@ -8,7 +8,7 @@ select.no-fancy {
     border-radius: 0;
 }
 
-blog.single-post .btArticleBody h3 {
+body.single-post .btArticleBody h3 {
     clear: none;
 }
 
