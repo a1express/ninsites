@@ -107,14 +107,11 @@
 							<div class="rows2">
 								<label>*Package Type</label>
 								<select class="no-fancy" name="jumpMenu3" onchange="$('input[name=jumpMenu2]').val( $('select[name=jumpMenu3]').val() );">
-									<option value="1" <?php echo isset($jumpMenu3) && $jumpMenu3 == '1' ? 'selected="selected"' : ''; ?>>Envelope</option>
-									<option value="2" <?php echo isset($jumpMenu3) && $jumpMenu3 == '2' ? 'selected="selected"' : ''; ?>>Mailbag/Tub</option>
-									<option value="3" <?php echo isset($jumpMenu3) && $jumpMenu3 == '3' ? 'selected="selected"' : ''; ?>>Roll</option>
-									<option value="4" <?php echo isset($jumpMenu3) && $jumpMenu3 == '4' ? 'selected="selected"' : ''; ?>>Transfile box</option>
-									<option value="5" <?php echo isset($jumpMenu3) && $jumpMenu3 == '5' ? 'selected="selected"' : ''; ?>>Trunk</option>
-									<option value="6" <?php echo isset($jumpMenu3) && $jumpMenu3 == '6' ? 'selected="selected"' : ''; ?>>Xerox box</option>
-									<option value="7" <?php echo isset($jumpMenu3) && $jumpMenu3 == '7' ? 'selected="selected"' : ''; ?>>Large Package</option>
-									<option value="8" <?php echo isset($jumpMenu3) && $jumpMenu3 == '8' ? 'selected="selected"' : ''; ?>>Book</option>
+									<option value="1" <?php echo isset($jumpMenu3) && $jumpMenu3 == '1' ? 'selected="selected"' : ''; ?>>Env-Package-Book</option>
+									<option value="2" <?php echo isset($jumpMenu3) && $jumpMenu3 == '2' ? 'selected="selected"' : ''; ?>>Roll-Bag-Small Item</option>
+									<option value="3" <?php echo isset($jumpMenu3) && $jumpMenu3 == '3' ? 'selected="selected"' : ''; ?>>Box-Trunk-Pics</option>
+									<option value="4" <?php echo isset($jumpMenu3) && $jumpMenu3 == '4' ? 'selected="selected"' : ''; ?>>Desk-Furniture</option>
+									<option value="5" <?php echo isset($jumpMenu3) && $jumpMenu3 == '5' ? 'selected="selected"' : ''; ?>>Pallett-Large Item</option>
 								</select>
 							</div>
 							<div class="rows2">
@@ -122,8 +119,9 @@
 								<select class="no-fancy" name="jumpMenu33" onchange="$('input[name=jumpMenu22]').val( $('select[name=jumpMenu33]').val() );">
 									<option value="1" <?php echo isset($jumpMenu33) && $jumpMenu33 == '1' ? 'selected="selected"': ''; ?>>Bike</option>
 									<option value="2" <?php echo isset($jumpMenu33) && $jumpMenu33 == '2' ? 'selected="selected"': ''; ?>>Car</option>
-									<option value="3" <?php echo isset($jumpMenu33) && $jumpMenu33 == '3' ? 'selected="selected"': ''; ?>>Van</option>
-									<option value="4" <?php echo isset($jumpMenu33) && $jumpMenu33 == '4' ? 'selected="selected"': ''; ?>>Truck</option>
+									<option value="3" <?php echo isset($jumpMenu33) && $jumpMenu33 == '3' ? 'selected="selected"': ''; ?>>Minivan</option>
+									<option value="4" <?php echo isset($jumpMenu33) && $jumpMenu33 == '4' ? 'selected="selected"': ''; ?>>Cargo Van</option>
+									<option value="5" <?php echo isset($jumpMenu33) && $jumpMenu33 == '5' ? 'selected="selected"': ''; ?>>Truck</option>
 								</select>
 							</div>
 						</div>
