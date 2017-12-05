@@ -311,7 +311,7 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
 				<tbody>
 					<tr>
 						<td style="text-align: center;">
-						<a href="https://expresswaycourier.com/" style="text-decoration:none;" title="ASAP Courier">
+						<a href="https://expresswaycourier.com/" style="text-decoration:none;" title="ExpressWay Courier">
 						<br>
 						<img src="https://expresswaycourier.com/email/expressway_banner.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;" width="700" height="70" title="ExpressWay Courier" alt="ExpressWay Courier">
 						</a>
@@ -553,6 +553,135 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                 $headers .= 'From: ASAP Courier Service <lisa@a1express.com>' . "\r\n";
 
                 $r = mail($email, "ASAPCourierService QuickQuote", $mailBody, $headers);
+            }
+
+		else if ( DomainManager::IsSdSglCourierDomain() )
+            {
+                Solve360::Call("http://www.webicise.com/Solve360/SDSG/QuickQuote/Solve360ContactSave.php", $params);
+
+                $mailBody = '
+<HTML><head><title>Save Time & Gas with $5 off</title></head>
+<body leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0"><table width="700" cellpadding="0" cellspacing="0" align="center">
+	<tbody>
+		<tr>
+			<td width="700" align="center" valign="top">
+			<table style="margin-left: 0px;" border="0" cellspacing="0" cellpadding="0">
+				<tbody>
+					<tr>
+						<td style="text-align: center;">
+						<a href="http://sdsgl.com//" style="text-decoration:none;" title="SDS Global">
+						<br>
+						<img src="http://sdsgl.com/email/sdsg_banner.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;" width="700" height="70" title="SDS Global" alt="SDS Global">
+						</a>
+						</td>
+					</tr>
+					<tr>
+						<td width="700" height="15"></td>
+					</tr>
+					<tr>
+						<td>
+						<table style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc;" height="32" width="700">
+							<tbody>
+								<tr>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 14px;" width="90">
+										<a href="http://sdsgl.com/quick-quote/" style="text-decoration:none; color: black;" title="Quick Quotes">
+										Quick Quotes
+										</a>
+										</td>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 0;" width="90">
+										<a href="http://sdsgl.com/services/" style="text-decoration:none; color: black;" title="Services">
+										Services
+										</a>
+										</td>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 0;" width="100">
+										<a href="http://sdsgl.com/company/" style="text-decoration:none; color: black;" title="About Us">
+										About Us
+										</a>
+										</td>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding-top: 3px;" width="70">
+										<a href="http://sdsgl.com/ship-now/" style="text-decoration:none; color: black;" title="Ship Now">
+										Ship Now
+										</a>
+										</td>
+										<td style="text-transform: uppercase;font-family: Helvetica;font-size: 12px;padding: 3px 0 0 18px;" width="90">
+										<a href="http://sdsgl.com/contact/" style="text-decoration:none; color: black;" title="Contact Us">
+										Contact Us
+										</a>
+										</td>
+									</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<table style="margin-left: 0px;" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td cellpadding="0" cellspacing="0" colspan="2">
+										<a title="Get $5 off" href="http://sdsgl.com/new-account/">
+											<img alt="Get $5 off" src="http://sdsgl.com/email/5off.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td cellpadding="0" cellspacing="0" >
+								 		<a title="Rush Courier & On Demand" href="http://sdsgl.com/services/on-demand/">
+									 		<img alt="Rush Courier & On Demand" src="http://sdsgl.com/email/rush.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		</a>
+									</td>
+									<td cellpadding="0" cellspacing="0"  >
+								 		<a title="Warehousing" href="http://sdsgl.com/services/warehousing/">
+									 		<img alt="Warehousing" src="http://sdsgl.com/email/warehousing.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		</a>
+									</td>
+								</tr>
+								<tr>
+									<td cellpadding="0" cellspacing="0" >
+								 		<a title="Last Mile Home Delivery" href="http://sdsgl.com/services/on-demand/">
+									 		<img alt="Last Mile Home Delivery" src="http://sdsgl.com/email/lastmile.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		</a>
+									</td>
+									<td cellpadding="0" cellspacing="0"  >
+								 		<a title="Value Added Services" href="http://sdsgl.com/services/value-added-services/">
+									 		<img alt="Value Added Services" src="http://sdsgl.com/email/prescheduled.png" style="color: rgb(0,0,0); text-align: center; vertical-align: middle; font-size: 14px; font-weight: bold;"/>
+								 		</a>
+									</td>
+								</tr>
+
+							</table>
+						</td>
+					</tr>
+					
+						<td width="233">
+						
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align: center;font-family: Helvetica;font-size:11px;padding-top: 28px;">
+			<p>You recently requested a same day courier service quote at sdsgl.com. Place an order for your
+1st courier delivery within the next 7 days and get $5 off with the coupon code SDSG100X.</p>
+
+<p>If you place an order online; place the code in the reference field on the order form and $5.00 will be
+deducted from the order before final charges. * Offer Expires in 30 days</p>
+
+			</td>
+		</tr>
+<tr>
+			<td style="text-align: center;font-family: Helvetica;font-size:11px;padding-top: 28px;">If you would like to unsubscribe and stop receiving these emails <a href="mailto:lisa@a1express.com?subject=unsubscribe%20to%20SDSG%20Quick%20Quotes" style="color:rgb(17,85,204);">click here</a></td>
+		</tr> 
+<tr><td height="10"></td></tr> 
+		<tr>
+<td align="center" bgcolor="#fe0000"><font color="#FFFFFF" face="Arial" size="2">SDS Global | 718.784.5586 | 337-18 57th Street | Woodside, NY |11377</font></td>
+</tr>		
+		
+	</tbody>
+</table>
+
+';
+
+                $headers .= 'From: SDS Global Service <lisa@a1express.com>' . "\r\n";
+
+                $r = mail($email, "SDSGlobal QuickQuote", $mailBody, $headers);
             }
 
             else if ( DomainManager::IsMMCourierDomain() )
