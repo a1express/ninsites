@@ -69,25 +69,25 @@
 
 	<?php elseif ( DomainManager::IsProficientLogisticDomain() ): ?>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97865280-9"></script>
-                <script>
-                   window.dataLayer = window.dataLayer || [];
-                   function gtag(){dataLayer.push(arguments);}
-                   gtag('js', new Date());
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-97865280-6"></script>
+		<script>
+  			window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
 
-                   gtag('config', 'UA-97865280-9');
-                </script>
-
+  			gtag('config', 'UA-97865280-9');
+		</script>
+		
 	<?php elseif ( DomainManager::IsNinCourierDomain() ): ?>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97865280-10"></script>
-                <script>
-                   window.dataLayer = window.dataLayer || [];
-                   function gtag(){dataLayer.push(arguments);}
-                   gtag('js', new Date());
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-76340259-1"></script>
+		<script>
+  			window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
 
-                   gtag('config', 'UA-97865280-10');
-                 </script>
+  			gtag('config', 'UA-76340259-1');
+		</script>
 
 	<?php endif; ?>
 </head>
