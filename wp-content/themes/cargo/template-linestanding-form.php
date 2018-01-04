@@ -34,7 +34,7 @@
                         $subject = "Linestanding Form message";
 
                         $headers = "From: noreply@washingtonexpress.com";
-                        $success = mail($to, $subject, $txt, $headers);
+                        $success = mail($to, $subject, $eml, $headers);
                     }
                 ?>
 
