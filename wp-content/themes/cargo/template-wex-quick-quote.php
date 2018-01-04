@@ -16,7 +16,7 @@
 							curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
 							$params = $_POST;
 
-							curl_setopt($ch, CURLOPT_URL, "http://washingtonexpress.com/services/quote.asp");
+							curl_setopt($ch, CURLOPT_URL, "http://washingtonexpress.com/services-old/quote.asp");
 							curl_setopt($ch,CURLOPT_POST, true);
 							curl_setopt($ch,CURLOPT_POSTFIELDS, http_build_query($params));
 
