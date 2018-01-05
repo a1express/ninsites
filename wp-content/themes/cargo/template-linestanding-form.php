@@ -188,15 +188,15 @@
                         </div>
                         <div>
                             <select id="fscf_field3_21" name="Location" class="no-fancy">
-                                <option>Senate – Hart</option>
-                                <option>Senate – Dirksen</option>
-                                <option>Senate – Russel</option>
-                                <option>House – Rayburn</option>
-                                <option>House – Longworth</option>
-                                <option>House – Cannon</option>
+                                <option>Senate - Hart</option>
+                                <option>Senate - Dirksen</option>
+                                <option>Senate - Russel</option>
+                                <option>House - Rayburn</option>
+                                <option>House - Longworth</option>
+                                <option>House - Cannon</option>
                                 <option>US Capitol</option>
                                 <option>Supreme Court</option>
-                                <option>Other – Please note below</option>
+                                <option>Other - Please note below</option>
                             </select>
                         </div>
                     </div>
