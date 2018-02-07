@@ -148,9 +148,9 @@
 			<div class="btContent">
 			<?php bt_header_headline() ?>
 
-<!--			--><?php //if (is_front_page() && (DomainManager::IsLocalhostDomain() || DomainManager::IsDEVCourierDomain())): ?>
-<!--				<div class="qq-holder on-banner">-->
-<!--					--><?php //$GLOBALS['qq_redirect_url'] = home_url('/quick-quote'); ?>
-<!--					--><?php //get_template_part( 'a1x/templates/quick-quote-form' ); ?>
-<!--				</div>-->
-<!--			--><?php //endif; ?>
+			<?php if (is_front_page() && (DomainManager::IsLocalhostDomain() || DomainManager::IsNinCourierDomain())): ?>
+				<div class="qq-holder on-banner">
+					<?php $GLOBALS['qq_redirect_url'] = home_url('/quick-quote'); ?>
+					<?php get_template_part( 'a1x/templates/quick-quote-form' ); ?>
+				</div>
+			<?php endif; ?>
