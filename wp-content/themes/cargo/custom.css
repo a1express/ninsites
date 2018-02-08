@@ -779,3 +779,12 @@ body.nindelivers-site #slider .banner-qq { display: none; }
 }
 /* End WEX Forms */
 
+.header.huge .btSuperTitle {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.header.huge h1 {
+    height: 200px;
+    overflow: hidden;
+}
