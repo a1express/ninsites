@@ -301,10 +301,11 @@ body.nindelivers-site #slider .banner-qq { display: none; }
 
 body.localhost-site #slider,
 body.nindelivers-site #slider {
-    max-width: 1160px;
+    /*max-width: 1160px;
     margin-left: auto;
-    margin-top: 20px;
     margin-right: auto;
+    */
+    margin-top: 20px;
     box-sizing: border-box;
     border: 1px solid #0014f7;
 }
