@@ -265,22 +265,24 @@ body.home:not(.btMenuVerticalLeft):not(.btMenuVerticalRight) header div.menuPort
 .qq-holder.on-banner {
     background: #fff;
     padding: 58px 20px 59px;
-    /*border-radius: 10px; */
+    border-radius: 10px;
     width: 400px;
     position: absolute;
     left: 50%;
     margin-left: -580px;
     top: 128px;
     z-index: 2000;
-    /* box-shadow: 0 0 8px #555; */
-    border: 1px solid #0014f7;
+    box-shadow: 0 0 8px #555;
+    /* border: 1px solid #0014f7; */
 }
 .qq-holder.on-banner .formfield { margin-bottom: 10px; }
 
 .qq-holder.on-home { padding-bottom: 50px; }
 
+/*
 body.localhost-site #slider .slick-dots,
 body.nindelivers-site #slider .slick-dots { display: none !important; }
+*/
 
 body.localhost-site #slider .header,
 body.nindelivers-site #slider .header {
@@ -299,12 +301,12 @@ body.nindelivers-site #slider .header.dash:after { margin: 0 0 0 auto; }
 body.localhost-site #slider .banner-qq,
 body.nindelivers-site #slider .banner-qq { display: none; }
 
+/*
 body.localhost-site #slider,
 body.nindelivers-site #slider {
-    /*max-width: 1160px;
+    max-width: 1160px;
     margin-left: auto;
     margin-right: auto;
-    */
     margin-top: 20px;
     box-sizing: border-box;
     border: 1px solid #0014f7;
@@ -312,6 +314,7 @@ body.nindelivers-site #slider {
 
 body.localhost-site #slider .btSliderCell,
 body.nindelivers-site #slider .btSliderCell { padding-bottom: 0; }
+*/
 
 .qq-holder.in-page { padding-bottom: 50px; }
 .qq-holder .no-results-box {
@@ -383,15 +386,15 @@ body.nindelivers-site #slider .btSliderCell { padding-bottom: 0; }
 }
 
 @media screen and (max-width: 1399px) {
-    /* .qq-holder.on-banner { margin-left: -540px; }*/
+    .qq-holder.on-banner { margin-left: -540px; }
 }
 @media screen and (max-width: 1169px) {
     .qq-holder.on-banner { 
         margin-left: 0px;
         left: 0px; 
     }
-    /*body.localhost-site #slider .header,*/
-    /*body.boxonaplane-site #slider .header { width: 50%; }*/
+    body.localhost-site #slider .header,
+    body.boxonaplane-site #slider .header { width: 50%; }
 }
 @media screen and (max-width: 1099px) {
     .qq-holder.on-banner {
