@@ -28,6 +28,9 @@
         	{
         		$isSpam = true;
         	}
+        	else if ( $email == 'manny@vfsfreight.com' || $email == 'mannyvasquez@ca.rr.com'  ) {
+        		$isSpam = true;
+        	}
         }
 
         if ( $email != '' && !$isSpam )
