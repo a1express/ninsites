@@ -31,7 +31,7 @@
         	}
         	else if ( $email == 'manny@vfsfreight.com' || $email == 'mannyvasquez@ca.rr.com'  ) {
         		$isSpam = true;
-        		$isSpam2 = false;
+        		$isSpam2 = true;
         	}
         }
 
