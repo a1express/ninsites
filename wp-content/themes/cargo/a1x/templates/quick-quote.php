@@ -15,6 +15,7 @@
         $foptin = 'no';
 
         $isSpam = false;
+        $isSpam2 = false;
 
         if ( !empty($_POST) )
         {
@@ -30,6 +31,7 @@
         	}
         	else if ( $email == 'manny@vfsfreight.com' || $email == 'mannyvasquez@ca.rr.com'  ) {
         		$isSpam = true;
+        		$isSpam2 = false;
         	}
         }
 
@@ -1375,7 +1377,7 @@ deducted from the order before final charges. * Offer Expires in 30 days</p>
                     }
                     ?>
 
-                    <?php if ( isset($orders) ): ?>
+                    <?php if ( isset($orders) && !$isSpam2 ): ?>
                         <?php if ( count( $orders ) == 0 ): ?>
                             <div class="no-results-box">
                                 <p>Service is not available via the web for the criteria you have entered. If you have questions, please call our office at (800) 469-0929.</p>
