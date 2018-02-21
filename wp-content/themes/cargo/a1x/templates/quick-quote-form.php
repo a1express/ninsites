@@ -109,9 +109,9 @@
         <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/823844725/?label=Gv4nCOyl0n0Q9b7riAM&amp;guid=ON&amp;script=0"/>
         </div>
         </noscript>
-    <?php elseif ( DomainManager::IsASAPCourierDomain ): ?>
+    <?php elseif ( DomainManager::IsASAPCourierDomain() ): ?>
         <!-- code here -->
-    <?php elseif ( DomainManager::IsSdSglCourierDomain ): ?>
+    <?php elseif ( DomainManager::IsSdSglCourierDomain() ): ?>
         <!-- code here -->
     <?php endif; ?>
 </form>
