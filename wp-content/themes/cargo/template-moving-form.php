@@ -1,4 +1,4 @@
-<?php /* Template Name: Freight Form */ ?>
+<?php /* Template Name: Moving Form */ ?>
 
 <?php get_header(); ?>
 
@@ -114,7 +114,7 @@
 				?>
 
 				<div id="main" class="single about">
-					<h3>Freight Estimator</h3>
+					<h3>Move Estimator</h3>
 
 					<?php if ($success): ?>
 						<h4>Thank you for your inquiry. One of our freight and move coordinators will be in touch with you shortly. For immediate attention, please contact us at 301-210-0991.</h4>
@@ -137,7 +137,7 @@
 							<?php endif; ?>
 
 							<span>&nbsp;</span>
-							<h4>Freight Estimator</h4>
+							<h4>Move Estimator</h4>
 
 							<div class="general-layout">
 								<div class="general-column">
@@ -179,12 +179,12 @@
 								<div class="general-column"></div>
 							</div>
 
-							<h4>Tell us more</h4>
+							<h4>Tell us about your move</h4>
 
 							<div class="general-layout">
 								<div class="general-column">
 									<div class="formfield">
-										<label>Date*</label>
+										<label>Move Date*</label>
 										<input type="text" id="date" name="move_date" class="full-width" value="<?php echo $move_date; ?>" />
 									</div>
 								</div>
@@ -194,13 +194,13 @@
 							<div class="general-layout">
 								<div class="general-column">
 									<div class="formfield">
-										<label>Origin Street Address</label>
+										<label>Moving From Street Address</label>
 										<input type="text" name="origin_street" class="full-width" value="<?php echo $origin_street; ?>" />
 									</div>
 								</div>
 								<div class="general-column">
 									<div class="formfield">
-										<label>Origin City</label>
+										<label>Moving From City</label>
 										<input type="text" name="origin_city" class="full-width" value="<?php echo $origin_city; ?>" />
 									</div>
 								</div>
@@ -209,7 +209,7 @@
 							<div class="general-layout">
 								<div class="general-column">
 									<div class="formfield">
-										<label>Origin State</label>
+										<label>Moving From State</label>
 										<select name="origin_state" class="full-width no-fancy">
 											<?php foreach($us_states as $us_state): ?>
 												<option value="<?php echo $us_state; ?>"><?php echo $us_state; ?></option>
@@ -219,7 +219,7 @@
 								</div>
 								<div class="general-column">
 									<div class="formfield">
-										<label>Origin Zip Code</label>
+										<label>Moving From Zip Code</label>
 										<input type="text" name="origin_zip" class="full-width" value="<?php echo $origin_zip; ?>" />
 									</div>
 								</div>
@@ -228,13 +228,13 @@
 							<div class="general-layout">
 								<div class="general-column">
 									<div class="formfield">
-										<label>Destination Street Address</label>
+										<label>Moving To Street Address</label>
 										<input type="text" name="destination_street" class="full-width" value="<?php echo $destination_street; ?>" />
 									</div>
 								</div>
 								<div class="general-column">
 									<div class="formfield">
-										<label>Destination City</label>
+										<label>Moving To City</label>
 										<input type="text" name="destination_city" class="full-width" value="<?php echo $destination_city; ?>" />
 									</div>
 								</div>
@@ -262,6 +262,12 @@
 							<div class="general-layout">
 								<div class="general-column">
 									<div class="formfield">
+										<label>Number of Employees Being Moved</label>
+										<input type="text" name="employees" class="full-width" value="<?php echo $employees; ?>" />
+									</div>
+								</div>
+								<div class="general-column">
+									<div class="formfield">
 										<label>Photos of Items Being Moved (if available)</label>
 										<input type="file" class="full-width" />
 									</div>
@@ -271,7 +277,7 @@
 							<div class="general-layout">
 								<div class="general-column">
 									<div class="formfield">
-										<label>Description of Items*</label>
+										<label>Description of Items Being Moved*</label>
 										<textarea name="description" class="full-width"><?php echo $description; ?></textarea>
 									</div>
 								</div>

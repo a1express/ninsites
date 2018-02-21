@@ -46,7 +46,10 @@
                 <?php endif; ?>
 
                 <?php if ($success): ?>
-                    <p style="color: green;">Thanks for your message.</p>
+                    <!-- <p style="color: green;">Thanks for your message.</p> -->
+                    <p style="color: #ff0000;">
+                        Thank you for your submission. Someone will reach out to them with confirmation of their order within 1 business day or they can call 301-210-3500 for more info. 
+                    </p>
                 <?php endif; ?>
 
                 <form action="" class="go-form" method="post">
