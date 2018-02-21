@@ -1,4 +1,4 @@
-<?php /* Template name: Linestanding Form */ ?>
+﻿<?php /* Template name: Linestanding Form */ ?>
 
 <?php get_header(); ?>
 
@@ -48,7 +48,7 @@
                 <?php if ($success): ?>
                     <!-- <p style="color: green;">Thanks for your message.</p> -->
                     <p style="color: #ff0000;">
-                        Thank you for your submission. Someone will reach out to them with confirmation of their order within 1 business day or they can call 301-210-3500 for more info. 
+                        Thank you for your submission. A representative will contact you within 1 business day with your order confirmation. If you need immediate assistance, please call (301) 210-3500.. 
                     </p>
                 <?php endif; ?>
 
