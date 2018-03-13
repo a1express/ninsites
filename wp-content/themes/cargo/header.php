@@ -29,8 +29,8 @@
 							var src = img.attr('src').split('/');
 							text = src[ src.length - 1 ];
 
-							//var pieces = text.split(".");
-							//text = text[ text.length - 1 ].replace('-', ' ');
+							var pieces = text.split(".");
+							text = pieces[ pieces.length - 1 ].replace('-', ' ');
 						}
 
 						img.after( $('<span/>', { 'text': text, 'class': 'image-name' }) );
