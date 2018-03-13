@@ -30,7 +30,7 @@
 							text = src[ src.length - 1 ];
 
 							var pieces = text.split(".");
-							text = pieces[ pieces.length - 1 ].replace('-', ' ');
+							text = pieces[ 0 ].replace('-', ' ');
 						}
 
 						img.after( $('<span/>', { 'text': text, 'class': 'image-name' }) );
