@@ -1,3 +1,7 @@
+body table.city-board td { padding: 0; }
+body table.city-board img { display: block; }
+body table.city-board a img { display: block; width: 100%; }
+
 body.single-post .btMediaBox img {
     max-width: 100%;
     width: auto;
