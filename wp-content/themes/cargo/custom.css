@@ -1,6 +1,7 @@
 body table.city-board td { padding: 0; }
-body table.city-board img { display: block; }
-body table.city-board a img { display: block; width: 100%; }
+body table.city-board a { display: block; position: relative; }
+body table.city-board a img { display: block; width: 100%; position: relative; z-index: 3; }
+body table.city-board a .image-name { position: absolute; left: 10px; right: 10px; top: 50%; text-transform: uppercase; text-align: center; line-height: 20px; margin-top: -15px; font-size: 20px; }
 
 body.single-post .btMediaBox img {
     max-width: 100%;
