@@ -18,6 +18,24 @@
 	<script type="text/javascript">
 		(function($) {
 			$(document).ready(function(){
+				$('.city-board').each(function(){
+					var board = $(this);
+
+					board.find('img').each(function(){
+						var img = $(this);
+						var text = img.attr('alt');
+
+						if ( $.trim( text ) === '' ) {
+							var src = img.attr('src').split('/');
+							text = src[ src.length - 1 ];
+						}
+
+						console.log(text);
+
+						img.after( $('<span/>', { 'text': text, 'class': 'image-name' }) );
+					});
+				});
+
 				var sliderImageRow = $("#slider .btIconImageRow");
 				var sliderQqForm = $("<form/>", { "action": "/quick-quote", "class": "banner-qq" })
 									.append( $("<label/>", { "text": "enter your pick-up zip code" }) )
