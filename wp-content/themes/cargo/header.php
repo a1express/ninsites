@@ -18,7 +18,7 @@
 	<script type="text/javascript">
 		(function($) {
 			$(document).ready(function(){
-				$('.city-board_').each(function(){
+				$('.city-board').each(function(){
 					var board = $(this);
 
 					board.find('img').each(function(){
