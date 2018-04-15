@@ -19,7 +19,15 @@
 
         if ( !empty($_POST) )
         {
-        	if ( 	trim($_POST['origin']) == '30301' &&
+        	$origin = trim($_POST['origin']);
+        	$destination = trim($_POST['destination']);
+
+        	if ( strlen($origin) !== 5 || strlen($destination) !== 5 || !is_numeric($origin) || !is_numeric($destination) )
+        	{
+    			echo '<div style="font-weight: 700;">Invalid zipcode! <a href="#" style="text-decoration: underline; color: #2a868f;" onclick="window.history.go(-1); return false;">Go back</a>.</div>';
+        		die();
+        	}
+        	else if ( 	trim($_POST['origin']) == '30301' &&
         			trim($_POST['destination']) == '30303' &&
         			trim($_POST['weight']) == '1' &&
         			trim($_POST['pieces']) == '1' &&
