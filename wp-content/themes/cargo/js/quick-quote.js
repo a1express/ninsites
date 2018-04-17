@@ -56,10 +56,20 @@
                         alert('Please enter the origin ZIP');
                         return false;
                     }
+                    else if ( $.trim( origin.val() ).length !== 5 || isNaN($.trim( origin.val() )) ) 
+                    {
+                        alert('Invalid origin ZIP');
+                        return false;
+                    }
 
                     if ( $.trim( destination.val() ) == '' )
                     {
                         alert('Please enter the destination ZIP');
+                        return false;
+                    }
+                    else if ( $.trim( destination.val() ).length !== 5 || isNaN($.trim( destination.val() )) ) 
+                    {
+                        alert('Invalid destination ZIP');
                         return false;
                     }
 
