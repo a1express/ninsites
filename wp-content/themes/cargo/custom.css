@@ -288,29 +288,29 @@ body.home:not(.btMenuVerticalLeft):not(.btMenuVerticalRight) header div.menuPort
 
 /*
 body.localhost-site #slider .slick-dots,
-body.nindelivers-site #slider .slick-dots { display: none !important; }
+body #slider .slick-dots { display: none !important; }
 */
 
 body.localhost-site #slider .header,
-body.nindelivers-site #slider .header {
+body #slider .header {
     text-align: right;
     width: 60%;
     margin: 0 0 0 auto;
 }
 body.localhost-site #slider .header h1,
-body.nindelivers-site #slider .header h1
+body #slider .header h1
     font-size: 60px;
     min-height: 200px;
     line-height: 1;
 }
 body.localhost-site #slider .header.dash:after,
-body.nindelivers-site #slider .header.dash:after { margin: 0 0 0 auto; }
+body #slider .header.dash:after { margin: 0 0 0 auto; }
 body.localhost-site #slider .banner-qq,
-body.nindelivers-site #slider .banner-qq { display: none; }
+body #slider .banner-qq { display: none; }
 
 /*
 body.localhost-site #slider,
-body.nindelivers-site #slider {
+body #slider {
     max-width: 1160px;
     margin-left: auto;
     margin-right: auto;
@@ -320,7 +320,7 @@ body.nindelivers-site #slider {
 }
 
 body.localhost-site #slider .btSliderCell,
-body.nindelivers-site #slider .btSliderCell { padding-bottom: 0; }
+body #slider .btSliderCell { padding-bottom: 0; }
 */
 
 .qq-holder.in-page { padding-bottom: 50px; }
@@ -401,7 +401,7 @@ body.nindelivers-site #slider .btSliderCell { padding-bottom: 0; }
         left: 0px; 
     }
     body.localhost-site #slider .header,
-    body.boxonaplane-site #slider .header { width: 50%; }
+    body #slider .header { width: 50%; }
 }
 @media screen and (max-width: 1099px) {
     .qq-holder.on-banner {
@@ -420,7 +420,7 @@ body.nindelivers-site #slider .btSliderCell { padding-bottom: 0; }
         width: auto;
     }
     /*body.localhost-site #slider .header,*/
-    /*body.boxonaplane-site #slider .header { opacity: 0 }*/
+    /*body #slider .header { opacity: 0 }*/
 }
 @media screen and (max-width: 767px) {
     .qq-holder.on-banner {
