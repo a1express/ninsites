@@ -166,6 +166,7 @@
                         position: results[0].geometry.location,
                         animation: google.maps.Animation.DROP
                     });
+                    calcRoute();
                 }
                 else
                 {
@@ -197,6 +198,7 @@
                         position: results[0].geometry.location,
                         animation: google.maps.Animation.DROP
                     });
+                    calcRoute();
                 }
                 else
                 {
