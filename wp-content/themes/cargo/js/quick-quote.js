@@ -157,6 +157,7 @@
             }
 
             geocoder.geocode( { 'address': address + ', United States' }, function(results, status) {
+                console.log('origin', results, status);
                 if (status == google.maps.GeocoderStatus.OK)
                 {
                     map.setCenter(results[0].geometry.location);
@@ -186,6 +187,8 @@
             }
 
             geocoder.geocode( { 'address': address + ', United States' }, function(results, status) {
+                console.log('destination', results, status);
+                
                 if (status == google.maps.GeocoderStatus.OK)
                 {
                     map.setCenter(results[0].geometry.location);
