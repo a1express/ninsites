@@ -254,6 +254,8 @@
 
             directionsService.route(request, function(result, status)
             {
+                console.log('directions', result, status);
+
                 if (status == google.maps.DirectionsStatus.OK)
                 {
                     directionsDisplay.setDirections(result);
