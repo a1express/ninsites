@@ -1,5 +1,7 @@
 (function($) {
     $(document).ready(function(){
+        console.log('v2');
+
         $(".qq-holder").each(function(){
             var qq = $(this);
             var form = qq.find("form");
