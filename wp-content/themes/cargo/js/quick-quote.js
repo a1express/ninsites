@@ -1,6 +1,6 @@
 (function($) {
     $(document).ready(function(){
-        console.log('v2');
+        console.log('v3');
 
         $(".qq-holder").each(function(){
             var qq = $(this);
@@ -245,8 +245,8 @@
 
         function calcRoute()
         {
-            var start = $('.input-origin').val();
-            var end = $('.input-destination').val();
+            var start = $('.input-origin').val() + ', United States';
+            var end = $('.input-destination').val() + ', United States';
 
             var request = {
                 origin: start,
