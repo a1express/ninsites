@@ -44,7 +44,9 @@
 
 					<div class="general-layout">
 						<div class="general-column">
-							<form action="http://www.cmstracking.com/index.php" class="go-form" method="post" novalidate="novalidate">
+							<form action="http://www.cmstracking.com/index.php" class="go-form" method="post" novalidate="novalidate" target="_blank">
+								<input type="hidden" name="f" value="1" />
+								<input type="hidden" name="submit" value="Login" />
 								<div class="title">
 									Please Login Below To Place Orders Online
 								</div>
@@ -69,7 +71,9 @@
 							</form>
 						</div>
 						<div class="general-column">
-							<form action="http://www.cmstracking.com/detail_instantj.php" class="go-form" method="post" novalidate="novalidate">
+							<form action="http://www.cmstracking.com/detail_instantj.php" class="go-form" method="post" novalidate="novalidate"target="_blank">
+								<input type="hidden" name="f" value="1" />
+								<input type="hidden" name="submit" value="Track Package" />
 								<div class="title">
 									Enter Job # to Track a Package
 								</div>
