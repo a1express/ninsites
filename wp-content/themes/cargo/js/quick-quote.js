@@ -214,6 +214,8 @@
             directionsDisplay = new google.maps.DirectionsRenderer();
             geocoder = new google.maps.Geocoder();
 
+            console.log('map init here');
+
             var myOptions = {
                 zoom: 11,
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -247,6 +249,7 @@
 
         function calcRoute()
         {
+            console.log('calc route was done');
             var start = $('.input-origin').val() + ', United States';
             var end = $('.input-destination').val() + ', United States';
 
