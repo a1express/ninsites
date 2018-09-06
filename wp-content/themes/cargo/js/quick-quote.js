@@ -178,6 +178,7 @@
 
         window.drawDestinationPin = function(address)
         {
+            console.log('addr', address);
             if ( address == '' )
             {
                 return;
