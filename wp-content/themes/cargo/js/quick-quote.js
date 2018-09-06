@@ -214,10 +214,8 @@
             directionsDisplay = new google.maps.DirectionsRenderer();
             geocoder = new google.maps.Geocoder();
 
-            console.log(defaultOrigin);
-
             var myOptions = {
-                zoom: 7,
+                zoom: 11,
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
                 center: defaultOrigin
             };
@@ -227,7 +225,7 @@
             $('.input-origin').each(function(){
                 var originInput = $(this);
                 drawOriginPin(originInput.val());
-                calcRoute();
+                // calcRoute();
             });
             $('.input-origin').blur(function(){
                 var originInput = $(this);
@@ -238,7 +236,7 @@
             $('.input-destination').each(function(){
                 var destinationInput = $(this);
                 drawDestinationPin(destinationInput.val());
-                calcRoute();
+                // calcRoute();
             });
             $('.input-destination').blur(function(){
                 var destinationInput = $(this);
