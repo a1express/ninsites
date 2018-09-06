@@ -157,7 +157,7 @@
                 originPin.setMap(null);
             }
 
-            console.log( defaultOrigin, defaultOrigin.lat(), defaultOrigin.lng() );
+            console.log( address, defaultOrigin, defaultOrigin.lat(), defaultOrigin.lng() );
 
             geocoder.geocode( { 'address': address + ', United States' }, function(results, status) {
                 console.log('origin', results, status);
@@ -215,8 +215,6 @@
         {
             directionsDisplay = new google.maps.DirectionsRenderer();
             geocoder = new google.maps.Geocoder();
-
-            console.log('map init here');
 
             var myOptions = {
                 zoom: 11,
