@@ -168,7 +168,7 @@
                         position: results[0].geometry.location,
                         animation: google.maps.Animation.DROP
                     });
-                    calcRoute();
+                    // calcRoute();
                 }
                 else
                 {
@@ -200,7 +200,7 @@
                         position: results[0].geometry.location,
                         animation: google.maps.Animation.DROP
                     });
-                    calcRoute();
+                    // calcRoute();
                 }
                 else
                 {
@@ -273,7 +273,7 @@
         if ( $('#map_canvas').length > 0 )
         {
             initialize();
-            calcRoute();
+            // calcRoute();
         }
     });
 })( jQuery );
