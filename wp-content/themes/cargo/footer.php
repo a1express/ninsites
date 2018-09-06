@@ -88,5 +88,10 @@ window.__lc.license = 9182295;
 })();
 </script>
 <!-- End of LiveChat code -->
+
+<script type="text/javascript">
+	console.log('v5');
+</script>
+
 </body>
 </html>
