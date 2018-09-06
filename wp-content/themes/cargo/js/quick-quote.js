@@ -228,13 +228,13 @@
 
             $('.input-origin').each(function(){
                 var originInput = $(this);
-                drawOriginPin(originInput.val());
+                // drawOriginPin(originInput.val());
                 // calcRoute();
             });
             $('.input-origin').blur(function(){
                 var originInput = $(this);
-                drawOriginPin(originInput.val());
-                calcRoute();
+                // drawOriginPin(originInput.val());
+                // calcRoute();
             });
 
             $('.input-destination').each(function(){
@@ -245,7 +245,7 @@
             $('.input-destination').blur(function(){
                 var destinationInput = $(this);
                 drawDestinationPin(destinationInput.val());
-                calcRoute();
+                // calcRoute();
             });
         }
 
