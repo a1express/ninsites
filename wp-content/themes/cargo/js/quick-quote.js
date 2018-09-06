@@ -230,7 +230,7 @@
 
             $('.input-destination').each(function(){
                 var destinationInput = $(this);
-                drawDestinationPin(destinationInput.val());
+                // drawDestinationPin(destinationInput.val());
                 // calcRoute();
             });
             $('.input-destination').blur(function(){
