@@ -146,6 +146,7 @@
 
         window.drawOriginPin = function(address)
         {
+            console.log('drawOriginPin');
             if ( address == '' )
             {
                 address = defaultOrigin.toString().replace("(", "").replace(")", "");
@@ -179,6 +180,7 @@
 
         window.drawDestinationPin = function(address)
         {
+            console.log('drawDestinationPin');
             if ( address == '' )
             {
                 return;
