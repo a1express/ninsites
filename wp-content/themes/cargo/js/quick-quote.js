@@ -231,7 +231,7 @@
             $('.input-destination').each(function(){
                 var destinationInput = $(this);
                 drawDestinationPin(destinationInput.val());
-                calcRoute();
+                // calcRoute();
             });
             $('.input-destination').blur(function(){
                 var destinationInput = $(this);
