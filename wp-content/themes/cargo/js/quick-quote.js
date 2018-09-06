@@ -160,9 +160,9 @@
             }
 
             console.log( address, defaultOrigin, defaultOrigin.lat(), defaultOrigin.lng() );
-            console.log( address + (needsCountry ? '' : ', United States') );
+            console.log( address + (needsCountry ? ', United States' : '') );
 
-            geocoder.geocode( { 'address': address + (needsCountry ? '' : ', United States') }, function(results, status) {
+            geocoder.geocode( { 'address': address + (needsCountry ? ', United States' : '') }, function(results, status) {
                 console.log('origin', results, status);
                 if (status == google.maps.GeocoderStatus.OK)
                 {
