@@ -165,7 +165,9 @@
                         position: results[0].geometry.location,
                         animation: google.maps.Animation.DROP
                     });
-                    calcRoute();
+                    if ( needsCountry ) {
+                        calcRoute();
+                    }
                 }
                 else
                 {
@@ -176,7 +178,6 @@
 
         window.drawDestinationPin = function(address)
         {
-            return false;
             if ( address == '' )
             {
                 return;
@@ -254,8 +255,6 @@
 
             directionsService.route(request, function(result, status)
             {
-                console.log('directions', result, status);
-
                 if (status == google.maps.DirectionsStatus.OK)
                 {
                     directionsDisplay.setDirections(result);
