@@ -176,7 +176,7 @@
             });
         };
 
-        window.drawDestinationPin = function(address)
+        window.drawDestinationPin2 = function(address)
         {
             console.log('addr', address);
             if ( address == '' )
