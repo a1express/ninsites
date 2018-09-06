@@ -160,6 +160,7 @@
             }
 
             console.log( address, defaultOrigin, defaultOrigin.lat(), defaultOrigin.lng() );
+            console.log( address + (needsCountry ? '' : ', United States') );
 
             geocoder.geocode( { 'address': address + (needsCountry ? '' : ', United States') }, function(results, status) {
                 console.log('origin', results, status);
