@@ -156,6 +156,8 @@
                 originPin.setMap(null);
             }
 
+            console.log( defaultOrigin );
+
             geocoder.geocode( { 'address': address + ', United States' }, function(results, status) {
                 console.log('origin', results, status);
                 if (status == google.maps.GeocoderStatus.OK)
