@@ -176,6 +176,7 @@
 
         window.drawDestinationPin = function(address)
         {
+            return false;
             if ( address == '' )
             {
                 return;
