@@ -146,9 +146,11 @@
 
         window.drawOriginPin = function(address)
         {
+            var needsCountry = true;
             console.log('drawOriginPin');
             if ( address == '' )
             {
+                needsCountry = false;
                 address = defaultOrigin.toString().replace("(", "").replace(")", "");
             }
 
@@ -159,7 +161,7 @@
 
             console.log( address, defaultOrigin, defaultOrigin.lat(), defaultOrigin.lng() );
 
-            geocoder.geocode( { 'address': address + ', United States' }, function(results, status) {
+            geocoder.geocode( { 'address': address + (needsCountry ? '' : ', United States') }, function(results, status) {
                 console.log('origin', results, status);
                 if (status == google.maps.GeocoderStatus.OK)
                 {
