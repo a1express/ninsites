@@ -1,7 +1,5 @@
 (function($) {
     $(document).ready(function(){
-        console.log('v3');
-
         $(".qq-holder").each(function(){
             var qq = $(this);
             var form = qq.find("form");
@@ -147,7 +145,6 @@
         window.drawOriginPin = function(address)
         {
             var needsCountry = true;
-            console.log('drawOriginPin');
             if ( address == '' )
             {
                 needsCountry = false;
@@ -159,11 +156,7 @@
                 originPin.setMap(null);
             }
 
-            console.log( address, defaultOrigin, defaultOrigin.lat(), defaultOrigin.lng() );
-            console.log( address + (needsCountry ? ', United States' : '') );
-
             geocoder.geocode( { 'address': address + (needsCountry ? ', United States' : '') }, function(results, status) {
-                console.log('origin', results, status);
                 if (status == google.maps.GeocoderStatus.OK)
                 {
                     map.setCenter(results[0].geometry.location);
@@ -172,7 +165,7 @@
                         position: results[0].geometry.location,
                         animation: google.maps.Animation.DROP
                     });
-                    // calcRoute();
+                    calcRoute();
                 }
                 else
                 {
@@ -183,7 +176,6 @@
 
         window.drawDestinationPin = function(address)
         {
-            console.log('drawDestinationPin');
             if ( address == '' )
             {
                 return;
@@ -195,8 +187,6 @@
             }
 
             geocoder.geocode( { 'address': address + ', United States' }, function(results, status) {
-                console.log('destination', results, status);
-                
                 if (status == google.maps.GeocoderStatus.OK)
                 {
                     map.setCenter(results[0].geometry.location);
@@ -205,7 +195,7 @@
                         position: results[0].geometry.location,
                         animation: google.maps.Animation.DROP
                     });
-                    // calcRoute();
+                    calcRoute();
                 }
                 else
                 {
@@ -230,7 +220,7 @@
             $('.input-origin').each(function(){
                 var originInput = $(this);
                 drawOriginPin(originInput.val());
-                // calcRoute();
+                calcRoute();
             });
             $('.input-origin').blur(function(){
                 var originInput = $(this);
@@ -240,8 +230,8 @@
 
             $('.input-destination').each(function(){
                 var destinationInput = $(this);
-                // drawDestinationPin(destinationInput.val());
-                // calcRoute();
+                drawDestinationPin(destinationInput.val());
+                calcRoute();
             });
             $('.input-destination').blur(function(){
                 var destinationInput = $(this);
@@ -252,7 +242,6 @@
 
         function calcRoute()
         {
-            console.log('calc route was done');
             var start = $('.input-origin').val() + ', United States';
             var end = $('.input-destination').val() + ', United States';
 
@@ -276,7 +265,7 @@
         if ( $('#map_canvas').length > 0 )
         {
             initialize();
-            // calcRoute();
+            calcRoute();
         }
     });
 })( jQuery );
