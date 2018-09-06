@@ -228,7 +228,7 @@
 
             $('.input-origin').each(function(){
                 var originInput = $(this);
-                // drawOriginPin(originInput.val());
+                drawOriginPin(originInput.val());
                 // calcRoute();
             });
             $('.input-origin').blur(function(){
