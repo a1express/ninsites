@@ -214,8 +214,10 @@
             directionsDisplay = new google.maps.DirectionsRenderer();
             geocoder = new google.maps.Geocoder();
 
+            console.log(defaultOrigin);
+
             var myOptions = {
-                zoom: 11,
+                zoom: 7,
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
                 center: defaultOrigin
             };
