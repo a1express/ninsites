@@ -233,19 +233,19 @@
             });
             $('.input-origin').blur(function(){
                 var originInput = $(this);
-                // drawOriginPin(originInput.val());
-                // calcRoute();
+                drawOriginPin(originInput.val());
+                calcRoute();
             });
 
             $('.input-destination').each(function(){
                 var destinationInput = $(this);
-                drawDestinationPin(destinationInput.val());
+                // drawDestinationPin(destinationInput.val());
                 // calcRoute();
             });
             $('.input-destination').blur(function(){
                 var destinationInput = $(this);
                 drawDestinationPin(destinationInput.val());
-                // calcRoute();
+                calcRoute();
             });
         }
 
