@@ -176,9 +176,8 @@
             });
         };
 
-        window.drawDestinationPin2 = function(address)
+        window.drawDestinationPin = function(address)
         {
-            console.log('addr', address);
             if ( address == '' )
             {
                 return;
@@ -266,7 +265,7 @@
         if ( $('#map_canvas').length > 0 )
         {
             initialize();
-            calcRoute();
+            // calcRoute();
         }
     });
 })( jQuery );
